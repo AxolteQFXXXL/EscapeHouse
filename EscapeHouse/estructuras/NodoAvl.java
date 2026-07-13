@@ -1,18 +1,21 @@
-package EscapeHouse.estructuras;
+package estructuras;
 
 public class NodoAvl{
+    private Comparable clave;
     private Object Elem;
     private int altura;
     private NodoAvl izquierdo;
     private NodoAvl derecho;
 
-    public NodoAvl(Object elem){
+    public NodoAvl(Comparable clave, Object elem){
+        this.clave= clave;
         this.Elem=elem;
         this.altura=0;
         this.izquierdo=null;
         this.derecho=null;
     }
 
+    public Comparable getClave(){return this.clave;}
     public Object getElem(){ return this.Elem;}
     public int getAltura(){ return this.altura;}
     public NodoAvl getIzquierdo(){ return this.izquierdo;}
