@@ -1,37 +1,35 @@
-package EscapeHouse.estructuras;
-
-import EscapeHouse.estructuras.Lista;
+package estructuras;
 
 public class AVL {
     public NodoAvl raiz;
 
     public AVL(){ this.raiz=null;}
 
-    public boolean insertar(Object elem){
-
-        if(this.esVacio()){
-            this.raiz = new NodoAvl(elem);
+    public boolean insertar(Comparable clave, Object elem){
+        
+        if(this.raiz==null){
+            this.raiz = new NodoAvl(clave, elem);
         }else{
-            this.raiz=insertarAux((Comparable) elem, this.raiz);
+            this.raiz=insertarAux(clave, elem, this.raiz);
         }
-
+        
         return true;
     }
 
-    private NodoAvl insertarAux(Comparable elem, NodoAvl root){
+    private NodoAvl insertarAux(Comparable clave, Object elem, NodoAvl root){
 
 
         if(root!=null){
-            if(elem.compareTo(root.getElem())!=0){
-                if(elem.compareTo(root.getElem())<0){
-                    root.setIzquierdo(insertarAux(elem, root.getIzquierdo()));
-                }else if(elem.compareTo(root.getElem())>0){
-                    root.setDerecho(insertarAux(elem, root.getDerecho()));
+            if(clave.compareTo(root.getClave())!=0){
+                if(clave.compareTo(root.getClave())<0){
+                    root.setIzquierdo(insertarAux(clave, elem, root.getIzquierdo()));
+                }else if(clave.compareTo(root.getClave())>0){
+                    root.setDerecho(insertarAux(clave, elem, root.getDerecho()));
                 }
             }
-        }else root = new NodoAvl(elem);
+        }else root = new NodoAvl(clave, elem);
 
-
+        
         return rebalance(root);
     }
 
@@ -100,7 +98,7 @@ public class AVL {
     String toStringAux(NodoAvl root, String sa){
 
         if(root!=null){
-            sa = "Nodo:"+root.getElem() + ": HI:";
+            sa = "Clave:"+root.getClave()+": HI:";
 
             if(root.getIzquierdo()!=null) sa+= root.getIzquierdo().getElem()+" ";
             else sa+="- ";
@@ -150,6 +148,45 @@ public class AVL {
         actualizarAltura(temp);
 
         return h;
+    }
+
+    //Recibe un elem, lo busca por el AVL de habitaciones y si lo encuentra devuelve todos sus datos.
+    public String obtenerDatos(Comparable clave){
+        String datos=null;
+        NodoAvl habitacion= null;
+
+        if(this.raiz!=null){
+            habitacion=buscarAux(this.raiz, clave);
+            if(habitacion!=null){
+                datos=habitacion.getElem().toString();
+            }
+        }
+
+
+        return datos;
+    }
+
+    private NodoAvl buscarAux(NodoAvl n, Comparable clave){
+        NodoAvl hab= null;
+
+        if(clave.compareTo(n.getClave())== 0){
+            hab=n;
+        }else{
+            if(clave.compareTo(n.getClave())<0){
+
+                if(n.getIzquierdo()!= null){
+                    hab= buscarAux(n.getIzquierdo(), clave);
+                }
+            }else{
+
+                if(n.getDerecho()!= null){
+                    hab= buscarAux(n.getDerecho(), clave);
+                }
+            }
+
+        }
+
+        return hab;
     }
 
 }
