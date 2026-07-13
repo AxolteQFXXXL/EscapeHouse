@@ -72,6 +72,17 @@ public class EscapeHouse {
 
         return resultado;
     }
+
+    public String mostrarHabitacion(Short cod){
+        String aMostrar = habitaciones.obtenerDatos(cod);
+
+        return  aMostrar;
+    }
+
+    public String mostrarDesafio(Short cod1, Short cod2){
+        Habitacion hab = (Habitacion) habitaciones.obtenerElemento(cod2);
+        return hab.obtenerDatoDesafio(cod1);
+    }
     //...
 
 }

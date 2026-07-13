@@ -61,4 +61,8 @@ public class Habitacion {
     public void setSalida(boolean salida){
         this.salida = salida;
     }
+
+    public String obtenerDatoDesafio(Short cod){
+    return desafios.obtenerDatos(cod);
+    }
 }

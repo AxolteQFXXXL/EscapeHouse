@@ -129,6 +129,9 @@ public class Menu {
             switch (opcion) {
                 case 1:
                     // mostrarHabitación
+                    System.out.println("Que habitacion desea Conocer: ");
+                    Short codigo = scanner.nextShort();
+                    System.out.println(house.mostrarHabitacion(codigo));
                     break;
                 case 2:
                     // habitacionesContiguas
@@ -166,6 +169,12 @@ public class Menu {
 
             switch (opcion) {
                 case 1:
+                    System.out.println("Ingrese codigo desafio: ");
+                    Short a = scanner.nextShort();
+                    System.out.println("Y su habitacion correspondiente: ");
+                    Short b = scanner.nextShort();
+
+                    System.out.println(house.mostrarDesafio(a, b));
                     // mostrarDesafío
                     break;
                 case 2:

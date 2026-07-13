@@ -1,11 +1,15 @@
 package EscapeHouse.modelos;
 
+import java.util.HashMap;
+
 public class Equipo {
     private String nombre;
     private int puntajeNecesario;
     private int puntajeTotal;
     private int habitacionActual;
     private int puntajeActual;
+    private HashMap<Integer, Desafio> resueltos = new HashMap<>();
+
 
     public Equipo(String nombre){
         this.nombre = nombre;
@@ -17,6 +21,12 @@ public class Equipo {
         this.puntajeTotal = puntajeTotal;
         this.habitacionActual = habitacionActual;
         this.puntajeActual = puntajeActual;
+    }
+
+    /* Se le agrega un desafio al HashMap de resueltos cuando el equipo ya lo haya hecho
+    * Ademas, ingresar una clave particular (Tal vez el codigo del desafio)*/
+    public void agregarDesafioResuelto(int clave,Desafio unDes){
+        resueltos.put(clave, unDes);
     }
 
     public String getNombre(){
