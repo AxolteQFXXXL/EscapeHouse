@@ -1,0 +1,5 @@
+jul 07, 2026 3:43:12 A.M. testLogger main
+INFO: Se cambio X en el grafo
+jul 07, 2026 3:43:12 A.M. testLogger main
+INFO: Se añadió una nueva habitación
+

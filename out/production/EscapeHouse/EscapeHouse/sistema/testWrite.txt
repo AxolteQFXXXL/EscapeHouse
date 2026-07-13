@@ -1,0 +1,400 @@
+16:41:54 === INICIO DE CARGA DEL SISTEMA ===
+16:41:54 Habitación #1 cargada
+16:41:54   - Habitación dato: 15
+16:41:54   - Habitación dato: Invernadero
+16:41:54   - Habitación dato: 1
+16:41:54   - Habitación dato: 35
+16:41:54   - Habitación dato: false
+16:41:54 Habitación #2 cargada
+16:41:54   - Habitación dato: 8
+16:41:54   - Habitación dato: Depósito
+16:41:54   - Habitación dato: -1
+16:41:54   - Habitación dato: 40
+16:41:54   - Habitación dato: false
+16:41:54 Habitación #3 cargada
+16:41:54   - Habitación dato: 3
+16:41:54   - Habitación dato: Biblioteca
+16:41:54   - Habitación dato: 0
+16:41:54   - Habitación dato: 25
+16:41:54   - Habitación dato: false
+16:41:54 Habitación #4 cargada
+16:41:54   - Habitación dato: 20
+16:41:54   - Habitación dato: Recibidor
+16:41:54   - Habitación dato: 0
+16:41:54   - Habitación dato: 18
+16:41:54   - Habitación dato: true
+16:41:54 Habitación #5 cargada
+16:41:54   - Habitación dato: 12
+16:41:54   - Habitación dato: Escalera
+16:41:54   - Habitación dato: 0
+16:41:54   - Habitación dato: 12
+16:41:54   - Habitación dato: false
+16:41:54 Habitación #6 cargada
+16:41:54   - Habitación dato: 5
+16:41:54   - Habitación dato: Cochera
+16:41:54   - Habitación dato: 0
+16:41:54   - Habitación dato: 30
+16:41:54   - Habitación dato: false
+16:41:54 Habitación #7 cargada
+16:41:54   - Habitación dato: 18
+16:41:54   - Habitación dato: Pasillo
+16:41:54   - Habitación dato: 0
+16:41:54   - Habitación dato: 15
+16:41:54   - Habitación dato: false
+16:41:54 Habitación #8 cargada
+16:41:54   - Habitación dato: 2
+16:41:54   - Habitación dato: Cocina
+16:41:54   - Habitación dato: 0
+16:41:54   - Habitación dato: 22
+16:41:54   - Habitación dato: true
+16:41:54 Habitación #9 cargada
+16:41:54   - Habitación dato: 10
+16:41:54   - Habitación dato: Dormitorio Principal
+16:41:54   - Habitación dato: 1
+16:41:54   - Habitación dato: 28
+16:41:54   - Habitación dato: false
+16:41:54 Habitación #10 cargada
+16:41:54   - Habitación dato: 7
+16:41:54   - Habitación dato: Comedor
+16:41:54   - Habitación dato: 0
+16:41:54   - Habitación dato: 20
+16:41:54   - Habitación dato: false
+16:41:54 Habitación #11 cargada
+16:41:54   - Habitación dato: 1
+16:41:54   - Habitación dato: Altillo
+16:41:54   - Habitación dato: 2
+16:41:54   - Habitación dato: 15
+16:41:54   - Habitación dato: false
+16:41:54 Habitación #12 cargada
+16:41:54   - Habitación dato: 4
+16:41:54   - Habitación dato: Bodega
+16:41:54   - Habitación dato: -1
+16:41:54   - Habitación dato: 35
+16:41:54   - Habitación dato: false
+16:41:54 Habitación #13 cargada
+16:41:54   - Habitación dato: 22
+16:41:54   - Habitación dato: Sala de Juegos
+16:41:54   - Habitación dato: 1
+16:41:54   - Habitación dato: 30
+16:41:54   - Habitación dato: false
+16:41:54 Habitación #14 cargada
+16:41:54   - Habitación dato: 14
+16:41:54   - Habitación dato: Gimnasio
+16:41:54   - Habitación dato: 1
+16:41:54   - Habitación dato: 20
+16:41:54   - Habitación dato: false
+16:41:54 Habitación #15 cargada
+16:41:54   - Habitación dato: 11
+16:41:54   - Habitación dato: Dormitorio Huéspedes
+16:41:54   - Habitación dato: 1
+16:41:54   - Habitación dato: 22
+16:41:54   - Habitación dato: false
+16:41:54 Habitación #16 cargada
+16:41:54   - Habitación dato: 19
+16:41:54   - Habitación dato: Quincho
+16:41:54   - Habitación dato: 1
+16:41:54   - Habitación dato: 25
+16:41:54   - Habitación dato: false
+16:41:54 Habitación #17 cargada
+16:41:54   - Habitación dato: 13
+16:41:54   - Habitación dato: Escritorio
+16:41:54   - Habitación dato: 0
+16:41:54   - Habitación dato: 18
+16:41:54   - Habitación dato: false
+16:41:54 Habitación #18 cargada
+16:41:54   - Habitación dato: 9
+16:41:54   - Habitación dato: Despensa
+16:41:54   - Habitación dato: -1
+16:41:54   - Habitación dato: 15
+16:41:54   - Habitación dato: false
+16:41:54 Habitación #19 cargada
+16:41:54   - Habitación dato: 21
+16:41:54   - Habitación dato: Sala de Estar
+16:41:54   - Habitación dato: 0
+16:41:54   - Habitación dato: 30
+16:41:54   - Habitación dato: true
+16:41:54 Habitación #20 cargada
+16:41:54   - Habitación dato: 24
+16:41:54   - Habitación dato: Sótano
+16:41:54   - Habitación dato: -1
+16:41:54   - Habitación dato: 45
+16:41:54   - Habitación dato: false
+16:41:54 Equipo #1 cargada
+16:41:54   - Equipo dato: Los Valientes
+16:41:54   - Equipo dato: 400
+16:41:54   - Equipo dato: 130
+16:41:54   - Equipo dato: 4
+16:41:54   - Equipo dato: 0
+16:41:54 Equipo #2 cargada
+16:41:54   - Equipo dato: Los Locos Adams
+16:41:54   - Equipo dato: 400
+16:41:54   - Equipo dato: 50
+16:41:54   - Equipo dato: 2
+16:41:54   - Equipo dato: 10
+16:41:54 Equipo #3 cargada
+16:41:54   - Equipo dato: Exploradores
+16:41:54   - Equipo dato: 350
+16:41:54   - Equipo dato: 80
+16:41:54   - Equipo dato: 7
+16:41:54   - Equipo dato: 15
+16:41:54 Equipo #4 cargada
+16:41:54   - Equipo dato: Genios
+16:41:54   - Equipo dato: 450
+16:41:54   - Equipo dato: 200
+16:41:54   - Equipo dato: 10
+16:41:54   - Equipo dato: 25
+16:41:54 Equipo #5 cargada
+16:41:54   - Equipo dato: Aventureros
+16:41:54   - Equipo dato: 380
+16:41:54   - Equipo dato: 95
+16:41:54   - Equipo dato: 15
+16:41:54   - Equipo dato: 5
+16:41:54 Equipo #6 cargada
+16:41:54   - Equipo dato: Estrategas
+16:41:54   - Equipo dato: 420
+16:41:54   - Equipo dato: 150
+16:41:54   - Equipo dato: 3
+16:41:54   - Equipo dato: 20
+16:41:54 Equipo #7 cargada
+16:41:54   - Equipo dato: Resolutivos
+16:41:54   - Equipo dato: 360
+16:41:54   - Equipo dato: 70
+16:41:54   - Equipo dato: 8
+16:41:54   - Equipo dato: 10
+16:41:54 Equipo #8 cargada
+16:41:54   - Equipo dato: Creativos
+16:41:54   - Equipo dato: 430
+16:41:54   - Equipo dato: 180
+16:41:54   - Equipo dato: 12
+16:41:54   - Equipo dato: 30
+16:41:54 Equipo #9 cargada
+16:41:54   - Equipo dato: Audaces
+16:41:54   - Equipo dato: 390
+16:41:54   - Equipo dato: 110
+16:41:54   - Equipo dato: 18
+16:41:54   - Equipo dato: 5
+16:41:54 Equipo #10 cargada
+16:41:54   - Equipo dato: Sabios
+16:41:54   - Equipo dato: 410
+16:41:54   - Equipo dato: 160
+16:41:54   - Equipo dato: 21
+16:41:54   - Equipo dato: 15
+16:41:54 Desafío #1 cargada
+16:41:54   - Desafío dato: 30
+16:41:54   - Desafío dato: 1
+16:41:54   - Desafío dato: Acertijo
+16:41:54   - Desafío dato: Lógico
+16:41:54 Desafío #2 cargada
+16:41:54   - Desafío dato: 50
+16:41:54   - Desafío dato: 2
+16:41:54   - Desafío dato: Sudoku
+16:41:54   - Desafío dato: Matemático
+16:41:54 Desafío #3 cargada
+16:41:54   - Desafío dato: 65
+16:41:54   - Desafío dato: 3
+16:41:54   - Desafío dato: Trabado
+16:41:54   - Desafío dato: Ingenio
+16:41:54 Desafío #4 cargada
+16:41:54   - Desafío dato: 45
+16:41:54   - Desafío dato: 4
+16:41:54   - Desafío dato: Enigma
+16:41:54   - Desafío dato: Lógico
+16:41:54 Desafío #5 cargada
+16:41:54   - Desafío dato: 35
+16:41:54   - Desafío dato: 5
+16:41:54   - Desafío dato: Laberinto
+16:41:54   - Desafío dato: Destreza
+16:41:54 Desafío #6 cargada
+16:41:54   - Desafío dato: 70
+16:41:54   - Desafío dato: 6
+16:41:54   - Desafío dato: Calcular
+16:41:54   - Desafío dato: Matemático
+16:41:54 Desafío #7 cargada
+16:41:54   - Desafío dato: 25
+16:41:54   - Desafío dato: 7
+16:41:54   - Desafío dato: Buscar
+16:41:54   - Desafío dato: Busqueda
+16:41:54 Desafío #8 cargada
+16:41:54   - Desafío dato: 55
+16:41:54   - Desafío dato: 8
+16:41:54   - Desafío dato: Rompecabezas
+16:41:54   - Desafío dato: Ingenio
+16:41:54 Desafío #9 cargada
+16:41:54   - Desafío dato: 40
+16:41:54   - Desafío dato: 9
+16:41:54   - Desafío dato: Adivinanza
+16:41:54   - Desafío dato: Lógico
+16:41:54 Desafío #10 cargada
+16:41:54   - Desafío dato: 60
+16:41:54   - Desafío dato: 10
+16:41:54   - Desafío dato: Criptograma
+16:41:54   - Desafío dato: Matemático
+16:41:54 Desafío #11 cargada
+16:41:54   - Desafío dato: 75
+16:41:54   - Desafío dato: 11
+16:41:54   - Desafío dato: Escape
+16:41:54   - Desafío dato: Destreza
+16:41:54 Desafío #12 cargada
+16:41:54   - Desafío dato: 20
+16:41:54   - Desafío dato: 12
+16:41:54   - Desafío dato: Memoria
+16:41:54   - Desafío dato: Lógico
+16:41:54 Desafío #13 cargada
+16:41:54   - Desafío dato: 80
+16:41:54   - Desafío dato: 13
+16:41:54   - Desafío dato: Razonar
+16:41:54   - Desafío dato: Ingenio
+16:41:54 Desafío #14 cargada
+16:41:54   - Desafío dato: 15
+16:41:54   - Desafío dato: 14
+16:41:54   - Desafío dato: Observar
+16:41:54   - Desafío dato: Busqueda
+16:41:54 Desafío #15 cargada
+16:41:54   - Desafío dato: 85
+16:41:54   - Desafío dato: 15
+16:41:54   - Desafío dato: Resolver
+16:41:54   - Desafío dato: Matemático
+16:41:54 Desafío #16 cargada
+16:41:54   - Desafío dato: 10
+16:41:54   - Desafío dato: 16
+16:41:54   - Desafío dato: Asociar
+16:41:54   - Desafío dato: Lógico
+16:41:54 Desafío #17 cargada
+16:41:54   - Desafío dato: 90
+16:41:54   - Desafío dato: 17
+16:41:54   - Desafío dato: Construir
+16:41:54   - Desafío dato: Destreza
+16:41:54 Desafío #18 cargada
+16:41:54   - Desafío dato: 95
+16:41:54   - Desafío dato: 18
+16:41:54   - Desafío dato: Interpretar
+16:41:54   - Desafío dato: Ingenio
+16:41:54 Desafío #19 cargada
+16:41:54   - Desafío dato: 100
+16:41:54   - Desafío dato: 19
+16:41:54   - Desafío dato: Analizar
+16:41:54   - Desafío dato: Matemático
+16:41:54 Desafío #20 cargada
+16:41:54   - Desafío dato: 105
+16:41:54   - Desafío dato: 20
+16:41:54   - Desafío dato: Decidir
+16:41:54   - Desafío dato: Lógico
+16:41:54 Puerta #1 cargada
+16:41:54   - Puerta dato: 1
+16:41:54   - Puerta dato: 2
+16:41:54   - Puerta dato: 40
+16:41:54 Puerta #2 cargada
+16:41:54   - Puerta dato: 2
+16:41:54   - Puerta dato: 3
+16:41:54   - Puerta dato: 60
+16:41:54 Puerta #3 cargada
+16:41:54   - Puerta dato: 3
+16:41:54   - Puerta dato: 4
+16:41:54   - Puerta dato: 50
+16:41:54 Puerta #4 cargada
+16:41:54   - Puerta dato: 4
+16:41:54   - Puerta dato: 5
+16:41:54   - Puerta dato: 30
+16:41:54 Puerta #5 cargada
+16:41:54   - Puerta dato: 5
+16:41:54   - Puerta dato: 6
+16:41:54   - Puerta dato: 45
+16:41:54 Puerta #6 cargada
+16:41:54   - Puerta dato: 6
+16:41:54   - Puerta dato: 7
+16:41:54   - Puerta dato: 55
+16:41:54 Puerta #7 cargada
+16:41:54   - Puerta dato: 7
+16:41:54   - Puerta dato: 8
+16:41:54   - Puerta dato: 35
+16:41:54 Puerta #8 cargada
+16:41:54   - Puerta dato: 8
+16:41:54   - Puerta dato: 9
+16:41:54   - Puerta dato: 65
+16:41:54 Puerta #9 cargada
+16:41:54   - Puerta dato: 9
+16:41:54   - Puerta dato: 10
+16:41:54   - Puerta dato: 25
+16:41:54 Puerta #10 cargada
+16:41:54   - Puerta dato: 10
+16:41:54   - Puerta dato: 11
+16:41:54   - Puerta dato: 70
+16:41:54 Puerta #11 cargada
+16:41:54   - Puerta dato: 11
+16:41:54   - Puerta dato: 12
+16:41:54   - Puerta dato: 20
+16:41:54 Puerta #12 cargada
+16:41:54   - Puerta dato: 12
+16:41:54   - Puerta dato: 13
+16:41:54   - Puerta dato: 80
+16:41:54 Puerta #13 cargada
+16:41:54   - Puerta dato: 13
+16:41:54   - Puerta dato: 14
+16:41:54   - Puerta dato: 15
+16:41:54 Puerta #14 cargada
+16:41:54   - Puerta dato: 14
+16:41:54   - Puerta dato: 15
+16:41:54   - Puerta dato: 85
+16:41:54 Puerta #15 cargada
+16:41:54   - Puerta dato: 15
+16:41:54   - Puerta dato: 16
+16:41:54   - Puerta dato: 10
+16:41:54 Puerta #16 cargada
+16:41:54   - Puerta dato: 16
+16:41:54   - Puerta dato: 17
+16:41:54   - Puerta dato: 90
+16:41:54 Puerta #17 cargada
+16:41:54   - Puerta dato: 17
+16:41:54   - Puerta dato: 18
+16:41:54   - Puerta dato: 95
+16:41:54 Puerta #18 cargada
+16:41:54   - Puerta dato: 18
+16:41:54   - Puerta dato: 19
+16:41:54   - Puerta dato: 100
+16:41:54 Puerta #19 cargada
+16:41:54   - Puerta dato: 19
+16:41:54   - Puerta dato: 20
+16:41:54   - Puerta dato: 105
+16:41:54 Puerta #20 cargada
+16:41:54   - Puerta dato: 20
+16:41:54   - Puerta dato: 21
+16:41:54   - Puerta dato: 50
+16:41:54 Puerta #21 cargada
+16:41:54   - Puerta dato: 21
+16:41:54   - Puerta dato: 22
+16:41:54   - Puerta dato: 60
+16:41:54 Puerta #22 cargada
+16:41:54   - Puerta dato: 22
+16:41:54   - Puerta dato: 23
+16:41:54   - Puerta dato: 55
+16:41:54 Puerta #23 cargada
+16:41:54   - Puerta dato: 23
+16:41:54   - Puerta dato: 24
+16:41:54   - Puerta dato: 45
+16:41:54 Habitación #21 cargada
+16:41:54   - Habitación dato: 16
+16:41:54   - Habitación dato: Patio
+16:41:54   - Habitación dato: 0
+16:41:54   - Habitación dato: 20
+16:41:54   - Habitación dato: false
+16:41:54 Habitación #22 cargada
+16:41:54   - Habitación dato: 16
+16:41:54   - Habitación dato: Patio
+16:41:54   - Habitación dato: 0
+16:41:54   - Habitación dato: 20
+16:41:54   - Habitación dato: false
+16:41:54 Habitación #23 cargada
+16:41:54   - Habitación dato: 16
+16:41:54   - Habitación dato: Patio
+16:41:54   - Habitación dato: 0
+16:41:54   - Habitación dato: 20
+16:41:54   - Habitación dato: false
+16:41:54 Habitación #24 cargada
+16:41:54   - Habitación dato: 16
+16:41:54   - Habitación dato: Patio
+16:41:54   - Habitación dato: 0
+16:41:54   - Habitación dato: 20
+16:41:54   - Habitación dato: false
+16:41:54 === CARGA FINALIZADA ===
+16:41:54 Estadísticas: Habitaciones=24, Equipos=10, Desafíos=20, Puertas=23
+16:41:54 === FIN DE CARGA DEL SISTEMA ===

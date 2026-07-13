@@ -1,0 +1,153 @@
+package EscapeHouse.sistema;
+
+import EscapeHouse.estructuras.AVL;
+import EscapeHouse.estructuras.Grafo;
+import EscapeHouse.modelos.Equipo;
+import EscapeHouse.modelos.Habitacion;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
+import java.util.StringTokenizer;
+
+public class GestorArchivos {
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+
+    public void cargarSistema(EscapeHouse house) {
+            AVL habitaciones = new AVL();
+            AVL desafios = new AVL();
+            HashMap<Integer, Equipo> equipos = new HashMap<Integer, Equipo>(20);
+            Grafo esquema = new Grafo();
+        try (FileReader fr = new FileReader("EscapeHouse/sistema/test.txt");
+             BufferedReader br = new BufferedReader(fr)) {
+            int[] nros = {0, 0, 0, 0};
+            String line;
+            reiniciarLog();
+            log("=== INICIO DE CARGA DEL SISTEMA ===");
+            // Read line-by-line until the end of the file (null)
+            while ((line = br.readLine()) != null) {
+                StringTokenizer st = new StringTokenizer(line, ";");
+
+                switch (st.nextToken()) {
+                    case "H":
+                        cargarHabitacion(nros, st, habitaciones, esquema);
+                        break;
+                    case "E":
+                        cargarEquipo(nros, st, equipos);
+                        break;
+                    case "D":
+                        cargarDesafio(nros, st, desafios);
+                        break;
+                    case "P":
+                        cargarPuerta(nros, st);
+                        break;
+                    default:
+                        System.out.println();
+                }
+
+            }
+            log("=== CARGA FINALIZADA ===");
+            log("Estadísticas: " +
+                    "Habitaciones=" + nros[0] +
+                    ", Equipos=" + nros[1] +
+                    ", Desafíos=" + nros[2] +
+                    ", Puertas=" + nros[3]);
+
+        } catch (IOException e) {
+            String errorMsg = "Error al leer el archivo: " + e.getMessage();
+            System.err.println(errorMsg);
+            log("ERROR: " + errorMsg);
+        }
+        house.inicializar(habitaciones, equipos, null);
+
+        log("=== FIN DE CARGA DEL SISTEMA ===");
+
+
+    }
+
+    private void cargarHabitacion(int[] nros, StringTokenizer st, AVL habits, Grafo scheme){
+        //aca hacer la carga de las habitaciones en el AVL y en el GRAFO como vertices
+        nros[0]++;
+        Object [] cajon = new Object[5];
+        int i=0;
+        log("Habitación #" + nros[0] + " cargada");
+        while (st.hasMoreTokens()) {
+            String token = st.nextToken();
+            log("  - Habitación dato: " + token);
+            cajon[i] = token;
+            i++;
+        }
+        Habitacion hab;
+        habits.insertar(hab);
+        scheme.insertarVertice(hab.getCodigo());
+    }
+
+    private void cargarEquipo(int[] nros, StringTokenizer st, HashMap<Integer, Equipo> equipos){
+        //aca hacer la carga de los equipos en el Hash
+        nros[1]++;
+        Object [] cajon = new Object[5];
+        var i = 0;
+        log("Equipo #" + nros[1] + " cargada");
+        while (st.hasMoreTokens()) {
+            String token = st.nextToken();
+            log("  - Equipo dato: " + token);
+            cajon[i]=token;
+        }
+
+        Equipo eq = new Equipo((String)cajon[0], (int) cajon[1], (int)cajon[2], (int)cajon[3], (int)cajon[4]);
+        equipos.put( nros[1], eq);
+    }
+
+    private void cargarDesafio(int[] nros, StringTokenizer st, AVL defs){
+        //aca hacer la carga de los desafios en el AVL dentro de las habitaciones, tener en cuenta que cada desafio tiene como 3er token del String a la habitacion que corresponde
+        nros[2]++;
+        log("Desafío #" + nros[2] + " cargada");
+        while (st.hasMoreTokens()) {
+            String token = st.nextToken();
+            log("  - Desafío dato: " + token);
+        }
+    }
+
+    private void cargarPuerta(int[] nros, StringTokenizer st){
+        //aca insertar las puertas como arcos en el GRAFO
+        nros[3]++;
+        log("Puerta #" + nros[3] + " cargada");
+        while (st.hasMoreTokens()) {
+            String token = st.nextToken();
+            log("  - Puerta dato: " + token);
+        }
+    }
+
+    public void log(String mensaje){
+        FileWriter fw = null;
+        try {
+            fw = new FileWriter("src/EscapeHouse/testWrite.txt", true);
+            String timestamp = LocalTime.now().format(formatter);
+            fw.write(timestamp + " " + mensaje + "\n");
+            fw.flush();
+        } catch (IOException e) {
+            System.out.println("Error al escribir log: " + e.getMessage());
+        } finally {
+            try {
+                if (fw != null) {
+                    fw.close();
+                }
+            } catch (IOException e) {
+                System.out.println("Error al cerrar log: " + e.getMessage());
+            }
+        }
+    }
+
+    public void reiniciarLog(){
+        try (FileWriter fw = new FileWriter("src/EscapeHouse/testWrite.txt", false)) {
+            fw.write("");
+            fw.flush();
+        } catch (IOException e) {
+            System.out.println("Error al reiniciar log: " + e.getMessage());
+        }
+    }
+}
