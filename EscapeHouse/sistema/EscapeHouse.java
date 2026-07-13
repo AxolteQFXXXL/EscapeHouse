@@ -39,14 +39,14 @@ public class EscapeHouse {
     public String habitacionesContiguas(Object codigo){
         String datos=casa.mostrarAdyacentes(codigo);
 
-        if(datos==""){
-            datos="No se encontró la habitación con el código "+codigo;
+        if(datos=="") {
+            datos = "No se encontró la habitación con el código " + codigo;
         }
 
         return datos;
     }
 
-    //método que calcula la cantidad de puntos minima y la resta con la requerida, devolviendo true or false si llega al destino.
+    //metodo que calcula la cantidad de puntos minima y la resta con la requerida, devolviendo true or false si llega al destino.
     public boolean esPosibleLlegar(Object codigo1, Object codigo2, int puntos){
         boolean esPosible=false;
         Lista habitaciones= casa.caminoMasLiviano(codigo1, codigo2);
