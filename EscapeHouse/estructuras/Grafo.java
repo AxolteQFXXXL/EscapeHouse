@@ -258,10 +258,6 @@ public class Grafo {
         return camino;
     }
 
-    public Lista caminoMasLargo(Object origen, Object destino){//---------------------------------------------------------------------------
-        return null;
-    }
-
     public Lista caminoMasLiviano(Object origen, Object destino) {
         Lista camino = new Lista();
         NodoVert vOrigen = ubicarVertice(origen);
@@ -351,10 +347,19 @@ public class Grafo {
                         actual= null;
                     }
                 }
+                int posValorFinal= nodos.localizar(vDestino.getElem());
+                int valorCamino=(int)valorAcum.recuperar(posValorFinal);
+                camino.insertar(valorCamino, camino.longitud()+1);//almacena al final de la lista el valor minimo necesario para llegar al destino
             }
         }
         return camino;
     }
+
+    public Lista caminoMasLargo(Object origen, Object destino){//---------------------------------------------------------------------------
+        return null;
+    }
+
+
 
     //grafo no etiquetado
     public Lista listarEnProfundidad() {
@@ -450,6 +455,22 @@ public class Grafo {
             }
         }
         return grafo;
+    }
+
+    public String mostrarAdyacentes(Object elem){
+        String datos="";
+
+        NodoVert objetivo= ubicarVertice(elem);
+
+        if(objetivo!=null){
+            NodoAdy ady= objetivo.getPrimerAdy();
+            while(ady!=null){
+                datos+="Habitacion "+ ady.getVertice().getElem()+ " Puntaje "+ ady.getEtiqueta()+ "\n";
+                ady=ady.getSigAdyacente();
+            }
+        }
+
+        return datos;
     }
 
 }
