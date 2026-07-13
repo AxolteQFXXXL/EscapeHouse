@@ -1,30 +1,46 @@
-package EscapeHouse.sistema;
+package sistema;
+import modelos.*;
+import estructuras.AVL;
+import estructuras.Grafo;
+import estructuras.*;
 
 // aca implementamos cada metodo del menu
 
-import EscapeHouse.estructuras.AVL;
-import EscapeHouse.estructuras.Grafo;
-import EscapeHouse.modelos.Equipo;
-
-import java.util.HashMap;
-
 public class EscapeHouse {
-    AVL habitaciones;
-    HashMap<Integer, Equipo> equipos;
-    Grafo esquema;
 
-    public void inicializar(AVL habits,HashMap<Integer, Equipo> equipos,AVL desafios){
-        this.habitaciones = habits;
-        this.equipos=equipos;
-    }
-    public void mostrarHabitación(){
-        System.out.println("Hola");
+    private Grafo casa; //plano de la casa mediante un grafo
+    private AVL habitaciones;
+
+    public EscapeHouse(){
+        this.casa= new Grafo();
+        this.habitaciones = new AVL();
     }
 
-    public void habitacionesContiguas(){
-
+    public EscapeHouse(AVL avl, Grafo graf){ //Constructor para el testeo de los metodos
+        this.casa= graf;
+        this.habitaciones = avl;
     }
 
+    public String mostrarHabitación(int codigo){
+        String datos=habitaciones.obtenerDatos(codigo);
+        
+        if(datos==null){
+            datos="No se encontró la habitación con el código "+codigo;
+        }
+        
+        return datos;
+    }
+    
+
+    public String habitacionesContiguas(Object codigo){
+        String datos=casa.mostrarAdyacentes(codigo);
+
+        if(datos==""){
+            datos="No se encontró la habitación con el código "+codigo;
+        }
+
+        return datos;
+    }
     //...
 
 }
