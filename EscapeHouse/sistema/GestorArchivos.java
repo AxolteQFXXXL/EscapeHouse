@@ -62,7 +62,7 @@ public class GestorArchivos {
             System.err.println(errorMsg);
             log("ERROR: " + errorMsg);
         }
-        house.inicializar(habitaciones, equipos, null);
+        house.inicializar(habitaciones, esquema, equipos);
 
         log("=== FIN DE CARGA DEL SISTEMA ===");
 

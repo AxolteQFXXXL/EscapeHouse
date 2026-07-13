@@ -1,4 +1,4 @@
-package estructuras;
+package EscapeHouse.estructuras;
 
 public class NodoAvl{
     private Comparable clave;
