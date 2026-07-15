@@ -130,7 +130,7 @@ public class Menu {
                 case 1:
                     // mostrarHabitación
                     System.out.println("Que habitacion desea Conocer: ");
-                    Short codigo = scanner.nextShort();
+                    int codigo = scanner.nextInt();
                     System.out.println(house.mostrarHabitacion(codigo));
                     break;
                 case 2:

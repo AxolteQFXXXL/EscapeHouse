@@ -64,4 +64,9 @@ public class Equipo {
     public void setPuntajeActual(int puntajeActual){
         this.puntajeActual = puntajeActual;
     }
+
+    public String misDatos(){
+        String s = "Nombre: "+this.nombre+"| PuntajoNecesario:"+this.puntajeNecesario+"| PuntajeTotal:"+this.puntajeTotal+"| PuntajeActual:"+this.puntajeActual+"| HabitacionActual:"+this.habitacionActual+".";
+        return s;
+    }
 }

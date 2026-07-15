@@ -47,4 +47,10 @@ public class Desafio {
     public void setTipo(String tipo){
         this.tipo = tipo;
     }
+
+    @Override
+    public String toString() {
+        String s = "PuntajeOtorgado:" + this.puntaje + "| Nombre: " + this.nombre + "| tipo: " + this.tipo + "| en Habitacion:" + this.codigoHabitacion+".";
+        return s;
+    }
 }

@@ -65,4 +65,9 @@ public class Habitacion {
     public String obtenerDatoDesafio(Short cod){
     return desafios.obtenerDatos(cod);
     }
+
+    public String toString(){
+        String s = "Nombre: "+this.nombre+"| Planta: "+this.planta+"| Metros a 2: "+this.metros+"| esSalida: "+this.salida+".";
+        return s;
+    }
 }

@@ -73,7 +73,7 @@ public class EscapeHouse {
         return resultado;
     }
 
-    public String mostrarHabitacion(Short cod){
+    public String mostrarHabitacion(int cod){
         String aMostrar = habitaciones.obtenerDatos(cod);
 
         return  aMostrar;
