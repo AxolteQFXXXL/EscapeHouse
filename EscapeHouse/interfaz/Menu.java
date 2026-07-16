@@ -212,9 +212,18 @@ public class Menu {
             switch (opcion) {
                 case 1:
                     // mostrarInfoEquipo
+                    System.out.println("ingrese el nombre del equipo");
+                    String nombreEquipo;
+                    nombreEquipo = scanner.nextLine();
+                    System.out.println(house.mostrarInfoEquipos(nombreEquipo));
                     break;
                 case 2:
                     // posiblesDesafios
+                    System.out.println("ingrese el nombre del equipo");
+                    String unNombre = scanner.nextLine();
+                    System.out.println("ingrese el codigo de habitacion que desea buscar");
+                    short unCodigo = scanner.nextShort();
+                    System.out.println(house.posiblesDesafios(unNombre, unCodigo));
                     break;
                 case 3:
                     // jugarDesafío

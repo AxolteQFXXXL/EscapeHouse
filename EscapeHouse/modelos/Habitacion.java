@@ -1,5 +1,6 @@
 package EscapeHouse.modelos;
 import EscapeHouse.estructuras.AVL;
+import EscapeHouse.estructuras.Lista;
 
 public class Habitacion {
     private int codigo;
@@ -69,5 +70,10 @@ public class Habitacion {
     public String toString(){
         String s = "Nombre: "+this.nombre+"| Planta: "+this.planta+"| Metros a 2: "+this.metros+"| esSalida: "+this.salida+".";
         return s;
+    }
+
+    public Lista mostrarDesafios(){
+        Lista listaDesafios = desafios.listar();
+        return listaDesafios;
     }
 }

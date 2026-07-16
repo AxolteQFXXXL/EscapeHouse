@@ -1,7 +1,5 @@
 package EscapeHouse.sistema;
 import EscapeHouse.modelos.*;
-import EscapeHouse.estructuras.AVL;
-import EscapeHouse.estructuras.Grafo;
 import EscapeHouse.estructuras.*;
 
 import java.util.HashMap;
@@ -82,6 +80,47 @@ public class EscapeHouse {
     public String mostrarDesafio(Short cod1, Short cod2){
         Habitacion hab = (Habitacion) habitaciones.obtenerElemento(cod2);
         return hab.obtenerDatoDesafio(cod1);
+    }
+
+    public String mostrarInfoEquipos(String unNombre){
+        String datos = "no se ha encontrado el equipo";
+
+        //busca el equipo en la tabla
+        Equipo equipoB = equipos.get(unNombre);
+        //si lo encuentra guarda sus datos
+        if(equipoB != null) datos = equipoB.misDatos();
+        return datos;
+    }
+
+    public String posiblesDesafios(String nombreEquipo, short codigoHab){
+        String s;
+        //busco el equipo
+        Equipo unEquipo = equipos.get(nombreEquipo);
+
+       //verifico que sean adyacentes
+        if(casa.existeArco(unEquipo.getHabitacionActual(), codigoHab)){
+            //si existe el arco tengo q buscar q tiene en la etiqueta
+            Lista camino = casa.caminoMasLiviano(unEquipo.getHabitacionActual(), codigoHab);
+            int ultPos = camino.longitud();
+            int puntajeNecesario =  (int) camino.recuperar(ultPos);
+            puntajeNecesario = unEquipo.getPuntajeActual();
+            //busco los desafios de la  habitacion actual
+            Habitacion habActual = (Habitacion) habitaciones.obtenerElemento(unEquipo.getHabitacionActual());
+            Lista desafios = habActual.mostrarDesafios();
+            int pos = desafios.longitud();
+            Lista desafiosPosibles = new Lista();
+            //creo una lista y le inserto los desafios que cumplen la condicion 
+            while(pos > 1 && puntajeNecesario <= (int) desafios.recuperar(pos)){
+                desafiosPosibles.insertar(habActual.obtenerDatoDesafio((short) desafios.recuperar(pos)), 1);
+            }
+            if(!desafiosPosibles.esVacia()){
+                s = "los desafios que bastan por si solos para llegar al puntaje son: " + "\n" + desafiosPosibles.toString();
+            }else s = "No basta con hacer un desafio para llegar al puntaje";
+
+        }else s = "No es posible acceder a la habitacion buscada desde la habitacion actual";
+
+        return s;
+
     }
     //...
 
