@@ -135,12 +135,33 @@ public class Menu {
                     break;
                 case 2:
                     // habitacionesContiguas
+                    System.out.println("De cual habitacion quiere conocer sus adyacentes: ");
+                    int casoHC = scanner.nextInt();
+                    System.out.println(house.habitacionesContiguas(casoHC));
                     break;
                 case 3:
                     // esPosibleLlegar
+                    String resp;
+                    System.out.println("Ingrese el codigo de la primer habitacion: ");
+                    int hab1 = scanner.nextInt();
+                    System.out.println("Ingrese el codigo de la segunda habitacion: ");
+                    int hab2 = scanner.nextInt();
+                    System.out.println("Ingrese la puntuacion: ");
+                    int punt = scanner.nextInt();
+                    if(house.esPosibleLlegar(hab1, hab2, punt)){//¿Quieren que devuelva de esta forma la respuesta o un true/false simplemente?
+                        resp= "Es posible llegar.";
+                    }else{
+                        resp="No es posible llegar con la puntuacion ingresada.";
+                    }
+                    System.out.println(resp);
                     break;
                 case 4:
                     // minimoPuntaje
+                    System.out.println("Ingrese el codigo de la primer habitacion: ");
+                    int cod1 = scanner.nextInt();
+                    System.out.println("Ingrese el codigo de la segunda habitacion: ");
+                    int cod2 = scanner.nextInt();
+                    System.out.println(house.minimoPuntaje(cod1, cod2));
                     break;
                 case 5:
                     // sinPasarPor
