@@ -23,7 +23,7 @@ public class EscapeHouse {
         this.equipos=equipos;
     }
 
-    public String mostrarHabitación(int codigo){
+    public String mostrarHabitacion(int codigo){
         String datos=habitaciones.obtenerDatos(codigo);
         
         if(datos==null){
@@ -33,7 +33,6 @@ public class EscapeHouse {
         return datos;
     }
     
-
     public String habitacionesContiguas(Object codigo){
         String datos=casa.mostrarAdyacentes(codigo);
 
@@ -69,12 +68,6 @@ public class EscapeHouse {
         resultado="Puntaje minimo necesario: "+puntaje+"\n"+"Camino a realizar: "+camino.toString();
 
         return resultado;
-    }
-
-    public String mostrarHabitacion(int cod){
-        String aMostrar = habitaciones.obtenerDatos(cod);
-
-        return  aMostrar;
     }
 
     public String mostrarDesafio(Short cod1, Short cod2){
