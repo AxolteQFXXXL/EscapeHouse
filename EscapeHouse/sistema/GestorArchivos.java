@@ -1,9 +1,9 @@
-package EscapeHouse.sistema;
+package sistema;
 
-import EscapeHouse.estructuras.AVL;
-import EscapeHouse.estructuras.Grafo;
-import EscapeHouse.modelos.Equipo;
-import EscapeHouse.modelos.Habitacion;
+import estructuras.AVL;
+import estructuras.Grafo;
+import modelos.Equipo;
+import modelos.Habitacion;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

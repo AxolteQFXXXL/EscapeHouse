@@ -1,8 +1,8 @@
-package EscapeHouse.interfaz;
+package interfaz;
 import java.util.Scanner;
 
-import EscapeHouse.sistema.EscapeHouse;
-import EscapeHouse.sistema.GestorArchivos;
+import sistema.EscapeHouse;
+import sistema.GestorArchivos;
 
 
 public class Menu {
@@ -165,6 +165,15 @@ public class Menu {
                     break;
                 case 5:
                     // sinPasarPor
+                    System.out.println("Ingrese el codigo de la primer habitacion: ");
+                    int casoSPP1 = scanner.nextInt();
+                    System.out.println("Ingrese el codigo de la segunda habitacion: ");
+                    int casoSPP2 = scanner.nextInt();
+                    System.out.println("Ingrese el codigo de la habitacion por la que no se puede pasar: ");
+                    int casoSPP3 = scanner.nextInt();
+                    System.out.println("Ingrese la puntuacion: ");
+                    int casoSPP4 = scanner.nextInt();
+                    System.out.println(house.sinPasarPor(casoSPP1, casoSPP2, casoSPP3, casoSPP4));
                     break;
                 case 0:
                     System.out.println("Volviendo al menú principal...");

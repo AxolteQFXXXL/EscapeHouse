@@ -1,4 +1,4 @@
-package EscapeHouse.estructuras;
+package estructuras;
 
 /**Autores**
  Ansberck Martin, legajo FAI-4861

@@ -1,4 +1,4 @@
-package EscapeHouse.estructuras;
+package estructuras;
 
 //este grafo es etiquetado pero aun no usamos las etiquetas
 
@@ -471,6 +471,49 @@ public class Grafo {
         }
 
         return datos;
+    }
+
+    public Lista caminosConRestricciones(Object origen, Object destino, Object prohibido, int puntMax){
+        NodoVert vOrigen = ubicarVertice(origen);
+        NodoVert vDestino = ubicarVertice(destino);
+        Lista visitados= new Lista();
+        Lista caminos= new Lista();
+        int[] punt= new int[1];
+        punt[0]=0;
+        
+        if(vOrigen != null && vDestino != null){
+            recorreAux(visitados, vOrigen, vDestino, caminos, prohibido, punt, puntMax);
+        }
+
+        return caminos;
+    }
+
+    private void recorreAux(Lista visitados, NodoVert n, NodoVert dest, Lista caminos, Object pro, int[] punt, int puntMax){
+        
+        if(n!=null){
+            visitados.insertar(n.getElem(), visitados.longitud()+1);
+            if(n!=dest){
+
+                NodoAdy v= n.getPrimerAdy();
+                while(v!=null){
+                    NodoVert u=v.getVertice();
+                    if(visitados.localizar(u.getElem())<0 && u.getElem()!=pro){
+                        punt[0]+=v.getEtiqueta();
+                        recorreAux(visitados, u, dest, caminos, pro, punt, puntMax);
+                        punt[0]-=v.getEtiqueta();
+                    }
+                    
+                    v=v.getSigAdyacente();
+                }
+            }else{
+                if(punt[0]<=puntMax){
+                    caminos.insertar((visitados.toString()), caminos.longitud()+1);
+                }
+                
+            }   
+            
+            visitados.eliminar(visitados.longitud());
+        }
     }
 
 }

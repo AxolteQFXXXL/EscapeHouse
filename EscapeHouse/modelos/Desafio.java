@@ -1,4 +1,4 @@
-package EscapeHouse.modelos;
+package modelos;
 
 public class Desafio {
     private Comparable puntaje;

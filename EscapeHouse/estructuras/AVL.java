@@ -1,6 +1,6 @@
-package EscapeHouse.estructuras;
+package estructuras;
 
-import EscapeHouse.modelos.Habitacion;
+import modelos.Habitacion;
 
 public class AVL {
     public NodoAvl raiz;

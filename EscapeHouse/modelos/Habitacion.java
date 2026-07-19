@@ -1,6 +1,6 @@
-package EscapeHouse.modelos;
-import EscapeHouse.estructuras.AVL;
-import EscapeHouse.estructuras.Lista;
+package modelos;
+import estructuras.AVL;
+import estructuras.Lista;
 
 public class Habitacion {
     private int codigo;

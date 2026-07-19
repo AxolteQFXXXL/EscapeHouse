@@ -1,6 +1,6 @@
-package EscapeHouse.sistema;
-import EscapeHouse.modelos.*;
-import EscapeHouse.estructuras.*;
+package sistema;
+import modelos.*;
+import estructuras.*;
 
 import java.util.HashMap;
 
@@ -68,6 +68,18 @@ public class EscapeHouse {
         resultado="Puntaje minimo necesario: "+puntaje+"\n"+"Camino a realizar: "+camino.toString();
 
         return resultado;
+    }
+
+    public String sinPasarPor(Object origen, Object destino, Object prohibido, int puntMax){
+        String res=null;
+        Lista caminos= casa.caminosConRestricciones(origen, destino, prohibido, puntMax);
+        if(caminos.esVacia()){
+            res="Los datos ingresados son incorrectos.";
+        }else{
+            res="Caminos posibles: "+caminos.toString();
+        }
+
+        return res;
     }
 
     public String mostrarDesafio(Short cod1, Short cod2){
