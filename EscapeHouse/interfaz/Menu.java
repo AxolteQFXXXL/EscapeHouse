@@ -270,9 +270,9 @@ public class Menu {
                     String tt2 = scanner.nextLine();
                     System.out.println("ingrese el codigo de habitacion que desea buscar");
                     short cc2 = scanner.nextShort();
-                    boolean exito = house.pasarAHabitacion(name, unCod);
-                    if(exito) System.out.println("Equipo: "+name+" paso a habitacion:"+ unCod);
-                    else System.out.println("Equipo: "+name+" no puede pasar a habitacion");
+                    boolean exito = house.pasarAHabitacion(tt2, cc2);
+                    if(exito) System.out.println("Equipo: "+tt2+" paso a habitacion:"+ cc2);
+                    else System.out.println("Equipo: "+tt2+" no puede pasar a habitacion");
 
                     break;
                 case 5:
