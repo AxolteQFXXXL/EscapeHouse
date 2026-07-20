@@ -10,14 +10,14 @@ public class EscapeHouse {
 
     private Grafo casa; //plano de la casa mediante un grafo
     private AVL habitaciones;
-    private HashMap<Integer, Equipo> equipos;
+    private HashMap<String, Equipo> equipos;
 
     public EscapeHouse(){
         this.casa= new Grafo();
         this.habitaciones = new AVL();
     }
 
-    public void inicializar(AVL avl, Grafo graf, HashMap<Integer, Equipo> equipos){ //Constructor para el testeo de los metodos
+    public void inicializar(AVL avl, Grafo graf, HashMap<String, Equipo> equipos){ //Constructor para el testeo de los metodos
         this.casa= graf;
         this.habitaciones = avl;
         this.equipos=equipos;
@@ -114,6 +114,79 @@ public class EscapeHouse {
 
         return s;
 
+    }
+
+    /**
+     * segun
+     * @Param: equipo destinado a pasar la habitacion
+     * @Param: habitacion a pasar
+     * @return: true or false
+     *
+     *  se verifica si codigoHab es adyacente desde la HabitacionActual de Equipo
+     *  y tambien si Equipo cuenta con puntajeActual necesario para hacerlo
+     *
+     */
+    public boolean pasarAHabitacion(String nombreEquipo, short codigoHab){
+        boolean exito = false;
+        Equipo eq = equipos.get(nombreEquipo);
+
+        if(casa.existeArco(eq.getHabitacionActual(),codigoHab)){
+            int a =casa.getEtiquetaArco(eq.getHabitacionActual(), codigoHab);
+            System.out.println("la etiqueta: "+a);
+            if(eq.getPuntajeActual()>= a){
+                System.out.println("la etiqueta: "+a);
+                exito = true;
+                eq.setHabitacionActual(codigoHab);
+                eq.sumarPuntActual();
+            }
+        }
+
+        return exito;
+    }
+
+    /**
+     * @Param: equipo que jugara el desafio
+     * @Param: habitacion que posee el desafio
+     * @Param: codigo del desafio (su puntaje)
+     * @return el valor del desafio pasado, o 0 si el desafios no se encuentra en habitacion.
+     *
+     * realizamos las acciones necesarias para que el equipo lo juege
+     * el desafio se guarda en el hash de desafios del equipo y sumamos su puntajeActual
+     *
+     */
+    public int equipoJuega(String nombreEquipo, short codigoHab, short codigoDes){
+        int a = 0;
+        Equipo eq = equipos.get(nombreEquipo);
+        Habitacion hab = (Habitacion) habitaciones.obtenerElemento(codigoHab);
+        Desafio des = hab.getUnDesafio(codigoDes);
+        if(des !=null){
+            a = (int) des.getPuntaje();
+            eq.agregarPuntajeActual(a);
+            eq.agregarDesafio((short)des.getPuntaje(), des);
+        }
+
+        return a;
+    }
+
+    /**  verifica que
+     * @Param un equipo pueda
+    * escapar de una habitacion segun su puntajeTotal
+    * @return true or false, dependiendo tambien si
+    * su habitacion actual es salida o no
+    */
+    public boolean equipoEscapa(String nombreEquipo){
+        boolean exito = false;
+        Equipo eq = equipos.get(nombreEquipo);
+        Habitacion hab = (Habitacion) habitaciones.obtenerElemento(eq.getHabitacionActual());
+
+        if(hab.getSalida()){
+            if(eq.getPuntajeTotal()>=eq.getPuntajeNecesario()){
+                exito = true;
+                equipos.remove(nombreEquipo);
+            }
+        }
+
+        return exito;
     }
     //...
 

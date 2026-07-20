@@ -21,7 +21,7 @@ public class GestorArchivos {
     public void cargarSistema(EscapeHouse house) {
             AVL habitaciones = new AVL();
             AVL desafios = new AVL();
-            HashMap<Integer, Equipo> equipos = new HashMap<Integer, Equipo>(20);
+            HashMap<String, Equipo> equipos = new HashMap<String, Equipo>(20);
             Grafo esquema = new Grafo();
         try (FileReader fr = new FileReader("EscapeHouse/sistema/test.txt");
              BufferedReader br = new BufferedReader(fr)) {
@@ -93,7 +93,7 @@ public class GestorArchivos {
         scheme.insertarVertice(hab.getCodigo());
     }
 
-    private void cargarEquipo(int[] nros, StringTokenizer st, HashMap<Integer, Equipo> equipos){
+    private void cargarEquipo(int[] nros, StringTokenizer st, HashMap<String, Equipo> equipos){
         //aca hacer la carga de los equipos en el Hash
         nros[1]++;
         Object [] cajon = new Object[5];
@@ -112,7 +112,7 @@ public class GestorArchivos {
         cajon[4] = Integer.parseInt((String) cajon[4]);
 
         Equipo eq = new Equipo((String)cajon[0], (int) cajon[1], (int)cajon[2], (int)cajon[3], (int)cajon[4]);
-        equipos.put( nros[1], eq);
+        equipos.put( eq.getNombre(), eq);
     }
 
     private void cargarDesafio(int[] nros, StringTokenizer st, AVL defs, AVL habits){

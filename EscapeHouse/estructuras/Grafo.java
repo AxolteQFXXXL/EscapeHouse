@@ -457,6 +457,27 @@ public class Grafo {
         return grafo;
     }
 
+    public int getEtiquetaArco(int codigohab, int codigoArco){
+        NodoVert node = this.inicio;
+        boolean localizado = false;
+        int objetivo = 0;
+        while(node!=null && !localizado){
+            if(node.getElem().equals(codigohab)){
+            NodoAdy auxAdy = node.getPrimerAdy();
+                while(auxAdy!=null && !localizado){
+                    if(auxAdy.getVertice().getElem().equals(codigoArco)){
+                        localizado = true;
+                        objetivo = auxAdy.getEtiqueta();
+                    }
+                    auxAdy = auxAdy.getSigAdyacente();
+                }
+            }
+            node = node.getSigVertice();
+        }
+
+        return objetivo;
+    }
+
     public String mostrarAdyacentes(Object elem){
         String datos="";
 

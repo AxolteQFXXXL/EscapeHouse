@@ -67,6 +67,10 @@ public class Habitacion {
     return desafios.obtenerDatos(cod);
     }
 
+    public Desafio getUnDesafio(short cod){
+        return (Desafio) desafios.obtenerElemento(cod);
+    }
+
     public String toString(){
         String s = "Nombre: "+this.nombre+"| Planta: "+this.planta+"| Metros a 2: "+this.metros+"| esSalida: "+this.salida+".";
         return s;

@@ -157,7 +157,7 @@ public class AVL {
         Object buscado = null;
         if(no1!=null) buscado = no1.getElem();
 
-        return (buscado==null)? 0 : buscado;
+        return  buscado;
     }
 
     //Recibe un elem, lo busca por el AVL de habitaciones y si lo encuentra devuelve todos sus datos.
