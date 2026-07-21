@@ -65,6 +65,19 @@ public class Equipo {
         this.puntajeActual = puntajeActual;
     }
 
+    public void sumarPuntActual(){
+        this.puntajeTotal += this.puntajeActual;
+        this.puntajeActual = 0;
+    }
+
+    public void agregarPuntajeActual(int puntos){
+        this.puntajeActual+= puntos;
+    }
+
+    public void agregarDesafio(int clave, Desafio unD){
+        resueltos.put(clave,unD);
+    }
+
     public String misDatos(){
         String s = "Nombre: "+this.nombre+"| PuntajoNecesario:"+this.puntajeNecesario+"| PuntajeTotal:"+this.puntajeTotal+"| PuntajeActual:"+this.puntajeActual+"| HabitacionActual:"+this.habitacionActual+".";
         return s;

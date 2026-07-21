@@ -1,8 +1,9 @@
-package interfaz;
-import java.util.Scanner;
+package EscapeHouse.interfaz;
 
-import sistema.EscapeHouse;
-import sistema.GestorArchivos;
+import EscapeHouse.sistema.EscapeHouse;
+import EscapeHouse.sistema.GestorArchivos;
+
+import java.util.Scanner;
 
 
 public class Menu {
@@ -200,9 +201,9 @@ public class Menu {
             switch (opcion) {
                 case 1:
                     System.out.println("Ingrese codigo desafio: ");
-                    Short a = scanner.nextShort();
+                    int a = scanner.nextInt();
                     System.out.println("Y su habitacion correspondiente: ");
-                    Short b = scanner.nextShort();
+                    int b = scanner.nextInt();
 
                     System.out.println(house.mostrarDesafio(a, b));
                     // mostrarDesafío
@@ -257,12 +258,41 @@ public class Menu {
                     break;
                 case 3:
                     // jugarDesafío
+
+                    System.out.println("Ingrese nombre de equipo: ");
+                    String tt1 = scanner.nextLine();
+                    System.out.println("Ingrese codigo habitacion: ");
+                    short hh1 = scanner.nextShort();
+                    System.out.println("Ingrese codigo desafio: ");
+                    short cc1 = scanner.nextShort();
+                    int pp1 = house.equipoJuega(tt1,hh1,cc1);
+
+                    if(pp1>0) System.out.println("Equipo: "+tt1+" ganó:"+ pp1+" puntos.");
+                    else System.out.println("Tal desafio no se encuentra en esa habitacion.");
+
                     break;
                 case 4:
                     // pasarAHabitacion
+
+                    System.out.println("ingrese el nombre del equipo");
+                    String tt2 = scanner.nextLine();
+                    System.out.println("ingrese el codigo de habitacion que desea buscar");
+                    short cc2 = scanner.nextShort();
+                    boolean exito = house.pasarAHabitacion(tt2, cc2);
+                    if(exito) System.out.println("Equipo: "+tt2+" paso a habitacion:"+ cc2);
+                    else System.out.println("Equipo: "+tt2+" no puede pasar a habitacion");
+
                     break;
                 case 5:
                     // puedeSalir
+
+                    System.out.println("Ingrese nombre del equipo: ");
+                    String tt3 = scanner.nextLine();
+                    boolean hanSalido = house.equipoEscapa(tt3);
+
+                    if(hanSalido) System.out.println("ENHORABUENA! El equipo: "+tt3+" HA ESCAPADO!");
+                    else System.out.println("Le queda un largo camino por recorrer...");
+
                     break;
                 case 0:
                     System.out.println("Volviendo al menú principal...");
