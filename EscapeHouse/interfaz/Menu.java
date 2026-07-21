@@ -193,9 +193,9 @@ public class Menu {
             switch (opcion) {
                 case 1:
                     System.out.println("Ingrese codigo desafio: ");
-                    Short a = scanner.nextShort();
+                    int a = scanner.nextInt();
                     System.out.println("Y su habitacion correspondiente: ");
-                    Short b = scanner.nextShort();
+                    int b = scanner.nextInt();
 
                     System.out.println(house.mostrarDesafio(a, b));
                     // mostrarDesafío

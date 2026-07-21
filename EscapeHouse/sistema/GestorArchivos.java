@@ -128,12 +128,12 @@ public class GestorArchivos {
             cajon[i]=token;
             i++;
         }
-        cajon[0]= Short.parseShort((String) cajon[0]);
-        cajon[1]= Short.parseShort((String) cajon[1]);
+        cajon[0]= Integer.parseInt((String) cajon[0]);
+        cajon[1]= Integer.parseInt((String) cajon[1]);
 
-        Desafio des = new Desafio((short) cajon[0], (short) cajon[1],(String) cajon[2],(String) cajon[3]);
-        Habitacion hab = (Habitacion) habits.obtenerElemento((short) cajon[1]);
-        hab.AgregarDesafio((short) des.getPuntaje(), des);
+        Desafio des = new Desafio((int) cajon[0], (int) cajon[1],(String) cajon[2],(String) cajon[3]);
+        Habitacion hab = (Habitacion) habits.obtenerElemento((int) cajon[1]);
+        if(hab != null) hab.AgregarDesafio((int) des.getPuntaje(), des);
     }
 
     private void cargarPuerta(int[] nros, StringTokenizer st, Grafo esquema){

@@ -63,11 +63,11 @@ public class Habitacion {
         this.salida = salida;
     }
 
-    public String obtenerDatoDesafio(Short cod){
+    public String obtenerDatoDesafio(int cod){
     return desafios.obtenerDatos(cod);
     }
 
-    public void AgregarDesafio(short cod, Desafio des){
+    public void AgregarDesafio(int cod, Desafio des){
         this.desafios.insertar(cod, des);
     }
 

@@ -70,9 +70,9 @@ public class EscapeHouse {
         return resultado;
     }
 
-    public String mostrarDesafio(Short cod1, Short cod2){
+    public String mostrarDesafio(int cod1, int cod2){
         Habitacion hab = (Habitacion) habitaciones.obtenerElemento(cod2);
-        return hab.obtenerDatoDesafio(cod1);
+        return hab.obtenerDatoDesafio( cod1);
     }
 
     public String mostrarInfoEquipos(String unNombre){

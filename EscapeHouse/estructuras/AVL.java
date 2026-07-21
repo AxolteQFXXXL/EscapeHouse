@@ -154,10 +154,8 @@ public class AVL {
 
     public Object obtenerElemento(Comparable clave){
         NodoAvl no1 = buscarAux(this.raiz, clave);
-        Object buscado = null;
-        if(no1!=null) buscado = no1.getElem();
 
-        return  buscado;
+        return  (no1==null)? null : no1.getElem();
     }
 
     //Recibe un elem, lo busca por el AVL de habitaciones y si lo encuentra devuelve todos sus datos.
