@@ -1,6 +1,6 @@
-package interfaz;
+package EscapeHouse.interfaz;
 
-import sistema.EscapeHouse;
+import EscapeHouse.sistema.EscapeHouse;
 
 public class Main {
     public static void main(String[] args) {

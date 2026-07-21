@@ -1,4 +1,4 @@
-package modelos;
+package EscapeHouse.modelos;
 
 import java.util.HashMap;
 

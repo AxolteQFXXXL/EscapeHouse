@@ -1,6 +1,6 @@
-package sistema;
-import modelos.*;
-import estructuras.*;
+package EscapeHouse.sistema;
+import EscapeHouse.modelos.*;
+import EscapeHouse.estructuras.*;
 
 import java.util.HashMap;
 

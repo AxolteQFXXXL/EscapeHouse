@@ -1,4 +1,4 @@
-package sistema;
+package EscapeHouse.sistema;
 
 import EscapeHouse.estructuras.AVL;
 import EscapeHouse.estructuras.Grafo;

@@ -1,4 +1,4 @@
-package estructuras;
+package EscapeHouse.estructuras;
 
 public class NodoAdy {
     private int etiqueta;

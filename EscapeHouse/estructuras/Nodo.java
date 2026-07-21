@@ -1,4 +1,4 @@
-package estructuras;
+package EscapeHouse.estructuras;
 
 public class Nodo {
     private Object elem;

@@ -1,4 +1,4 @@
-package estructuras;
+package EscapeHouse.estructuras;
 
 public class NodoVert {
     private Object elem;

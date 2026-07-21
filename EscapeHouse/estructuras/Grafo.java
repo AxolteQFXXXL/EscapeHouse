@@ -1,4 +1,4 @@
-package estructuras;
+package EscapeHouse.estructuras;
 
 //este grafo es etiquetado pero aun no usamos las etiquetas
 
