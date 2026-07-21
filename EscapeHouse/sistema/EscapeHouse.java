@@ -188,6 +188,34 @@ public class EscapeHouse {
 
         return exito;
     }
+
+    public String desafiosDelEquipo(String nombreEquipo){
+        Equipo eq = equipos.get(nombreEquipo);
+        return eq.desafiosResueltos();
+    }
+
+    public boolean verificarDesafioResuelto(String nombreEquipo, int cod1, int cod2){
+        Desafio des = null;
+        Equipo eq = equipos.get(nombreEquipo);
+        Habitacion hab = (Habitacion) habitaciones.obtenerElemento(cod1);
+        if(hab!=null) des = hab.getUnDesafio(cod2);
+
+        return (des!=null) ? eq.resolvioDesafio((Integer) des.getPuntaje()) : null;
+    }
+
+    public String desafiosDeTipo(String tt1, int cod1, int a, int b) {
+        String ss="";
+        Habitacion hab = (Habitacion) habitaciones.obtenerElemento(cod1);
+        Lista lis = hab.mostrarDesafios();
+
+        while(!lis.esVacia()){
+            Desafio des = (Desafio) lis.recuperar(1);
+            if(des.getTipo().equals(tt1) && (des.getPuntaje().compareTo(a)>=0 && des.getPuntaje().compareTo(b)<=0)) ss+= des.toString();
+            lis.eliminar(1);
+        }
+
+        return ss;
+    }
     //...
 
 }

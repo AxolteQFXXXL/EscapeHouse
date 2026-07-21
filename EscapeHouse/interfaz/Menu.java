@@ -178,7 +178,9 @@ public class Menu {
     }
 
     public void menuConsultasDesafios() {
-        int opcion;
+        int opcion, a, b, c;
+        String tt1;
+        boolean bb1;
         do {
             System.out.println("\n--- CONSULTAS SOBRE DESAFÍOS ---");
             System.out.println("1. mostrarDesafío");
@@ -193,21 +195,51 @@ public class Menu {
             switch (opcion) {
                 case 1:
                     System.out.println("Ingrese codigo desafio: ");
-                    int a = scanner.nextInt();
+                    a = scanner.nextInt();
                     System.out.println("Y su habitacion correspondiente: ");
-                    int b = scanner.nextInt();
+                    b = scanner.nextInt();
 
                     System.out.println(house.mostrarDesafio(a, b));
                     // mostrarDesafío
                     break;
                 case 2:
                     // mostrarDesafíosResueltos
+
+                    System.out.println("Ingrese nombre del Equipo: ");
+                    tt1 = scanner.nextLine();
+                    System.out.println(house.desafiosDelEquipo(tt1));
+
                     break;
                 case 3:
                     // verificarDesafíoResuelto
+
+                    System.out.println("Ingrese nombre del Equipo; ");
+                    tt1 = scanner.nextLine();
+                    System.out.println("Ingrese codigo el codigo de la Habitacion: ");
+                    a = scanner.nextInt();
+                    System.out.println("Ingrese codigo del desafio: ");
+                    b = scanner.nextInt();
+
+                    bb1 = house.verificarDesafioResuelto(tt1, a, b);
+
+                    if(bb1) System.out.println("El desafio esta resuelto.");
+                    else if(!bb1) System.out.println("El desafio no esta resuelto.");
+                    else System.out.println("Seguro de lo que ingresaste?...");
+
                     break;
                 case 4:
                     // mostrarDesafíosTipo
+                    System.out.println("Ingrese codigo de la habitacion: ");
+                    a = scanner.nextInt();
+                    System.out.println("Desafio de tipo?: ");
+                    tt1 = scanner.nextLine();
+                    System.out.println("Desde un rango: ");
+                    b = scanner.nextInt();
+                    System.out.println("Hasta: ");
+                    c = scanner.nextInt();
+
+                    System.out.println(house.desafiosDeTipo(tt1, a, b, c));
+
                     break;
                 case 0:
                     System.out.println("Volviendo al menú principal...");

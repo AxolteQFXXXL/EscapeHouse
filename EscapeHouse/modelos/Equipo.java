@@ -82,4 +82,16 @@ public class Equipo {
         String s = "Nombre: "+this.nombre+"| PuntajoNecesario:"+this.puntajeNecesario+"| PuntajeTotal:"+this.puntajeTotal+"| PuntajeActual:"+this.puntajeActual+"| HabitacionActual:"+this.habitacionActual+".";
         return s;
     }
+
+    public String desafiosResueltos(){
+        String ss="";
+        for(Desafio des : resueltos.values()){
+            ss += des.toString()+"\n";
+        }
+        return ss;
+    }
+
+    public boolean resolvioDesafio(int puntaje) {
+        return resueltos.containsKey(puntaje);
+    }
 }

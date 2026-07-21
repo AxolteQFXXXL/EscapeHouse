@@ -71,7 +71,7 @@ public class Habitacion {
         this.desafios.insertar(cod, des);
     }
 
-    public Desafio getUnDesafio(short cod){
+    public Desafio getUnDesafio(int cod){
         return (Desafio) desafios.obtenerElemento(cod);
     }
 
@@ -84,4 +84,5 @@ public class Habitacion {
         Lista listaDesafios = desafios.listar();
         return listaDesafios;
     }
+
 }
