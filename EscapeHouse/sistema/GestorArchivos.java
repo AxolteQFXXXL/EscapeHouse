@@ -2,6 +2,7 @@ package EscapeHouse.sistema;
 
 import EscapeHouse.estructuras.AVL;
 import EscapeHouse.estructuras.Grafo;
+import EscapeHouse.modelos.Desafio;
 import EscapeHouse.modelos.Equipo;
 import EscapeHouse.modelos.Habitacion;
 
@@ -74,7 +75,7 @@ public class GestorArchivos {
         //aca hacer la carga de las habitaciones en el AVL y en el GRAFO como vertices
         nros[0]++;
         Object [] cajon = new Object[5];
-        int i=0;
+        short i=0;
         log("Habitación #" + nros[0] + " cargada");
         while (st.hasMoreTokens()) {
             String token = st.nextToken();
@@ -97,7 +98,7 @@ public class GestorArchivos {
         //aca hacer la carga de los equipos en el Hash
         nros[1]++;
         Object [] cajon = new Object[5];
-        var i = 0;
+        short i = 0;
         log("Equipo #" + nros[1] + " cargada");
         while (st.hasMoreTokens()) {
             String token = st.nextToken();
@@ -118,11 +119,21 @@ public class GestorArchivos {
     private void cargarDesafio(int[] nros, StringTokenizer st, AVL defs, AVL habits){
         //aca hacer la carga de los desafios en el AVL dentro de las habitaciones, tener en cuenta que cada desafio tiene como 3er token del String a la habitacion que corresponde
         nros[2]++;
+        Object [] cajon = new Object[4];
+        short i = 0;
         log("Desafío #" + nros[2] + " cargada");
         while (st.hasMoreTokens()) {
             String token = st.nextToken();
             log("  - Desafío dato: " + token);
+            cajon[i]=token;
+            i++;
         }
+        cajon[0]= Integer.parseInt((String) cajon[0]);
+        cajon[1]= Integer.parseInt((String) cajon[1]);
+
+        Desafio des = new Desafio((short) cajon[0], (int) cajon[1],(String) cajon[2],(String) cajon[3]);
+        Habitacion hab = (Habitacion) habits.obtenerElemento((short) cajon[1]);
+        hab.AgregarDesafio((Short) des.getPuntaje(), des);
     }
 
     private void cargarPuerta(int[] nros, StringTokenizer st, Grafo esquema){
