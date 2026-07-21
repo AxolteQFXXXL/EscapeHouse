@@ -67,6 +67,10 @@ public class Habitacion {
     return desafios.obtenerDatos(cod);
     }
 
+    public void AgregarDesafio(short cod, Desafio des){
+        this.desafios.insertar(cod, des);
+    }
+
     public Desafio getUnDesafio(short cod){
         return (Desafio) desafios.obtenerElemento(cod);
     }
