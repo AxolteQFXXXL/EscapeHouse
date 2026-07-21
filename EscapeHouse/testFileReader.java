@@ -1,4 +1,3 @@
-package EscapeHouse;
 
 import java.io.*;
 import java.util.StringTokenizer;

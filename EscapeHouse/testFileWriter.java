@@ -1,4 +1,3 @@
-package EscapeHouse;
 import java.io.*;
 
 public class testFileWriter {

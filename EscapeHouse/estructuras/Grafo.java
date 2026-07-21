@@ -457,27 +457,6 @@ public class Grafo {
         return grafo;
     }
 
-    public int getEtiquetaArco(int codigohab, int codigoArco){
-        NodoVert node = this.inicio;
-        boolean localizado = false;
-        int objetivo = 0;
-        while(node!=null && !localizado){
-            if(node.getElem().equals(codigohab)){
-            NodoAdy auxAdy = node.getPrimerAdy();
-                while(auxAdy!=null && !localizado){
-                    if(auxAdy.getVertice().getElem().equals(codigoArco)){
-                        localizado = true;
-                        objetivo = auxAdy.getEtiqueta();
-                    }
-                    auxAdy = auxAdy.getSigAdyacente();
-                }
-            }
-            node = node.getSigVertice();
-        }
-
-        return objetivo;
-    }
-
     public String mostrarAdyacentes(Object elem){
         String datos="";
 
@@ -492,6 +471,49 @@ public class Grafo {
         }
 
         return datos;
+    }
+
+    public Lista caminosConRestricciones(Object origen, Object destino, Object prohibido, int puntMax){
+        NodoVert vOrigen = ubicarVertice(origen);
+        NodoVert vDestino = ubicarVertice(destino);
+        Lista visitados= new Lista();
+        Lista caminos= new Lista();
+        int[] punt= new int[1];
+        punt[0]=0;
+        
+        if(vOrigen != null && vDestino != null){
+            recorreAux(visitados, vOrigen, vDestino, caminos, prohibido, punt, puntMax);
+        }
+
+        return caminos;
+    }
+
+    private void recorreAux(Lista visitados, NodoVert n, NodoVert dest, Lista caminos, Object pro, int[] punt, int puntMax){
+        
+        if(n!=null){
+            visitados.insertar(n.getElem(), visitados.longitud()+1);
+            if(n!=dest){
+
+                NodoAdy v= n.getPrimerAdy();
+                while(v!=null){
+                    NodoVert u=v.getVertice();
+                    if(visitados.localizar(u.getElem())<0 && u.getElem()!=pro){
+                        punt[0]+=v.getEtiqueta();
+                        recorreAux(visitados, u, dest, caminos, pro, punt, puntMax);
+                        punt[0]-=v.getEtiqueta();
+                    }
+                    
+                    v=v.getSigAdyacente();
+                }
+            }else{
+                if(punt[0]<=puntMax){
+                    caminos.insertar((visitados.toString()), caminos.longitud()+1);
+                }
+                
+            }   
+            
+            visitados.eliminar(visitados.longitud());
+        }
     }
 
 }

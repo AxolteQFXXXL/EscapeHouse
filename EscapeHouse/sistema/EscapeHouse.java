@@ -70,6 +70,18 @@ public class EscapeHouse {
         return resultado;
     }
 
+    public String sinPasarPor(Object origen, Object destino, Object prohibido, int puntMax){
+        String res=null;
+        Lista caminos= casa.caminosConRestricciones(origen, destino, prohibido, puntMax);
+        if(caminos.esVacia()){
+            res="Los datos ingresados son incorrectos.";
+        }else{
+            res="Caminos posibles: "+caminos.toString();
+        }
+
+        return res;
+    }
+
     public String mostrarDesafio(int cod1, int cod2){
         Habitacion hab = (Habitacion) habitaciones.obtenerElemento(cod2);
         return hab.obtenerDatoDesafio( cod1);
