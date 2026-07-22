@@ -1,6 +1,7 @@
 package EscapeHouse.estructuras;
 
-import EscapeHouse.modelos.Habitacion;
+import EscapeHouse.modelos.*;
+import modelos.Desafio;
 
 public class AVL {
     public NodoAvl raiz;
@@ -195,6 +196,57 @@ public class AVL {
         }
 
         return hab;
+    }
+
+    //Lista una cantidad de elementos que pertenezcan a un rango.
+    public Lista listarRango(Comparable puntMin, Comparable puntMax, String tipo){
+        Lista miLista = new Lista();
+
+        if(this.raiz!=null){
+            NodoAvl aux=buscarEnRango(this.raiz, puntMin, puntMax);
+            if(aux!=null){
+                listarRangoAux(aux, puntMin, puntMax, tipo, miLista);
+            }
+        }
+
+        return miLista;
+    }
+
+    //Busca el primer nodo que está dentro de un rango especifico.
+    private NodoAvl buscarEnRango(NodoAvl n, Comparable min, Comparable max){
+        NodoAvl obj=null;
+
+        if(n!=null){
+            if(n.getClave().compareTo(min)<0){
+                obj=buscarEnRango(n.getDerecho(), min, max);
+            }else if(n.getClave().compareTo(max)>0){
+                obj=buscarEnRango(n.getIzquierdo(), min, max);
+            }else{
+                obj=n;
+            }
+        }
+
+        return obj;
+    }
+
+    private void listarRangoAux(NodoAvl n, Comparable min, Comparable max, String tipo, Lista miLista){
+        
+        if(n.getClave().compareTo(min)>= 0 && n.getClave().compareTo(max)<= 0){
+            
+            if(n.getDerecho()!=null){
+                listarRangoAux(n.getDerecho(), min, max, tipo, miLista);
+            }
+
+            if(((Desafio)n.getElem()).getTipo().equals(tipo)){
+                miLista.insertar(n.getElem(), 1);
+            }
+
+            if(n.getIzquierdo()!=null){
+                listarRangoAux(n.getIzquierdo(), min, max, tipo, miLista);
+            }
+            
+        }
+
     }
 
 }

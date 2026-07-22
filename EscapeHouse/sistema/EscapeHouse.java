@@ -1,5 +1,11 @@
 package EscapeHouse.sistema;
 import EscapeHouse.modelos.*;
+import estructuras.AVL;
+import estructuras.Grafo;
+import estructuras.Lista;
+import modelos.Desafio;
+import modelos.Equipo;
+import modelos.Habitacion;
 import EscapeHouse.estructuras.*;
 
 import java.util.HashMap;
@@ -23,6 +29,7 @@ public class EscapeHouse {
         this.equipos=equipos;
     }
 
+    //Consultas sobre habitaciones
     public String mostrarHabitacion(int codigo){
         String datos=habitaciones.obtenerDatos(codigo);
         
@@ -81,12 +88,20 @@ public class EscapeHouse {
 
         return res;
     }
-
+    
+    //Consultas sobre desafios:
     public String mostrarDesafio(int cod1, int cod2){
         Habitacion hab = (Habitacion) habitaciones.obtenerElemento(cod2);
         return hab.obtenerDatoDesafio( cod1);
     }
 
+    public String mostrarDesafiosTipo(int cod, int puntMin, int puntMax, String tipo){
+        Habitacion hab = (Habitacion) habitaciones.obtenerElemento(cod);
+        String res= hab.mostrarDesafiosTipo((Comparable)puntMin, (Comparable)puntMax, tipo);
+        return res;
+    }
+
+    //Consultas sobre equipos participantes:
     public String mostrarInfoEquipos(String unNombre){
         String datos = "no se ha encontrado el equipo";
 

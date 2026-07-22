@@ -84,4 +84,13 @@ public class Habitacion {
         Lista listaDesafios = desafios.listar();
         return listaDesafios;
     }
+
+    public String mostrarDesafiosTipo(Comparable puntMin, Comparable puntMax, String tipo){
+        Lista rango= desafios.listarRango((Comparable)puntMin, (Comparable)puntMax, tipo);
+        String res=rango.toString();
+        if(rango.esVacia()){
+            res= "Sin desafios en el rango otorgado.";
+        }
+        return res;
+    }
 }
