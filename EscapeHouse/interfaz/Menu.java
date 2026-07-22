@@ -216,16 +216,17 @@ public class Menu {
                     break;
                 case 4:
                     // mostrarDesafíosTipo
-                    System.out.println("Ingrese el codigo de la habitación: ");
-                    int casoMDT1 = scanner.nextInt();
-                    System.out.println("Ingrese el puntaje mínimo: ");
-                    int casoMDT2 = scanner.nextInt();
-                    System.out.println("Ingrese el puntaje máximo: ");
-                    int casoMDT3 = scanner.nextInt();
-                    System.out.println("Ingrese el tipo de desafio: ");
-                    String casoMDT4 = scanner.nextLine()    ;
+                    System.out.println("Ingrese codigo de la habitacion: ");
+                    a = scanner.nextInt();
+                    System.out.println("Desafio de tipo?: ");
+                    tt1 = scanner.nextLine();
+                    System.out.println("Desde un rango: ");
+                    b = scanner.nextInt();
+                    System.out.println("Hasta: ");
+                    c = scanner.nextInt();
 
-                    System.out.println(house.mostrarDesafiosTipo(casoMDT1, casoMDT2, casoMDT3, casoMDT4));
+                    System.out.println(house.desafiosDeTipo(tt1, a, b, c));
+
                     break;
                 case 0:
                     System.out.println("Volviendo al menú principal...");

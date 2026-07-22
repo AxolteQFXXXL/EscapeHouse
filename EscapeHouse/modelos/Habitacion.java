@@ -71,7 +71,7 @@ public class Habitacion {
         this.desafios.insertar(cod, des);
     }
 
-    public Desafio getUnDesafio(short cod){
+    public Desafio getUnDesafio(int cod){
         return (Desafio) desafios.obtenerElemento(cod);
     }
 
@@ -85,12 +85,4 @@ public class Habitacion {
         return listaDesafios;
     }
 
-    public String mostrarDesafiosTipo(Comparable puntMin, Comparable puntMax, String tipo){
-        Lista rango= desafios.listarRango((Comparable)puntMin, (Comparable)puntMax, tipo);
-        String res=rango.toString();
-        if(rango.esVacia()){
-            res= "Sin desafios en el rango otorgado.";
-        }
-        return res;
-    }
 }
