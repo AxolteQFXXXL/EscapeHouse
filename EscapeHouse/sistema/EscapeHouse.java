@@ -3,6 +3,8 @@ import EscapeHouse.modelos.*;
 import EscapeHouse.estructuras.*;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 // aca implementamos cada metodo del menu
 
@@ -227,6 +229,25 @@ public class EscapeHouse {
         }
 
         return ss;
+    }
+
+    public void agregarHabitacion(Habitacion unH) { habitaciones.insertar(unH.getCodigo(), unH);}
+
+    public void eliminarHabitacion(int a) {
+        boolean estaLlena = false;
+        Iterator<Map.Entry<String, Equipo>> eq = equipos.entrySet().iterator();
+        while(!estaLlena && eq.hasNext()){
+            Map.Entry<String, Equipo> val = eq.next();
+            Equipo unEquipo = val.getValue();
+            if(unEquipo.getHabitacionActual() == a) estaLlena = true;
+
+        }
+        if(!estaLlena) habitaciones.eliminar(a);
+    }
+
+    public void cambiarNombreHabit(int c, String st1) {
+        Habitacion hab = (Habitacion) habitaciones.obtenerElemento(c);
+        if(hab != null) hab.setNombre(st1);
     }
     //...
 
