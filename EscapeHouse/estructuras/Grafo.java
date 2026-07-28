@@ -168,6 +168,29 @@ public class Grafo {
         return existe;
     }
 
+    public int getEtiquetaArco(int hab, int ady){
+        NodoVert vertexAux = this.inicio;
+        boolean existe = false;
+        int retornar = -1;
+
+        while(!existe && vertexAux!=null){
+            if(vertexAux.getElem().equals(hab)){
+                NodoAdy adyAux = vertexAux.getPrimerAdy();
+                while(!existe && adyAux!= null){
+                        if(adyAux.getVertice().getElem().equals(ady)){
+                            existe = true;
+                            retornar = adyAux.getEtiqueta();
+                        }
+                        adyAux = adyAux.getSigAdyacente();
+                }
+                existe = true;
+            }
+            vertexAux = vertexAux.getSigVertice();
+        }
+
+        return retornar;
+    }
+
     //grafo no etiquetado
     public boolean existeCamino(Object origen, Object destino) {
         boolean exito = false;

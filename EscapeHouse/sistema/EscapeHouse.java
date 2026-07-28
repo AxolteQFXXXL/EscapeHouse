@@ -217,14 +217,14 @@ public class EscapeHouse {
         return (des!=null) ? eq.resolvioDesafio((Integer) des.getPuntaje()) : null;
     }
 
-    public String desafiosDeTipo(String tt1, int cod1, int a, int b) {
+    public String desafiosDeTipo(String nombreDes, int cod1, int a, int b) {
         String ss="";
         Habitacion hab = (Habitacion) habitaciones.obtenerElemento(cod1);
         Lista lis = hab.mostrarDesafios();
 
         while(!lis.esVacia()){
             Desafio des = (Desafio) lis.recuperar(1);
-            if(des.getTipo().equals(tt1) && (des.getPuntaje().compareTo(a)>=0 && des.getPuntaje().compareTo(b)<=0)) ss+= des.toString();
+            if(des.getTipo().equals(nombreDes) && (des.getPuntaje().compareTo(a)>=0 && des.getPuntaje().compareTo(b)<=0)) ss+= des.toString();
             lis.eliminar(1);
         }
 
@@ -245,9 +245,31 @@ public class EscapeHouse {
         if(!estaLlena) habitaciones.eliminar(a);
     }
 
-    public void cambiarNombreHabit(int c, String st1) {
-        Habitacion hab = (Habitacion) habitaciones.obtenerElemento(c);
-        if(hab != null) hab.setNombre(st1);
+    public void cambiarNombreHabit(int cod, String nuevoNombre) {
+        Habitacion hab = (Habitacion) habitaciones.obtenerElemento(cod);
+        if(hab != null) hab.setNombre(nuevoNombre);
+    }
+
+    public void agregarEquipo(Equipo eq) {
+        equipos.put(eq.getNombre(), eq);
+    }
+
+    public void eliminarEquipo(String nombreEquipo) {
+        equipos.remove(nombreEquipo);
+    }
+
+    public void incrementarPuntajeNecesario(String nombreEquipo, int c) {
+        Equipo eq = equipos.get(nombreEquipo);
+        int sum = eq.getPuntajeNecesario();
+        sum += c;
+        eq.setPuntajeNecesario(sum);
+    }
+
+    public void disminuirPuntajeNecesario(String nombreEquipo, int c) {
+        Equipo eq = equipos.get(nombreEquipo);
+        int sum = eq.getPuntajeNecesario();
+        sum -= c;
+        eq.setPuntajeNecesario(sum);
     }
     //...
 

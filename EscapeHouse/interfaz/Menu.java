@@ -1,5 +1,6 @@
 package EscapeHouse.interfaz;
 
+import EscapeHouse.modelos.Equipo;
 import EscapeHouse.modelos.Habitacion;
 import EscapeHouse.sistema.EscapeHouse;
 import EscapeHouse.sistema.GestorArchivos;
@@ -81,7 +82,7 @@ public class Menu {
             //modificar puntaje de una puerta
             //
             System.out.println("1. Modificacion de Habitaciones");
-            System.out.println("2. ");
+            System.out.println("2. Modificacion de Equipos");
             System.out.println("3. ");
             System.out.println("4. ");
             System.out.println("0. Volver al menú principal");
@@ -91,11 +92,12 @@ public class Menu {
 
             switch (opcion) {// aca añadir cara modificacion
                 case 1:
-                    // mostrarHabitación
-                    menuMondificarHabitaciones();
+                    // modificar habitacion
+                    menuModificarHabitaciones();
                     break;
                 case 2:
-                    // habitacionesContiguas
+                    // modificar Equipos
+                    menuModificarEquipos();
                     break;
                 case 3:
                     // esPosibleLlegar
@@ -115,7 +117,8 @@ public class Menu {
         } while (opcion != 0);
     }
 
-    private void menuMondificarHabitaciones() {
+
+    private void menuModificarHabitaciones() {
         int opcion, a, b, c, d;
         String st1;
         do{
@@ -168,6 +171,72 @@ public class Menu {
 
         }while(opcion!=0);
     }
+
+    private void menuModificarEquipos() {
+        int opcion, a, b, c, d;
+        String st1;
+        do{
+            System.out.println("\n--- MODIFICACION DE HABITACIONES ---");
+            System.out.println("1. crear un nueva equipo");
+            System.out.println("2. eliminar un equipo");
+            System.out.println("3. incrementar puntaje necesario");
+            System.out.println("4. disminuar puntaje necesario");
+            System.out.println("0. Volver al menú principal");
+            System.out.print("Seleccione una opción: ");
+            opcion = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (opcion){
+                case 1:
+                    //crear equipo nuevo
+                    System.out.println("Ingrese un nombre para su equipo: ");
+                    st1 = scanner.nextLine();
+                    System.out.println("Ingrese puntaje necesario para escapar:");
+                    a = scanner.nextInt();
+                    System.out.println("Ingrese su puntaje total, actual y luego en que habitacion comienza: ");
+                    b = scanner.nextInt();
+                    c = scanner.nextInt();
+                    d = scanner.nextInt();
+                    Equipo eq = new Equipo(st1, a, b,d,c);
+
+                    house.agregarEquipo(eq);
+
+                    break;
+                case 2:
+                    // eliminar un equipo
+                    System.out.println("Ingrese el nombre del equipo que desea eliminar: ");
+                    st1 = scanner.nextLine();
+                    house.eliminarEquipo(st1);
+
+                    break;
+                case 3:
+                    // incrementar puntaje necesario
+                    System.out.println("Ingrese el nombre del equipo: ");
+                    st1 = scanner.nextLine();
+                    System.out.println("Cuanto quiere incrementarle(un valor): ");
+                    c = scanner.nextInt();
+
+                    house.incrementarPuntajeNecesario(st1, c);
+                    break;
+                case 4:
+                    //disminuir puntaje necesario
+                    System.out.println("Ingrese el nombre del equipo: ");
+                    st1 = scanner.nextLine();
+                    System.out.println("Cuanto quiere disminuirle(un valor): ");
+                    c = scanner.nextInt();
+
+                    house.disminuirPuntajeNecesario(st1, c);
+                    break;
+                case 0:
+                    System.out.println("Volviendo al menú principal...");
+                    break;
+                default:
+                    System.out.println("Opción no válida");
+            }
+
+        }while(opcion!=0);
+    }
+
 
     public void menuConsultasHabitaciones() {
         int opcion, a, b, c, d;
