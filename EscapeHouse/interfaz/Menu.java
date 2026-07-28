@@ -138,7 +138,7 @@ public class Menu {
                     a = scanner.nextInt();
                     System.out.println("Ingrese nombre de la habitacion:");
                     st1 = scanner.nextLine();
-                    System.out.println("Ingrese en que planta estara y su puntaje necesario: ");
+                    System.out.println("Ingrese en que planta estara y sus metros Cuadrados: ");
                     b = scanner.nextInt();
                     c = scanner.nextInt();
 
