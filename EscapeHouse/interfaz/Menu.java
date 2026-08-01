@@ -1,5 +1,8 @@
 package EscapeHouse.interfaz;
 
+import EscapeHouse.modelos.Desafio;
+import EscapeHouse.modelos.Equipo;
+import EscapeHouse.modelos.Habitacion;
 import EscapeHouse.sistema.EscapeHouse;
 import EscapeHouse.sistema.GestorArchivos;
 
@@ -51,7 +54,7 @@ public class Menu {
     public void mostrarMenu() {
         System.out.println("\n=== SISTEMA DE JUEGO DE HABITACIONES ===");
         System.out.println("1. Cargar sistema");
-        System.out.println("2. ABM");// cambiar por algo que tenga sentido ------------------------------------------------------------------------------------------------------------------------------
+        System.out.println("2. Modificar Sistema");// cambiar por algo que tenga sentido ------------------------------------------------------------------------------------------------------------------------------
         System.out.println("3. Consultas sobre habitaciones");
         System.out.println("4. Consultas sobre desafíos");
         System.out.println("5. Consultas sobre equipos participantes");
@@ -79,10 +82,10 @@ public class Menu {
             //modificar tipo de un desafio
             //modificar puntaje de una puerta
             //
-            System.out.println("1. ");
-            System.out.println("2. ");
-            System.out.println("3. ");
-            System.out.println("4. ");
+            System.out.println("1. Modificacion de Habitaciones");
+            System.out.println("2. Modificacion de Equipos");
+            System.out.println("3. Modificacion de Desafios");
+            System.out.println("4. Modificacion de Puertas");
             System.out.println("0. Volver al menú principal");
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
@@ -90,16 +93,20 @@ public class Menu {
 
             switch (opcion) {// aca añadir cara modificacion
                 case 1:
-                    // mostrarHabitación
+                    // modificar habitacion
+                    menuModificarHabitaciones();
                     break;
                 case 2:
-                    // habitacionesContiguas
+                    // modificar Equipos
+                    menuModificarEquipos();
                     break;
                 case 3:
-                    // esPosibleLlegar
+                    // medificar desasfios
+                    menuModificarDesafios();
                     break;
                 case 4:
-                    // minimoPuntaje
+                    // modificar Puertas
+                    menuModificarPuertas();
                     break;
                 case 5:
                     // sinPasarPor
@@ -113,8 +120,230 @@ public class Menu {
         } while (opcion != 0);
     }
 
+    private void menuModificarPuertas() {
+        int opcion, a, b, c;
+        do{
+            System.out.println("\n--- MODIFICACION DE HABITACIONES ---");
+            System.out.println("1. crear un nueva Puerta");
+            System.out.println("2. eliminar un Desafio");
+            System.out.println("0. Volver al menú principal");
+            System.out.print("Seleccione una opción: ");
+            opcion = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (opcion){
+                case 1:
+                    //crear puerta
+                    System.out.println("Ingrese codigo habitacion origen: ");
+                    a = scanner.nextInt();
+                    System.out.println("Ingrese codigo habitacion destino: ");
+                    b = scanner.nextInt();
+                    System.out.println("Ingrese puntaje necesario para pasar: ");
+                    c = scanner.nextInt();
+
+                    if(house.agregarPuerta(a, b, c)) System.out.println("Se ha agregado correctamente!");
+                    break;
+                case 2:
+                    // eliminar una puerta
+                    System.out.println("Ingrese codigo habitacion origen: ");
+                    a = scanner.nextInt();
+                    System.out.println("Ingrese codigo habitacion destino: ");
+                    b = scanner.nextInt();
+
+                    if(house.eliminarPuerta(a, b)) System.out.println("Se ha eliminado Correctamente!");
+                    break;
+                case 0:
+                    System.out.println("Volviendo al menú principal...");
+                    break;
+                default:
+                    System.out.println("Opción no válida");
+            }
+
+        }while(opcion!=0);
+    }
+
+    private void menuModificarDesafios() {
+        int opcion, a, b, c, d;
+        String st1, st2;
+        do{
+            System.out.println("\n--- MODIFICACION DE HABITACIONES ---");
+            System.out.println("1. crear un nuevo Desafio");
+            System.out.println("2. eliminar un Desafio");
+            System.out.println("3. modificar tipo de un Desafio");
+            System.out.println("0. Volver al menú principal");
+            System.out.print("Seleccione una opción: ");
+            opcion = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (opcion){
+                case 1:
+                    //crear habitacion
+                    System.out.println("Ingrese el puntaje que dara el desafio: ");
+                    a = scanner.nextInt();
+                    System.out.println("Ingrese su habitacion correspondiente: ");
+                    b = scanner.nextInt();
+                    System.out.println("Ingrese el nombre y el tipo de desafio: ");
+                    st1 = scanner.nextLine();
+                    st2 = scanner.nextLine();
+
+                    Desafio des = new Desafio(a, b, st1, st2);
+                    if(house.agregarDesafio(des)) System.out.println("Se ha agregado correctamente!");
+
+                    break;
+                case 2:
+                    // eliminar un desafio
+                    System.out.println("Ingrese el puntaje del desafio: ");
+                    a = scanner.nextInt();
+                    System.out.println("Ingrese el codigo de su habitacion: ");
+                    b = scanner.nextInt();
+
+                    if(house.eliminarDesafio(a, b)) System.out.println("Se ha eliminado Correctamente!");
+
+                    break;
+                case 3:
+                    // modificar tipo desafio
+                    System.out.println("Ingrese el puntaje del desafio: ");
+                    a = scanner.nextInt();
+                    System.out.println("Ingrese el codigo de su habitacion: ");
+                    c = scanner.nextInt();
+                    System.out.println("Ingrese el nueva tipo para el desafio: ");
+                    st2 = scanner.nextLine();
+
+                    house.cambiarTipoDesafio(a, c, st2);
+                    break;
+                case 0:
+                    System.out.println("Volviendo al menú principal...");
+                    break;
+                default:
+                    System.out.println("Opción no válida");
+            }
+
+        }while(opcion!=0);
+    }
+
+
+    private void menuModificarHabitaciones() {
+        int opcion, a, b, c, d;
+        String st1;
+        do{
+            System.out.println("\n--- MODIFICACION DE HABITACIONES ---");
+            System.out.println("1. crear una habitacion");
+            System.out.println("2. eliminar una habitacion");
+            System.out.println("3. modificar nombre de una habitacion");
+            System.out.println("0. Volver al menú principal");
+            System.out.print("Seleccione una opción: ");
+            opcion = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (opcion){
+                case 1:
+                    //crear habitacion
+                    System.out.println("Ingrese un codigo mayor a 24: ");
+                    a = scanner.nextInt();
+                    System.out.println("Ingrese nombre de la habitacion:");
+                    st1 = scanner.nextLine();
+                    System.out.println("Ingrese en que planta estara y sus metros Cuadrados: ");
+                    b = scanner.nextInt();
+                    c = scanner.nextInt();
+
+                    Habitacion unH = new Habitacion(a, st1, b, c, false);
+                    if(house.agregarHabitacion(unH)) System.out.println("Se ha agregado correctamente!");;
+
+                    break;
+                case 2:
+                    // eliminar una habitacion
+                    System.out.println("Ingrese el codigo de la habitacion que desea eliminar: ");
+                    a = scanner.nextInt();
+                    if(house.eliminarHabitacion(a)) System.out.println("Se ha eliminado Correctamente!");
+
+                    break;
+                case 3:
+                    // modificar nombre habitacion
+                    System.out.println("Ingrese el codigo de la habitacion: ");
+                    c = scanner.nextInt();
+                    System.out.println("Que nombre desea colocarle: ");
+                    st1 = scanner.nextLine();
+
+                    house.cambiarNombreHabit(c, st1);
+                    break;
+                case 0:
+                    System.out.println("Volviendo al menú principal...");
+                    break;
+                default:
+                    System.out.println("Opción no válida");
+            }
+
+        }while(opcion!=0);
+    }
+
+    private void menuModificarEquipos() {
+        int opcion, a, b, c, d;
+        String st1;
+        do{
+            System.out.println("\n--- MODIFICACION DE HABITACIONES ---");
+            System.out.println("1. crear un nueva equipo");
+            System.out.println("2. eliminar un equipo");
+            System.out.println("3. incrementar puntaje necesario");
+            System.out.println("4. disminuar puntaje necesario");
+            System.out.println("0. Volver al menú principal");
+            System.out.print("Seleccione una opción: ");
+            opcion = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (opcion){
+                case 1:
+                    //crear equipo nuevo
+                    System.out.println("Ingrese un nombre para su equipo: ");
+                    st1 = scanner.nextLine();
+                    System.out.println("Ingrese puntaje necesario para escapar:");
+                    a = scanner.nextInt();
+                    System.out.println("Ingrese su puntaje total, actual y luego en que habitacion comienza: ");
+                    b = scanner.nextInt();
+                    c = scanner.nextInt();
+                    d = scanner.nextInt();
+                    Equipo eq = new Equipo(st1, a, b,d,c);
+
+                    if(house.agregarEquipo(eq)) System.out.println("Se ha agregado correctamente!");
+
+                    break;
+                case 2:
+                    // eliminar un equipo
+                    System.out.println("Ingrese el nombre del equipo que desea eliminar: ");
+                    st1 = scanner.nextLine();
+                    if(house.eliminarEquipo(st1)) System.out.println("Se ha eliminado correctamente!");;
+
+                    break;
+                case 3:
+                    // incrementar puntaje necesario
+                    System.out.println("Ingrese el nombre del equipo: ");
+                    st1 = scanner.nextLine();
+                    System.out.println("Cuanto quiere incrementarle(un valor): ");
+                    c = scanner.nextInt();
+
+                    house.incrementarPuntajeNecesario(st1, c);
+                    break;
+                case 4:
+                    //disminuir puntaje necesario
+                    System.out.println("Ingrese el nombre del equipo: ");
+                    st1 = scanner.nextLine();
+                    System.out.println("Cuanto quiere disminuirle(un valor): ");
+                    c = scanner.nextInt();
+
+                    house.disminuirPuntajeNecesario(st1, c);
+                    break;
+                case 0:
+                    System.out.println("Volviendo al menú principal...");
+                    break;
+                default:
+                    System.out.println("Opción no válida");
+            }
+
+        }while(opcion!=0);
+    }
+
+
     public void menuConsultasHabitaciones() {
-        int opcion;
+        int opcion, a, b, c, d;
         do {
             System.out.println("\n--- CONSULTAS SOBRE HABITACIONES ---");
             System.out.println("1. mostrarHabitación");
@@ -131,25 +360,25 @@ public class Menu {
                 case 1:
                     // mostrarHabitación
                     System.out.println("Que habitacion desea Conocer: ");
-                    int codigo = scanner.nextInt();
-                    System.out.println(house.mostrarHabitacion(codigo));
+                    a = scanner.nextInt();
+                    System.out.println(house.mostrarHabitacion(a));
                     break;
                 case 2:
                     // habitacionesContiguas
                     System.out.println("De cual habitacion quiere conocer sus adyacentes: ");
-                    int casoHC = scanner.nextInt();
-                    System.out.println(house.habitacionesContiguas(casoHC));
+                    a = scanner.nextInt();
+                    System.out.println(house.habitacionesContiguas(a));
                     break;
                 case 3:
                     // esPosibleLlegar
                     String resp;
                     System.out.println("Ingrese el codigo de la primer habitacion: ");
-                    int hab1 = scanner.nextInt();
+                    a = scanner.nextInt();
                     System.out.println("Ingrese el codigo de la segunda habitacion: ");
-                    int hab2 = scanner.nextInt();
+                    b = scanner.nextInt();
                     System.out.println("Ingrese la puntuacion: ");
-                    int punt = scanner.nextInt();
-                    if(house.esPosibleLlegar(hab1, hab2, punt)){//¿Quieren que devuelva de esta forma la respuesta o un true/false simplemente?
+                    c = scanner.nextInt();
+                    if(house.esPosibleLlegar(a, b, c)){//¿Quieren que devuelva de esta forma la respuesta o un true/false simplemente?
                         resp= "Es posible llegar.";
                     }else{
                         resp="No es posible llegar con la puntuacion ingresada.";
@@ -159,22 +388,22 @@ public class Menu {
                 case 4:
                     // minimoPuntaje
                     System.out.println("Ingrese el codigo de la primer habitacion: ");
-                    int cod1 = scanner.nextInt();
+                    a = scanner.nextInt();
                     System.out.println("Ingrese el codigo de la segunda habitacion: ");
-                    int cod2 = scanner.nextInt();
-                    System.out.println(house.minimoPuntaje(cod1, cod2));
+                    b = scanner.nextInt();
+                    System.out.println(house.minimoPuntaje(a, b));
                     break;
                 case 5:
                     // sinPasarPor
                     System.out.println("Ingrese el codigo de la primer habitacion: ");
-                    int casoSPP1 = scanner.nextInt();
+                    a = scanner.nextInt();
                     System.out.println("Ingrese el codigo de la segunda habitacion: ");
-                    int casoSPP2 = scanner.nextInt();
+                    b = scanner.nextInt();
                     System.out.println("Ingrese el codigo de la habitacion por la que no se puede pasar: ");
-                    int casoSPP3 = scanner.nextInt();
+                    c = scanner.nextInt();
                     System.out.println("Ingrese la puntuacion: ");
-                    int casoSPP4 = scanner.nextInt();
-                    System.out.println(house.sinPasarPor(casoSPP1, casoSPP2, casoSPP3, casoSPP4));
+                    d = scanner.nextInt();
+                    System.out.println(house.sinPasarPor(a, b, c, d));
                     break;
                 case 0:
                     System.out.println("Volviendo al menú principal...");

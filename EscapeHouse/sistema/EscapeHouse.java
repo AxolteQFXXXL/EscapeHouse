@@ -9,6 +9,8 @@ import modelos.Habitacion;
 import EscapeHouse.estructuras.*;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 // aca implementamos cada metodo del menu
 
@@ -230,18 +232,94 @@ public class EscapeHouse {
         return (des!=null) ? eq.resolvioDesafio((Integer) des.getPuntaje()) : null;
     }
 
-    public String desafiosDeTipo(String tt1, int cod1, int a, int b) {
+    public String desafiosDeTipo(String nombreDes, int cod1, int a, int b) {
         String ss="";
         Habitacion hab = (Habitacion) habitaciones.obtenerElemento(cod1);
         Lista lis = hab.mostrarDesafios();
 
         while(!lis.esVacia()){
             Desafio des = (Desafio) lis.recuperar(1);
-            if(des.getTipo().equals(tt1) && (des.getPuntaje().compareTo(a)>=0 && des.getPuntaje().compareTo(b)<=0)) ss+= des.toString();
+            if(des.getTipo().equals(nombreDes) && (des.getPuntaje().compareTo(a)>=0 && des.getPuntaje().compareTo(b)<=0)) ss+= des.toString();
             lis.eliminar(1);
         }
 
         return ss;
+    }
+
+    public boolean agregarHabitacion(Habitacion unH) {
+        return habitaciones.insertar(unH.getCodigo(), unH);}
+
+    public boolean eliminarHabitacion(int a) {
+        boolean estaLlena = false;
+        Iterator<Map.Entry<String, Equipo>> eq = equipos.entrySet().iterator();
+        while(!estaLlena && eq.hasNext()){
+            Map.Entry<String, Equipo> val = eq.next();
+            Equipo unEquipo = val.getValue();
+            if(unEquipo.getHabitacionActual() == a) estaLlena = true;
+
+        }
+        if(!estaLlena) estaLlena = habitaciones.eliminar(a);
+
+        return estaLlena;
+    }
+
+    public void cambiarNombreHabit(int cod, String nuevoNombre) {
+        Habitacion hab = (Habitacion) habitaciones.obtenerElemento(cod);
+        if(hab != null) hab.setNombre(nuevoNombre);
+    }
+
+    public boolean agregarEquipo(Equipo eq) {
+        equipos.put(eq.getNombre(), eq);
+        return true;
+    }
+
+    public boolean eliminarEquipo(String nombreEquipo) {
+        equipos.remove(nombreEquipo);
+        return true;
+    }
+
+    public void incrementarPuntajeNecesario(String nombreEquipo, int c) {
+        Equipo eq = equipos.get(nombreEquipo);
+        int sum = eq.getPuntajeNecesario();
+        sum += c;
+        eq.setPuntajeNecesario(sum);
+    }
+
+    public void disminuirPuntajeNecesario(String nombreEquipo, int c) {
+        Equipo eq = equipos.get(nombreEquipo);
+        int sum = eq.getPuntajeNecesario();
+        sum -= c;
+        eq.setPuntajeNecesario(sum);
+    }
+
+    public boolean agregarDesafio(Desafio des) {
+        boolean bool = false;
+        Habitacion hab = (Habitacion) habitaciones.obtenerElemento(des.getCodigoHabitacion());
+        if(hab !=null) bool = hab.AgregarDesafio((int)des.getPuntaje(), des);
+
+        return bool;
+    }
+
+    public boolean eliminarDesafio(int cod1, int codHab) {
+        boolean bool = false;
+        Habitacion hab = (Habitacion) habitaciones.obtenerElemento(codHab);
+        if(hab!=null) bool = hab.eliminarDesafio(cod1);
+
+        return bool;
+    }
+
+    public void cambiarTipoDesafio(int cod1, int cod2, String nuevoTipo) {
+        Habitacion hab = (Habitacion) habitaciones.obtenerElemento(cod2);
+        if(hab!=null) hab.cambiarTipoDe(cod1, nuevoTipo);
+
+    }
+
+    public boolean agregarPuerta(int origen, int destino, int puntaje) {
+        return casa.insertarArco(origen,destino,puntaje);
+    }
+
+    public boolean eliminarPuerta(int origen, int destino) {
+        return casa.eliminarArco(origen, destino);
     }
     //...
 

@@ -67,8 +67,8 @@ public class Habitacion {
     return desafios.obtenerDatos(cod);
     }
 
-    public void AgregarDesafio(int cod, Desafio des){
-        this.desafios.insertar(cod, des);
+    public boolean AgregarDesafio(int cod, Desafio des){
+        return this.desafios.insertar(cod, des);
     }
 
     public Desafio getUnDesafio(int cod){
@@ -85,4 +85,12 @@ public class Habitacion {
         return listaDesafios;
     }
 
+    public boolean eliminarDesafio(int cod1) {
+        return this.desafios.eliminar(cod1);
+    }
+
+    public void cambiarTipoDe(int cod1, String nuevoTipo) {
+        Desafio des = (Desafio) desafios.obtenerElemento(cod1);
+        des.setTipo(nuevoTipo);
+    }
 }

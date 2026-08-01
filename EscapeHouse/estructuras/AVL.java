@@ -36,6 +36,39 @@ public class AVL {
         return rebalance(root);
     }
 
+    public boolean eliminar(Comparable clave){
+        this.raiz = eliminarAux(this.raiz, clave);
+        return true;
+    }
+
+    private NodoAvl eliminarAux(NodoAvl root, Comparable clave) {
+
+        if(root!=null) {
+            if (clave.compareTo(root.getClave()) == 0) {
+                if (root.getIzquierdo() == null) root = root.getDerecho();
+                else if (root.getDerecho() == null) root = root.getIzquierdo();
+                else {
+                    //aqui encuentra el valor mas pequeno de su hijo derecho
+                    NodoAvl aux = encuentraElMenorValor(root.getDerecho());
+                    root.setElem(aux.getElem()); // se reemplaza por el root que se queria eliminar
+
+                    root.setDerecho(eliminarAux(root.getDerecho(), aux.getClave()));
+                }
+
+            } else if (clave.compareTo(root.getClave()) < 0) root.setIzquierdo(eliminarAux(root.getIzquierdo(), clave));
+
+            else root.setDerecho(eliminarAux(root.getDerecho(), clave));
+
+        }
+
+        return rebalance(root);
+    }
+
+    private NodoAvl encuentraElMenorValor(NodoAvl nodo1){
+        while(nodo1.getIzquierdo()!=null) nodo1 = nodo1.getIzquierdo();
+        return nodo1;
+    }
+
     private NodoAvl rebalance(NodoAvl root){
         actualizarAltura(root);
         int balance=getBalance(root);
