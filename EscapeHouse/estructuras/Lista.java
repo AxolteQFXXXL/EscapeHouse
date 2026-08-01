@@ -1,14 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package EscapeHouse.estructuras;
 
-/**
- *
- * @author matias.miriuka
- */
 public class Lista {
     private Nodo cabecera;
 
@@ -159,14 +151,9 @@ public class Lista {
             }
             s += "]";
 
-            //s += " cabecera: " + this.cabecera.getElem().toString();
         }
         return s;
     }
-    /*Agregar al TDA Lista la operación obtenerMultiplos(int num) que recibe un número y devuelve una lista nueva
-que contiene todos los elementos de las posiciones múltiplos de num, en el mismo orden encontrado,
-haciendo un único recorrido de las estructuras original y copia; y sin usar otras operaciones del TDA.
-Ejemplo: si se invoca con la lista <A,B,C,D,E,F,G,H,I,J> y num=3, el método debe devolver la lista <C,F,I>*/
 
     public Lista obtenerMultiplos(int num){
         int contador = 1;
@@ -200,9 +187,6 @@ Ejemplo: si se invoca con la lista <A,B,C,D,E,F,G,H,I,J> y num=3, el método deb
         return resultado;
     }
 
-    /*b) Agregar al TDA Lista la operación eliminarApariciones(TipoElemento x) que elimine todas las apariciones de
-elementos iguales a x, haciendo un único recorrido de la estructura y sin usar otras operaciones del TDA.
-*/
     public void eliminarApariciones(Object x){
 
         if (this.cabecera != null){

@@ -23,8 +23,6 @@ public class Equipo {
         this.puntajeActual = puntajeActual;
     }
 
-    /* Se le agrega un desafio al HashMap de resueltos cuando el equipo ya lo haya hecho
-    * Ademas, ingresar una clave particular (Tal vez el codigo del desafio)*/
     public void agregarDesafioResuelto(int clave,Desafio unDes){
         resueltos.put(clave, unDes);
     }

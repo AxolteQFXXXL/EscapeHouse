@@ -6,11 +6,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-// aca implementamos cada metodo del menu
-
 public class EscapeHouse {
 
-    private Grafo casa; //plano de la casa mediante un grafo
+    private Grafo casa;
     private AVL habitaciones;
     private HashMap<String, Equipo> equipos;
 
@@ -46,14 +44,14 @@ public class EscapeHouse {
     }
 
     //metodo que calcula la cantidad de puntos minima y la resta con la requerida, devolviendo true or false si llega al destino.
-    public boolean esPosibleLlegar(Object codigo1, Object codigo2, int puntos){
-        boolean esPosible=false;
+    public String esPosibleLlegar(Object codigo1, Object codigo2, int puntos){
+        String esPosible= "No es posible.";
         Lista habitaciones= casa.caminoMasLiviano(codigo1, codigo2);
         if(!habitaciones.esVacia()){
             int aux=(int) habitaciones.recuperar(habitaciones.longitud());
             int calculo=puntos- aux;
             if(aux>=0 && calculo>=0){
-                esPosible=true;
+                esPosible="Es es posible.";
             }
         }
 
@@ -330,6 +328,5 @@ public class EscapeHouse {
         return sEH;
         }
 }
-    //...
 
 

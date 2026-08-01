@@ -1,6 +1,5 @@
 package EscapeHouse.estructuras;
 
-import EscapeHouse.modelos.Habitacion;
 
 public class AVL {
     public NodoAvl raiz;
@@ -194,12 +193,12 @@ public class AVL {
     //Recibe un elem, lo busca por el AVL de habitaciones y si lo encuentra devuelve todos sus datos.
     public String obtenerDatos(Comparable clave){
         String datos=null;
-        NodoAvl habitacion= null;
+        NodoAvl nodo= null;
 
         if(this.raiz!=null){
-            habitacion=buscarAux(this.raiz, clave);
-            if(habitacion!=null){
-                datos=habitacion.getElem().toString();
+            nodo=buscarAux(this.raiz, clave);
+            if(nodo!=null){
+                datos=nodo.getElem().toString();
             }
         }
 
@@ -208,26 +207,26 @@ public class AVL {
     }
 
     private NodoAvl buscarAux(NodoAvl n, Comparable clave){
-        NodoAvl hab= null;
+        NodoAvl res= null;
 
         if(clave.compareTo(n.getClave())== 0){
-            hab=n;
+            res=n;
         }else{
             if(clave.compareTo(n.getClave())<0){
 
                 if(n.getIzquierdo()!= null){
-                    hab= buscarAux(n.getIzquierdo(), clave);
+                    res= buscarAux(n.getIzquierdo(), clave);
                 }
             }else{
 
                 if(n.getDerecho()!= null){
-                    hab= buscarAux(n.getDerecho(), clave);
+                    res= buscarAux(n.getDerecho(), clave);
                 }
             }
 
         }
 
-        return hab;
+        return res;
     }
 
 }
