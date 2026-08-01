@@ -46,19 +46,19 @@ public class EscapeHouse {
     }
 
     //metodo que calcula la cantidad de puntos minima y la resta con la requerida, devolviendo true or false si llega al destino.
-    public String esPosibleLlegar(Object codigo1, Object codigo2, int puntos){
-        String esPosible= "No es posible.";
+    public boolean esPosibleLlegar(Object codigo1, Object codigo2, int puntos){
+        boolean esPosible=false;
         Lista habitaciones= casa.caminoMasLiviano(codigo1, codigo2);
         if(!habitaciones.esVacia()){
             int aux=(int) habitaciones.recuperar(habitaciones.longitud());
             int calculo=puntos- aux;
             if(aux>=0 && calculo>=0){
-                esPosible="Es es posible.";
+                esPosible=true;
             }
         }
 
         return esPosible;
-}
+    }
 
     public String minimoPuntaje(Object codigo1, Object codigo2){
         String resultado="";
@@ -316,9 +316,20 @@ public class EscapeHouse {
     }
     
     public String mostrarSistema (){
-        String sEH, sC, sE, sH, s;
-        
-    }
+        String sEH, sC, sE, sH;
+        sE = "";
+
+        for (Equipo unE : equipos.values()) {
+          sE +=  unE.misDatos() + "\n";
+        }
+
+        sC = casa.toString() + "\n";
+        sH = habitaciones.toString();
+
+        sEH = "La casa: " + "\n" + sC + "\n" + "los equipos: " + "\n" + sE + "\n" + "las habitaciones: " + sH;
+        return sEH;
+        }
+}
     //...
 
-}
+
