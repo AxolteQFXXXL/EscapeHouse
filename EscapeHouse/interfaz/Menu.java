@@ -371,19 +371,13 @@ public class Menu {
                     break;
                 case 3:
                     // esPosibleLlegar
-                    String resp;
                     System.out.println("Ingrese el codigo de la primer habitacion: ");
                     a = scanner.nextInt();
                     System.out.println("Ingrese el codigo de la segunda habitacion: ");
                     b = scanner.nextInt();
                     System.out.println("Ingrese la puntuacion: ");
                     c = scanner.nextInt();
-                    if(house.esPosibleLlegar(a, b, c)){//¿Quieren que devuelva de esta forma la respuesta o un true/false simplemente?
-                        resp= "Es posible llegar.";
-                    }else{
-                        resp="No es posible llegar con la puntuacion ingresada.";
-                    }
-                    System.out.println(resp);
+                    System.out.println(house.esPosibleLlegar(a, b, c));
                     break;
                 case 4:
                     // minimoPuntaje

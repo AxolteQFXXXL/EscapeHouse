@@ -24,7 +24,7 @@ public class GestorArchivos {
             AVL desafios = new AVL();
             HashMap<String, Equipo> equipos = new HashMap<String, Equipo>(20);
             Grafo esquema = new Grafo();
-        try (FileReader fr = new FileReader("C:\\Users\\yazmi\\OneDrive\\Desktop\\Facultad Prog\\trabajos EDAT\\TPO\\EscapeHouse\\EscapeHouse\\sistema\\test.txt");
+        try (FileReader fr = new FileReader("EscapeHouse/sistema/test.txt");
              BufferedReader br = new BufferedReader(fr)) {
             int[] nros = {0, 0, 0, 0};
             String line;
@@ -155,7 +155,7 @@ public class GestorArchivos {
     public void log(String mensaje){
         FileWriter fw = null;
         try {
-            fw = new FileWriter("C:\\Users\\yazmi\\OneDrive\\Desktop\\Facultad Prog\\trabajos EDAT\\TPO\\EscapeHouse\\EscapeHouse\\sistema\\testWrite.txt", true);
+            fw = new FileWriter("src/EscapeHouse/testWrite.txt", true);
             String timestamp = LocalTime.now().format(formatter);
             fw.write(timestamp + " " + mensaje + "\n");
             fw.flush();
@@ -173,7 +173,7 @@ public class GestorArchivos {
     }
 
     public void reiniciarLog(){
-        try (FileWriter fw = new FileWriter("C:\\Users\\yazmi\\OneDrive\\Desktop\\Facultad Prog\\trabajos EDAT\\TPO\\EscapeHouse\\EscapeHouse\\sistema\\testWrite.txt", false)) {
+        try (FileWriter fw = new FileWriter("src/EscapeHouse/testWrite.txt", false)) {
             fw.write("");
             fw.flush();
         } catch (IOException e) {
