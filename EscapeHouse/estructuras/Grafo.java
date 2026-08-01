@@ -191,7 +191,6 @@ public class Grafo {
         return retornar;
     }
 
-    //grafo no etiquetado
     public boolean existeCamino(Object origen, Object destino) {
         boolean exito = false;
         // verifica si ambos vertices existen
@@ -291,13 +290,11 @@ public class Grafo {
             Lista padres=new Lista();
             Lista valorAcum=new Lista();//Lista de las distancias que guarda cada nodo
             Lista pendientes=new Lista();//Lista de nodos candidatos a revisar
-            //Lista yaPisados= new Lista();
 
             //agrego al nodo inicial sin padre y con distancia 0
             nodos.insertar(vOrigen.getElem(),nodos.longitud()+1);
             padres.insertar(null, padres.longitud()+1);
             valorAcum.insertar(0,valorAcum.longitud()+1);
-            //yaPisados.insertar(true, 1);
             pendientes.insertar(vOrigen,pendientes.longitud()+1);
 
             boolean encontrado = false;
@@ -378,13 +375,6 @@ public class Grafo {
         return camino;
     }
 
-    public Lista caminoMasLargo(Object origen, Object destino){//---------------------------------------------------------------------------
-        return null;
-    }
-
-
-
-    //grafo no etiquetado
     public Lista listarEnProfundidad() {
         Lista visitados = new Lista();
         // define un vertice donde comenzar a recorrer
