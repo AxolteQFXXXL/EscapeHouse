@@ -99,10 +99,12 @@ public class EscapeHouse {
         return datos;
     }
 
-    public String posiblesDesafios(String nombreEquipo, short codigoHab){
+    public String posiblesDesafios(String nombreEquipo, int codigoHab){
         String s;
         //busco el equipo
-        Equipo unEquipo = equipos.get(nombreEquipo);
+        if(equipos.containsKey(nombreEquipo)) {
+            Equipo unEquipo = equipos.get(nombreEquipo);
+        
 
        //verifico que sean adyacentes
         if(casa.existeArco(unEquipo.getHabitacionActual(), codigoHab)){
@@ -114,18 +116,23 @@ public class EscapeHouse {
             //busco los desafios de la  habitacion actual
             Habitacion habActual = (Habitacion) habitaciones.obtenerElemento(unEquipo.getHabitacionActual());
             Lista desafios = habActual.mostrarDesafios();
-            int pos = desafios.longitud();
             Lista desafiosPosibles = new Lista();
+            Desafio unDes;
+            int puntajeActual = unEquipo.getPuntajeActual();
+            int puntajeTotal;
             //creo una lista y le inserto los desafios que cumplen la condicion 
-            while(pos > 1 && puntajeNecesario <= (int) desafios.recuperar(pos)){
-                desafiosPosibles.insertar(habActual.obtenerDatoDesafio((short) desafios.recuperar(pos)), 1);
+            while(!desafios.esVacia()){
+                unDes = (Desafio) desafios.recuperar(1);
+                puntajeTotal = (int) unDes.getPuntaje() + puntajeActual;
+                if((puntajeTotal >= puntajeNecesario)) desafiosPosibles.insertar(unDes, 1);
+                desafios.eliminar(1);
             }
             if(!desafiosPosibles.esVacia()){
                 s = "los desafios que bastan por si solos para llegar al puntaje son: " + "\n" + desafiosPosibles.toString();
             }else s = "No basta con hacer un desafio para llegar al puntaje";
 
         }else s = "No es posible acceder a la habitacion buscada desde la habitacion actual";
-
+    }else s = "No existe el equipo";
         return s;
 
     }
@@ -140,7 +147,7 @@ public class EscapeHouse {
      *  y tambien si Equipo cuenta con puntajeActual necesario para hacerlo
      *
      */
-    public boolean pasarAHabitacion(String nombreEquipo, short codigoHab){
+    public boolean pasarAHabitacion(String nombreEquipo, int codigoHab){
         boolean exito = false;
         Equipo eq = equipos.get(nombreEquipo);
 
@@ -168,7 +175,7 @@ public class EscapeHouse {
      * el desafio se guarda en el hash de desafios del equipo y sumamos su puntajeActual
      *
      */
-    public int equipoJuega(String nombreEquipo, short codigoHab, short codigoDes){
+    public int equipoJuega(String nombreEquipo, int codigoHab, int codigoDes){
         int a = 0;
         Equipo eq = equipos.get(nombreEquipo);
         Habitacion hab = (Habitacion) habitaciones.obtenerElemento(codigoHab);
@@ -176,7 +183,7 @@ public class EscapeHouse {
         if(des !=null){
             a = (int) des.getPuntaje();
             eq.agregarPuntajeActual(a);
-            eq.agregarDesafio((short)des.getPuntaje(), des);
+            eq.agregarDesafio((int)des.getPuntaje(), des);
         }
 
         return a;
@@ -197,6 +204,7 @@ public class EscapeHouse {
             if(eq.getPuntajeTotal()>=eq.getPuntajeNecesario()){
                 exito = true;
                 equipos.remove(nombreEquipo);
+                
             }
         }
 
@@ -305,6 +313,11 @@ public class EscapeHouse {
 
     public boolean eliminarPuerta(int origen, int destino) {
         return casa.eliminarArco(origen, destino);
+    }
+    
+    public String mostrarSistema (){
+        String sEH, sC, sE, sH, s;
+        
     }
     //...
 

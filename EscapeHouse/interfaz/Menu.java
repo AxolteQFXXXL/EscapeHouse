@@ -488,7 +488,8 @@ public class Menu {
     }
 
     public void menuConsultasEquipos() {
-        int opcion;
+        int opcion, a, b, c;
+        String tt1;
         do {
             System.out.println("\n--- CONSULTAS SOBRE EQUIPOS ---");
             System.out.println("1. mostrarInfoEquipo");
@@ -501,34 +502,33 @@ public class Menu {
             opcion = scanner.nextInt();
             scanner.nextLine();
 
-            switch (opcion) {
+            switch (opcion){
                 case 1:
                     // mostrarInfoEquipo
                     System.out.println("ingrese el nombre del equipo");
-                    String nombreEquipo;
-                    nombreEquipo = scanner.nextLine();
-                    System.out.println(house.mostrarInfoEquipos(nombreEquipo));
+                    tt1 = scanner.nextLine();
+                    System.out.println(house.mostrarInfoEquipos(tt1));
                     break;
                 case 2:
                     // posiblesDesafios
                     System.out.println("ingrese el nombre del equipo");
-                    String unNombre = scanner.nextLine();
+                    tt1 = scanner.nextLine();
                     System.out.println("ingrese el codigo de habitacion que desea buscar");
-                    short unCodigo = scanner.nextShort();
-                    System.out.println(house.posiblesDesafios(unNombre, unCodigo));
+                    a = scanner.nextInt();
+                    System.out.println(house.posiblesDesafios(tt1, a));
                     break;
                 case 3:
                     // jugarDesafío
 
                     System.out.println("Ingrese nombre de equipo: ");
-                    String tt1 = scanner.nextLine();
+                     tt1 = scanner.nextLine();
                     System.out.println("Ingrese codigo habitacion: ");
-                    short hh1 = scanner.nextShort();
+                      a = scanner.nextInt();
                     System.out.println("Ingrese codigo desafio: ");
-                    short cc1 = scanner.nextShort();
-                    int pp1 = house.equipoJuega(tt1,hh1,cc1);
+                      b = scanner.nextInt();
+                    c = house.equipoJuega(tt1,a,b);
 
-                    if(pp1>0) System.out.println("Equipo: "+tt1+" ganó:"+ pp1+" puntos.");
+                    if(c>0) System.out.println("Equipo: "+tt1+" ganó:"+ c +" puntos.");
                     else System.out.println("Tal desafio no se encuentra en esa habitacion.");
 
                     break;
@@ -536,12 +536,12 @@ public class Menu {
                     // pasarAHabitacion
 
                     System.out.println("ingrese el nombre del equipo");
-                    String tt2 = scanner.nextLine();
+                    tt1 = scanner.nextLine();
                     System.out.println("ingrese el codigo de habitacion que desea buscar");
-                    short cc2 = scanner.nextShort();
-                    boolean exito = house.pasarAHabitacion(tt2, cc2);
-                    if(exito) System.out.println("Equipo: "+tt2+" paso a habitacion:"+ cc2);
-                    else System.out.println("Equipo: "+tt2+" no puede pasar a habitacion");
+                     a = scanner.nextShort();
+                    boolean exito = house.pasarAHabitacion(tt1, a);
+                    if(exito) System.out.println("Equipo: "+tt1+" paso a habitacion:"+ a);
+                    else System.out.println("Equipo: "+tt1+" no puede pasar a habitacion");
 
                     break;
                 case 5:
@@ -557,6 +557,7 @@ public class Menu {
                     break;
                 case 0:
                     System.out.println("Volviendo al menú principal...");
+                    
                     break;
                 default:
                     System.out.println("Opción no válida");
@@ -567,6 +568,8 @@ public class Menu {
     public void mostrarSistema() {
         System.out.println("\n=== MOSTRANDO TODAS LAS ESTRUCTURAS DEL SISTEMA ===");
         // Implementación de mostrarSistema
+        
+
     }
 }
 

@@ -1,3 +1,4 @@
+package EscapeHouse;
 import java.io.IOException;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;

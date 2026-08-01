@@ -7,5 +7,6 @@ public class Main {
         EscapeHouse miEscapeHouse = new EscapeHouse();
         Menu menu = new Menu();
         menu.mostrarMenuPrincipal(miEscapeHouse);
+        
     }
 }
