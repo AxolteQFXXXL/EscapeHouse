@@ -149,21 +149,21 @@ public class Grafo {
     }
 
     public boolean existeArco(Object origen, Object destino){
-        NodoVert verticeAux = this.inicio;
+        NodoVert verticeAux = ubicarVertice(origen);
         boolean existe = false;
 
-        while (!existe && verticeAux != null){
-            if (verticeAux.getElem().equals(origen)){
-                NodoAdy adyAux = verticeAux.getPrimerAdy();
-                while (!existe && adyAux != null){
-                    if (adyAux.getVertice().getElem().equals(destino)){
-                        existe = true;
-                    }
-                    adyAux = adyAux.getSigAdyacente();
+        
+        if (verticeAux!=null){
+            NodoAdy adyAux = verticeAux.getPrimerAdy();
+            while (!existe && adyAux != null){
+                if (adyAux.getVertice().getElem().equals(destino)){
+                    existe = true;
                 }
+                adyAux = adyAux.getSigAdyacente();
             }
-            verticeAux = verticeAux.getSigVertice();
-        }
+        }    
+            
+        
 
         return existe;
     }

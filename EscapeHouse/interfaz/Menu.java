@@ -425,13 +425,14 @@ public class Menu {
 
             switch (opcion) {
                 case 1:
+                    // mostrarDesafío
                     System.out.println("Ingrese codigo desafio: ");
                     a = scanner.nextInt();
                     System.out.println("Y su habitacion correspondiente: ");
                     b = scanner.nextInt();
 
                     System.out.println(house.mostrarDesafio(a, b));
-                    // mostrarDesafío
+                    
                     break;
                 case 2:
                     // mostrarDesafíosResueltos

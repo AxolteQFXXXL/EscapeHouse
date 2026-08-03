@@ -100,17 +100,16 @@ public class EscapeHouse {
     public String posiblesDesafios(String nombreEquipo, int codigoHab){
         String s;
         //busco el equipo
-        if(equipos.containsKey(nombreEquipo)) {
-            Equipo unEquipo = equipos.get(nombreEquipo);
-        
-
+        Equipo unEquipo = equipos.get(nombreEquipo);
+        if(unEquipo!=null) {
+            
        //verifico que sean adyacentes
         if(casa.existeArco(unEquipo.getHabitacionActual(), codigoHab)){
             //si existe el arco tengo q buscar q tiene en la etiqueta
             Lista camino = casa.caminoMasLiviano(unEquipo.getHabitacionActual(), codigoHab);
             int ultPos = camino.longitud();
             int puntajeNecesario =  (int) camino.recuperar(ultPos);
-            puntajeNecesario = unEquipo.getPuntajeActual();
+            
             //busco los desafios de la  habitacion actual
             Habitacion habActual = (Habitacion) habitaciones.obtenerElemento(unEquipo.getHabitacionActual());
             Lista desafios = habActual.mostrarDesafios();
@@ -151,9 +150,8 @@ public class EscapeHouse {
         if(eq != null) {
             if (casa.existeArco(eq.getHabitacionActual(), codigoHab)) {
                 int a = casa.getEtiquetaArco(eq.getHabitacionActual(), codigoHab);
-                System.out.println("la etiqueta: " + a);
+                
                 if (eq.getPuntajeActual() >= a) {
-                    System.out.println("la etiqueta: " + a);
                     exito = true;
                     eq.setHabitacionActual(codigoHab);
                     eq.sumarPuntActual();
