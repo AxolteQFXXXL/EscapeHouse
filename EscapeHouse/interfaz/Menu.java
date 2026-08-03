@@ -460,10 +460,10 @@ public class Menu {
                     break;
                 case 4:
                     // mostrarDesafíosTipo
-                    System.out.println("Ingrese codigo de la habitacion: ");
-                    a = scanner.nextInt();
                     System.out.println("Desafio de tipo?: ");
                     tt1 = scanner.nextLine();
+                    System.out.println("Ingrese codigo de la habitacion: ");
+                    a = scanner.nextInt();
                     System.out.println("Desde un rango: ");
                     b = scanner.nextInt();
                     System.out.println("Hasta: ");
@@ -551,7 +551,7 @@ public class Menu {
                     break;
                 case 0:
                     System.out.println("Volviendo al menú principal...");
-                    
+
                     break;
                 default:
                     System.out.println("Opción no válida");
@@ -562,7 +562,7 @@ public class Menu {
     public void mostrarSistema() {
         System.out.println("\n=== MOSTRANDO TODAS LAS ESTRUCTURAS DEL SISTEMA ===");
         // Implementación de mostrarSistema
-        
+        System.out.println(house.mostrarSistema());
 
     }
 }

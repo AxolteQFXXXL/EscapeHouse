@@ -148,15 +148,16 @@ public class EscapeHouse {
     public boolean pasarAHabitacion(String nombreEquipo, int codigoHab){
         boolean exito = false;
         Equipo eq = equipos.get(nombreEquipo);
-
-        if(casa.existeArco(eq.getHabitacionActual(),codigoHab)){
-            int a =casa.getEtiquetaArco(eq.getHabitacionActual(), codigoHab);
-            System.out.println("la etiqueta: "+a);
-            if(eq.getPuntajeActual()>= a){
-                System.out.println("la etiqueta: "+a);
-                exito = true;
-                eq.setHabitacionActual(codigoHab);
-                eq.sumarPuntActual();
+        if(eq != null) {
+            if (casa.existeArco(eq.getHabitacionActual(), codigoHab)) {
+                int a = casa.getEtiquetaArco(eq.getHabitacionActual(), codigoHab);
+                System.out.println("la etiqueta: " + a);
+                if (eq.getPuntajeActual() >= a) {
+                    System.out.println("la etiqueta: " + a);
+                    exito = true;
+                    eq.setHabitacionActual(codigoHab);
+                    eq.sumarPuntActual();
+                }
             }
         }
 

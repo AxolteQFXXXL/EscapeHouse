@@ -132,7 +132,7 @@ public class AVL {
     String toStringAux(NodoAvl root, String sa){
 
         if(root!=null){
-            sa = "Clave:"+root.getClave()+": HI:";
+            sa = "Nodo:"+root.getClave()+": HI:";
 
             if(root.getIzquierdo()!=null) sa+= root.getIzquierdo().getElem()+" ";
             else sa+="- ";

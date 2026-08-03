@@ -1,534 +1,646 @@
-19:44:03 === INICIO DE CARGA DEL SISTEMA ===
-19:44:03 Habitación #1 cargada
-19:44:03   - Habitación dato: 7
-19:44:03   - Habitación dato: Comedor
-19:44:03   - Habitación dato: 0
-19:44:03   - Habitación dato: 20
-19:44:03   - Habitación dato: false
-19:44:03 Habitación #2 cargada
-19:44:03   - Habitación dato: 22
-19:44:03   - Habitación dato: SalaDeJuegos
-19:44:03   - Habitación dato: 1
-19:44:03   - Habitación dato: 30
-19:44:03   - Habitación dato: false
-19:44:03 Habitación #3 cargada
-19:44:03   - Habitación dato: 15
-19:44:03   - Habitación dato: Invernadero
-19:44:03   - Habitación dato: 1
-19:44:03   - Habitación dato: 35
-19:44:03   - Habitación dato: false
-19:44:03 Habitación #4 cargada
-19:44:03   - Habitación dato: 3
-19:44:03   - Habitación dato: Biblioteca
-19:44:03   - Habitación dato: 0
-19:44:03   - Habitación dato: 25
-19:44:03   - Habitación dato: false
-19:44:03 Habitación #5 cargada
-19:44:03   - Habitación dato: 1
-19:44:03   - Habitación dato: Altillo
-19:44:03   - Habitación dato: 2
-19:44:03   - Habitación dato: 15
-19:44:03   - Habitación dato: false
-19:44:03 Habitación #6 cargada
-19:44:03   - Habitación dato: 19
-19:44:03   - Habitación dato: Quincho
-19:44:03   - Habitación dato: 1
-19:44:03   - Habitación dato: 25
-19:44:03   - Habitación dato: false
-19:44:03 Habitación #7 cargada
-19:44:03   - Habitación dato: 12
-19:44:03   - Habitación dato: Escalera
-19:44:03   - Habitación dato: 0
-19:44:03   - Habitación dato: 12
-19:44:03   - Habitación dato: false
-19:44:03 Habitación #8 cargada
-19:44:03   - Habitación dato: 8
-19:44:03   - Habitación dato: DepÃ³sito
-19:44:03   - Habitación dato: -1
-19:44:03   - Habitación dato: 40
-19:44:03   - Habitación dato: false
-19:44:03 Habitación #9 cargada
-19:44:03   - Habitación dato: 5
-19:44:03   - Habitación dato: Cochera
-19:44:03   - Habitación dato: 0
-19:44:03   - Habitación dato: 30
-19:44:03   - Habitación dato: false
-19:44:03 Habitación #10 cargada
-19:44:03   - Habitación dato: 24
-19:44:03   - Habitación dato: SÃ³tano
-19:44:03   - Habitación dato: -1
-19:44:03   - Habitación dato: 45
-19:44:03   - Habitación dato: false
-19:44:03 Habitación #11 cargada
-19:44:03   - Habitación dato: 14
-19:44:03   - Habitación dato: Gimnasio
-19:44:03   - Habitación dato: 1
-19:44:03   - Habitación dato: 20
-19:44:03   - Habitación dato: false
-19:44:03 Habitación #12 cargada
-19:44:03   - Habitación dato: 10
-19:44:03   - Habitación dato: DormitorioPrincipal
-19:44:03   - Habitación dato: 1
-19:44:03   - Habitación dato: 28
-19:44:03   - Habitación dato: false
-19:44:03 Habitación #13 cargada
-19:44:03   - Habitación dato: 20
-19:44:03   - Habitación dato: Recibidor
-19:44:03   - Habitación dato: 0
-19:44:03   - Habitación dato: 18
-19:44:03   - Habitación dato: true
-19:44:03 Habitación #14 cargada
-19:44:03   - Habitación dato: 6
-19:44:03   - Habitación dato: Lavadero
-19:44:03   - Habitación dato: 0
-19:44:03   - Habitación dato: 12
-19:44:03   - Habitación dato: false
-19:44:03 Habitación #15 cargada
-19:44:03   - Habitación dato: 18
-19:44:03   - Habitación dato: Pasillo
-19:44:03   - Habitación dato: 0
-19:44:03   - Habitación dato: 15
-19:44:03   - Habitación dato: false
-19:44:03 Habitación #16 cargada
-19:44:03   - Habitación dato: 2
-19:44:03   - Habitación dato: Cocina
-19:44:03   - Habitación dato: 0
-19:44:03   - Habitación dato: 22
-19:44:03   - Habitación dato: true
-19:44:03 Habitación #17 cargada
-19:44:03   - Habitación dato: 21
-19:44:03   - Habitación dato: SalaDeEstar
-19:44:03   - Habitación dato: 0
-19:44:03   - Habitación dato: 30
-19:44:03   - Habitación dato: true
-19:44:03 Habitación #18 cargada
-19:44:03   - Habitación dato: 9
-19:44:03   - Habitación dato: Despensa
-19:44:03   - Habitación dato: -1
-19:44:03   - Habitación dato: 15
-19:44:03   - Habitación dato: false
-19:44:03 Habitación #19 cargada
-19:44:03   - Habitación dato: 13
-19:44:03   - Habitación dato: Escritorio
-19:44:03   - Habitación dato: 0
-19:44:03   - Habitación dato: 18
-19:44:03   - Habitación dato: false
-19:44:03 Habitación #20 cargada
-19:44:03   - Habitación dato: 23
-19:44:03   - Habitación dato: Terraza
-19:44:03   - Habitación dato: 2
-19:44:03   - Habitación dato: 20
-19:44:03   - Habitación dato: true
-19:44:03 Habitación #21 cargada
-19:44:03   - Habitación dato: 4
-19:44:03   - Habitación dato: Bodega
-19:44:03   - Habitación dato: -1
-19:44:03   - Habitación dato: 35
-19:44:03   - Habitación dato: false
-19:44:03 Habitación #22 cargada
-19:44:03   - Habitación dato: 11
-19:44:03   - Habitación dato: DormitorioHuÃ©spedes
-19:44:03   - Habitación dato: 1
-19:44:03   - Habitación dato: 22
-19:44:03   - Habitación dato: false
-19:44:03 Habitación #23 cargada
-19:44:03   - Habitación dato: 16
-19:44:03   - Habitación dato: BaÃ±o
-19:44:03   - Habitación dato: 1
-19:44:03   - Habitación dato: 10
-19:44:03   - Habitación dato: false
-19:44:03 Habitación #24 cargada
-19:44:03   - Habitación dato: 17
-19:44:03   - Habitación dato: Vestidor
-19:44:03   - Habitación dato: 1
-19:44:03   - Habitación dato: 15
-19:44:03   - Habitación dato: false
-19:44:03 Equipo #1 cargada
-19:44:03   - Equipo dato: Audaces
-19:44:03   - Equipo dato: 390
-19:44:03   - Equipo dato: 110
-19:44:03   - Equipo dato: 18
-19:44:03   - Equipo dato: 5
-19:44:03 Equipo #2 cargada
-19:44:03   - Equipo dato: Resolutivos
-19:44:03   - Equipo dato: 360
-19:44:03   - Equipo dato: 70
-19:44:03   - Equipo dato: 8
-19:44:03   - Equipo dato: 10
-19:44:03 Equipo #3 cargada
-19:44:03   - Equipo dato: Exploradores
-19:44:03   - Equipo dato: 350
-19:44:03   - Equipo dato: 80
-19:44:03   - Equipo dato: 7
-19:44:03   - Equipo dato: 15
-19:44:03 Equipo #4 cargada
-19:44:03   - Equipo dato: LosLocosAdams
-19:44:03   - Equipo dato: 400
-19:44:03   - Equipo dato: 50
-19:44:03   - Equipo dato: 2
-19:44:03   - Equipo dato: 10
-19:44:03 Equipo #5 cargada
-19:44:03   - Equipo dato: Estrategas
-19:44:03   - Equipo dato: 420
-19:44:03   - Equipo dato: 150
-19:44:03   - Equipo dato: 3
-19:44:03   - Equipo dato: 20
-19:44:03 Equipo #6 cargada
-19:44:03   - Equipo dato: Creativos
-19:44:03   - Equipo dato: 430
-19:44:03   - Equipo dato: 180
-19:44:03   - Equipo dato: 12
-19:44:03   - Equipo dato: 30
-19:44:03 Equipo #7 cargada
-19:44:03   - Equipo dato: Sabios
-19:44:03   - Equipo dato: 410
-19:44:03   - Equipo dato: 160
-19:44:03   - Equipo dato: 21
-19:44:03   - Equipo dato: 15
-19:44:03 Equipo #8 cargada
-19:44:03   - Equipo dato: Aventureros
-19:44:03   - Equipo dato: 380
-19:44:03   - Equipo dato: 95
-19:44:03   - Equipo dato: 15
-19:44:03   - Equipo dato: 5
-19:44:03 Equipo #9 cargada
-19:44:03   - Equipo dato: Genios
-19:44:03   - Equipo dato: 450
-19:44:03   - Equipo dato: 200
-19:44:03   - Equipo dato: 10
-19:44:03   - Equipo dato: 25
-19:44:03 Equipo #10 cargada
-19:44:03   - Equipo dato: LosValientes
-19:44:03   - Equipo dato: 400
-19:44:03   - Equipo dato: 130
-19:44:03   - Equipo dato: 4
-19:44:03   - Equipo dato: 0
-19:44:03 Desafío #1 cargada
-19:44:03   - Desafío dato: 35
-19:44:03   - Desafío dato: 5
-19:44:03   - Desafío dato: LaberintoDeHerramientas
-19:44:03   - Desafío dato: Destreza
-19:44:03 Desafío #2 cargada
-19:44:03   - Desafío dato: 80
-19:44:03   - Desafío dato: 22
-19:44:03   - Desafío dato: RazonarElTurno
-19:44:03   - Desafío dato: Ingenio
-19:44:03 Desafío #3 cargada
-19:44:03   - Desafío dato: 30
-19:44:03   - Desafío dato: 21
-19:44:03   - Desafío dato: AcertijoDelHogar
-19:44:03   - Desafío dato: LÃ³gico
-19:44:03 Desafío #4 cargada
-19:44:03   - Desafío dato: 65
-19:44:03   - Desafío dato: 22
-19:44:03   - Desafío dato: TrabadoLÃºdico
-19:44:03   - Desafío dato: Ingenio
-19:44:03 Desafío #5 cargada
-19:44:03   - Desafío dato: 95
-19:44:03   - Desafío dato: 18
-19:44:03   - Desafío dato: InterpretarSombras
-19:44:03   - Desafío dato: Ingenio
-19:44:03 Desafío #6 cargada
-19:44:03   - Desafío dato: 70
-19:44:03   - Desafío dato: 6
-19:44:03   - Desafío dato: CalcularDetergente
-19:44:03   - Desafío dato: MatemÃ¡tico
-19:44:03 Desafío #7 cargada
-19:44:03   - Desafío dato: 10
-19:44:03   - Desafío dato: 24
-19:44:03   - Desafío dato: SÃ³tanoOculto
-19:44:03   - Desafío dato: Busqueda
-19:44:03 Desafío #8 cargada
-19:44:03   - Desafío dato: 55
-19:44:03   - Desafío dato: 3
-19:44:03   - Desafío dato: CÃ¡lculoSilencioso
-19:44:03   - Desafío dato: MatemÃ¡tico
-19:44:03 Desafío #9 cargada
-19:44:03   - Desafío dato: 50
-19:44:03   - Desafío dato: 2
-19:44:03   - Desafío dato: SudokuArdiente
-19:44:03   - Desafío dato: MatemÃ¡tico
-19:44:03 Desafío #10 cargada
-19:44:03   - Desafío dato: 100
-19:44:03   - Desafío dato: 24
-19:44:03   - Desafío dato: AnalizarLaHumedad
-19:44:03   - Desafío dato: MatemÃ¡tico
-19:44:03 Desafío #11 cargada
-19:44:03   - Desafío dato: 15
-19:44:03   - Desafío dato: 23
-19:44:03   - Desafío dato: ObservarElHorizonte
-19:44:03   - Desafío dato: Busqueda
-19:44:03 Desafío #12 cargada
-19:44:03   - Desafío dato: 25
-19:44:03   - Desafío dato: 7
-19:44:03   - Desafío dato: BuscarElCubierto
-19:44:03   - Desafío dato: Busqueda
-19:44:03 Desafío #13 cargada
-19:44:03   - Desafío dato: 45
-19:44:03   - Desafío dato: 4
-19:44:03   - Desafío dato: EnigmaDeLasCubas
-19:44:03   - Desafío dato: LÃ³gico
-19:44:03 Desafío #14 cargada
-19:44:03   - Desafío dato: 85
-19:44:03   - Desafío dato: 15
-19:44:03   - Desafío dato: ResolverElInjerto
-19:44:03   - Desafío dato: MatemÃ¡tico
-19:44:03 Desafío #15 cargada
-19:44:03   - Desafío dato: 60
-19:44:03   - Desafío dato: 10
-19:44:03   - Desafío dato: CriptogramaDelSueÃ±o
-19:44:03   - Desafío dato: MatemÃ¡tico
-19:44:03 Desafío #16 cargada
-19:44:03   - Desafío dato: 40
-19:44:03   - Desafío dato: 9
-19:44:03   - Desafío dato: AdivinanzaDeLasConservas
-19:44:03   - Desafío dato: LÃ³gico
-19:44:03 Desafío #17 cargada
-19:44:03   - Desafío dato: 75
-19:44:03   - Desafío dato: 11
-19:44:03   - Desafío dato: EscapeDeLaCÃ³moda
-19:44:03   - Desafío dato: Destreza
-19:44:03 Desafío #18 cargada
-19:44:03   - Desafío dato: 20
-19:44:03   - Desafío dato: 1
-19:44:03   - Desafío dato: EcuaciÃ³nVertical
-19:44:03   - Desafío dato: MatemÃ¡tico
-19:44:03 Desafío #19 cargada
-19:44:03   - Desafío dato: 90
-19:44:03   - Desafío dato: 17
-19:44:03   - Desafío dato: ConstruirAtuendo
-19:44:03   - Desafío dato: Destreza
-19:44:03 Desafío #20 cargada
-19:44:03   - Desafío dato: 25
-19:44:03   - Desafío dato: 1
-19:44:03   - Desafío dato: SopaDeLetras
-19:44:03   - Desafío dato: Letras
-19:44:03 Desafío #21 cargada
-19:44:03   - Desafío dato: 105
-19:44:03   - Desafío dato: 20
-19:44:03   - Desafío dato: DecidirLaEntrada
-19:44:03   - Desafío dato: LÃ³gico
-19:44:03 Desafío #22 cargada
-19:44:03   - Desafío dato: 15
-19:44:03   - Desafío dato: 14
-19:44:03   - Desafío dato: ObservarMancuernas
-19:44:03   - Desafío dato: Busqueda
-19:44:03 Desafío #23 cargada
-19:44:03   - Desafío dato: 55
-19:44:03   - Desafío dato: 8
-19:44:03   - Desafío dato: RompecabezasPolvoriento
-19:44:03   - Desafío dato: Ingenio
-19:44:03 Desafío #24 cargada
-19:44:03   - Desafío dato: 40
-19:44:03   - Desafío dato: 8
-19:44:03   - Desafío dato: AdivinanzaDelTrastero
-19:44:03   - Desafío dato: LÃ³gico
-19:44:03 Desafío #25 cargada
-19:44:03   - Desafío dato: 30
-19:44:03   - Desafío dato: 1
-19:44:03   - Desafío dato: AcertijoDelÃ?tico
-19:44:03   - Desafío dato: LÃ³gico
-19:44:03 Desafío #26 cargada
-19:44:03   - Desafío dato: 25
-19:44:03   - Desafío dato: 5
-19:44:03   - Desafío dato: LlaveMaestra
-19:44:03   - Desafío dato: Busqueda
-19:44:03 Desafío #27 cargada
-19:44:03   - Desafío dato: 45
-19:44:03   - Desafío dato: 3
-19:44:03   - Desafío dato: EnigmaDelSabio
-19:44:03   - Desafío dato: LÃ³gico
-19:44:03 Desafío #28 cargada
-19:44:03   - Desafío dato: 50
-19:44:03   - Desafío dato: 20
-19:44:03   - Desafío dato: BienvenidaEnClave
-19:44:03   - Desafío dato: Letras
-19:44:03 Desafío #29 cargada
-19:44:03   - Desafío dato: 10
-19:44:03   - Desafío dato: 16
-19:44:03   - Desafío dato: AsociarTuberÃ­as
-19:44:03   - Desafío dato: LÃ³gico
-19:44:03 Desafío #30 cargada
-19:44:03   - Desafío dato: 25
-19:44:03   - Desafío dato: 22
-19:44:03   - Desafío dato: BuscarLaFicha
-19:44:03   - Desafío dato: Busqueda
-19:44:03 Desafío #31 cargada
-19:44:03   - Desafío dato: 95
-19:44:03   - Desafío dato: 24
-19:44:03   - Desafío dato: InterpretarElEco
-19:44:03   - Desafío dato: Ingenio
-19:44:03 Desafío #32 cargada
-19:44:03   - Desafío dato: 40
-19:44:03   - Desafío dato: 2
-19:44:03   - Desafío dato: RecetaOculta
-19:44:03   - Desafío dato: Letras
-19:44:03 Desafío #33 cargada
-19:44:03   - Desafío dato: 35
-19:44:03   - Desafío dato: 23
-19:44:03   - Desafío dato: LaberintoDeMacetas
-19:44:03   - Desafío dato: Destreza
-19:44:03 Desafío #34 cargada
-19:44:03   - Desafío dato: 100
-19:44:03   - Desafío dato: 19
-19:44:03   - Desafío dato: AnalizarLasBrasas
-19:44:03   - Desafío dato: MatemÃ¡tico
-19:44:03 Desafío #35 cargada
-19:44:03   - Desafío dato: 30
-19:44:03   - Desafío dato: 3
-19:44:03   - Desafío dato: BÃºsquedaDelTomo
-19:44:03   - Desafío dato: Busqueda
-19:44:03 Desafío #36 cargada
-19:44:03   - Desafío dato: 20
-19:44:03   - Desafío dato: 12
-19:44:03   - Desafío dato: MemoriaEnEscalones
-19:44:03   - Desafío dato: LÃ³gico
-19:44:03 Desafío #37 cargada
-19:44:03   - Desafío dato: 55
-19:44:03   - Desafío dato: 7
-19:44:03   - Desafío dato: RompecabezasDelBanquete
-19:44:03   - Desafío dato: Ingenio
-19:44:03 Desafío #38 cargada
-19:44:03   - Desafío dato: 35
-19:44:03   - Desafío dato: 2
-19:44:03   - Desafío dato: CadenaDeOllas
-19:44:03   - Desafío dato: Ingenio
-19:44:03 Desafío #39 cargada
-19:44:03   - Desafío dato: 60
-19:44:03   - Desafío dato: 8
-19:44:03   - Desafío dato: CriptogramaVertical
-19:44:03   - Desafío dato: MatemÃ¡tico
-19:44:03 Desafío #40 cargada
-19:44:03   - Desafío dato: 70
-19:44:03   - Desafío dato: 21
-19:44:03   - Desafío dato: CalcularCojines
-19:44:03   - Desafío dato: MatemÃ¡tico
-19:44:03 Desafío #41 cargada
-19:44:03   - Desafío dato: 65
-19:44:03   - Desafío dato: 3
-19:44:03   - Desafío dato: TrabalenguasAntiguo
-19:44:03   - Desafío dato: Ingenio
-19:44:03 Desafío #42 cargada
-19:44:03   - Desafío dato: 40
-19:44:03   - Desafío dato: 6
-19:44:03   - Desafío dato: CicloDeLavado
-19:44:03   - Desafío dato: LÃ³gico
-19:44:03 Desafío #43 cargada
-19:44:03   - Desafío dato: 25
-19:44:03   - Desafío dato: 21
-19:44:03   - Desafío dato: BuscarElControl
-19:44:03   - Desafío dato: Busqueda
-19:44:03 Desafío #44 cargada
-19:44:03   - Desafío dato: 80
-19:44:03   - Desafío dato: 13
-19:44:03   - Desafío dato: RazonarLaTinta
-19:44:03   - Desafío dato: Ingenio
-19:44:03 Desafío #45 cargada
-19:44:03   - Desafío dato: 20
-19:44:03   - Desafío dato: 9
-19:44:03   - Desafío dato: MemoriaDeEspecias
-19:44:03   - Desafío dato: LÃ³gico
-19:44:03 Desafío #46 cargada
-19:44:03   - Desafío dato: 60
-19:44:03   - Desafío dato: 4
-19:44:03   - Desafío dato: ConteoDeBotellas
-19:44:03   - Desafío dato: MatemÃ¡tico
-19:44:03 Puerta #1 cargada
-19:44:03   - Puerta dato: 20
-19:44:03   - Puerta dato: 7
-19:44:03   - Puerta dato: 75
-19:44:03 Puerta #2 cargada
-19:44:03   - Puerta dato: 15
-19:44:03   - Puerta dato: 3
-19:44:03   - Puerta dato: 60
-19:44:03 Puerta #3 cargada
-19:44:03   - Puerta dato: 8
-19:44:03   - Puerta dato: 22
-19:44:03   - Puerta dato: 40
-19:44:03 Puerta #4 cargada
-19:44:03   - Puerta dato: 1
-19:44:03   - Puerta dato: 13
-19:44:03   - Puerta dato: 55
-19:44:03 Puerta #5 cargada
-19:44:03   - Puerta dato: 5
-19:44:03   - Puerta dato: 18
-19:44:03   - Puerta dato: 30
-19:44:03 Puerta #6 cargada
-19:44:03   - Puerta dato: 14
-19:44:03   - Puerta dato: 6
-19:44:03   - Puerta dato: 45
-19:44:03 Puerta #7 cargada
-19:44:03   - Puerta dato: 22
-19:44:03   - Puerta dato: 9
-19:44:03   - Puerta dato: 70
-19:44:03 Puerta #8 cargada
-19:44:03   - Puerta dato: 3
-19:44:03   - Puerta dato: 24
-19:44:03   - Puerta dato: 85
-19:44:03 Puerta #9 cargada
-19:44:03   - Puerta dato: 10
-19:44:03   - Puerta dato: 20
-19:44:03   - Puerta dato: 50
-19:44:03 Puerta #10 cargada
-19:44:03   - Puerta dato: 24
-19:44:03   - Puerta dato: 2
-19:44:03   - Puerta dato: 65
-19:44:03 Puerta #11 cargada
-19:44:03   - Puerta dato: 7
-19:44:03   - Puerta dato: 16
-19:44:03   - Puerta dato: 25
-19:44:03 Puerta #12 cargada
-19:44:03   - Puerta dato: 13
-19:44:03   - Puerta dato: 5
-19:44:03   - Puerta dato: 80
-19:44:03 Puerta #13 cargada
-19:44:03   - Puerta dato: 12
-19:44:03   - Puerta dato: 19
-19:44:03   - Puerta dato: 35
-19:44:03 Puerta #14 cargada
-19:44:03   - Puerta dato: 19
-19:44:03   - Puerta dato: 4
-19:44:03   - Puerta dato: 90
-19:44:03 Puerta #15 cargada
-19:44:03   - Puerta dato: 18
-19:44:03   - Puerta dato: 21
-19:44:03   - Puerta dato: 20
-19:44:03 Puerta #16 cargada
-19:44:03   - Puerta dato: 2
-19:44:03   - Puerta dato: 11
-19:44:03   - Puerta dato: 95
-19:44:03 Puerta #17 cargada
-19:44:03   - Puerta dato: 9
-19:44:03   - Puerta dato: 14
-19:44:03   - Puerta dato: 100
-19:44:03 Puerta #18 cargada
-19:44:03   - Puerta dato: 21
-19:44:03   - Puerta dato: 1
-19:44:03   - Puerta dato: 15
-19:44:03 Puerta #19 cargada
-19:44:03   - Puerta dato: 6
-19:44:03   - Puerta dato: 23
-19:44:03   - Puerta dato: 105
-19:44:03 Puerta #20 cargada
-19:44:03   - Puerta dato: 4
-19:44:03   - Puerta dato: 17
-19:44:03   - Puerta dato: 10
-19:44:03 Puerta #21 cargada
-19:44:03   - Puerta dato: 23
-19:44:03   - Puerta dato: 12
-19:44:03   - Puerta dato: 110
-19:44:03 Puerta #22 cargada
-19:44:03   - Puerta dato: 16
-19:44:03   - Puerta dato: 8
-19:44:03   - Puerta dato: 115
-19:44:03 Puerta #23 cargada
-19:44:03   - Puerta dato: 17
-19:44:03   - Puerta dato: 10
-19:44:03   - Puerta dato: 120
-19:44:03 Puerta #24 cargada
-19:44:03   - Puerta dato: 11
-19:44:03   - Puerta dato: 15
-19:44:03   - Puerta dato: 125
-19:44:03 === CARGA FINALIZADA ===
-19:44:03 Estadísticas: Habitaciones=24, Equipos=10, Desafíos=46, Puertas=24
-19:44:03 === FIN DE CARGA DEL SISTEMA ===
+13:31:47 === INICIO DE CARGA DEL SISTEMA ===
+13:31:47 HabitaciÃ³n #1 cargada
+13:31:47   - HabitaciÃ³n dato: 7
+13:31:47   - HabitaciÃ³n dato: Comedor
+13:31:47   - HabitaciÃ³n dato: 0
+13:31:47   - HabitaciÃ³n dato: 20
+13:31:47   - HabitaciÃ³n dato: false
+13:31:47 HabitaciÃ³n #2 cargada
+13:31:47   - HabitaciÃ³n dato: 22
+13:31:47   - HabitaciÃ³n dato: SalaDeJuegos
+13:31:47   - HabitaciÃ³n dato: 1
+13:31:47   - HabitaciÃ³n dato: 30
+13:31:47   - HabitaciÃ³n dato: false
+13:31:47 HabitaciÃ³n #3 cargada
+13:31:47   - HabitaciÃ³n dato: 15
+13:31:47   - HabitaciÃ³n dato: Invernadero
+13:31:47   - HabitaciÃ³n dato: 1
+13:31:47   - HabitaciÃ³n dato: 35
+13:31:47   - HabitaciÃ³n dato: false
+13:31:47 HabitaciÃ³n #4 cargada
+13:31:47   - HabitaciÃ³n dato: 3
+13:31:47   - HabitaciÃ³n dato: Biblioteca
+13:31:47   - HabitaciÃ³n dato: 0
+13:31:47   - HabitaciÃ³n dato: 25
+13:31:47   - HabitaciÃ³n dato: false
+13:31:47 HabitaciÃ³n #5 cargada
+13:31:47   - HabitaciÃ³n dato: 1
+13:31:47   - HabitaciÃ³n dato: Altillo
+13:31:47   - HabitaciÃ³n dato: 2
+13:31:47   - HabitaciÃ³n dato: 15
+13:31:47   - HabitaciÃ³n dato: false
+13:31:47 HabitaciÃ³n #6 cargada
+13:31:47   - HabitaciÃ³n dato: 19
+13:31:47   - HabitaciÃ³n dato: Quincho
+13:31:47   - HabitaciÃ³n dato: 1
+13:31:47   - HabitaciÃ³n dato: 25
+13:31:47   - HabitaciÃ³n dato: false
+13:31:47 HabitaciÃ³n #7 cargada
+13:31:47   - HabitaciÃ³n dato: 12
+13:31:47   - HabitaciÃ³n dato: Escalera
+13:31:47   - HabitaciÃ³n dato: 0
+13:31:47   - HabitaciÃ³n dato: 12
+13:31:47   - HabitaciÃ³n dato: false
+13:31:47 HabitaciÃ³n #8 cargada
+13:31:47   - HabitaciÃ³n dato: 8
+13:31:47   - HabitaciÃ³n dato: DepÃ³sito
+13:31:47   - HabitaciÃ³n dato: -1
+13:31:47   - HabitaciÃ³n dato: 40
+13:31:47   - HabitaciÃ³n dato: false
+13:31:47 HabitaciÃ³n #9 cargada
+13:31:47   - HabitaciÃ³n dato: 5
+13:31:47   - HabitaciÃ³n dato: Cochera
+13:31:47   - HabitaciÃ³n dato: 0
+13:31:47   - HabitaciÃ³n dato: 30
+13:31:47   - HabitaciÃ³n dato: false
+13:31:47 HabitaciÃ³n #10 cargada
+13:31:47   - HabitaciÃ³n dato: 24
+13:31:47   - HabitaciÃ³n dato: SÃ³tano
+13:31:47   - HabitaciÃ³n dato: -1
+13:31:47   - HabitaciÃ³n dato: 45
+13:31:47   - HabitaciÃ³n dato: false
+13:31:47 HabitaciÃ³n #11 cargada
+13:31:47   - HabitaciÃ³n dato: 14
+13:31:47   - HabitaciÃ³n dato: Gimnasio
+13:31:47   - HabitaciÃ³n dato: 1
+13:31:47   - HabitaciÃ³n dato: 20
+13:31:47   - HabitaciÃ³n dato: false
+13:31:47 HabitaciÃ³n #12 cargada
+13:31:47   - HabitaciÃ³n dato: 10
+13:31:47   - HabitaciÃ³n dato: DormitorioPrincipal
+13:31:47   - HabitaciÃ³n dato: 1
+13:31:47   - HabitaciÃ³n dato: 28
+13:31:47   - HabitaciÃ³n dato: false
+13:31:47 HabitaciÃ³n #13 cargada
+13:31:47   - HabitaciÃ³n dato: 20
+13:31:47   - HabitaciÃ³n dato: Recibidor
+13:31:47   - HabitaciÃ³n dato: 0
+13:31:47   - HabitaciÃ³n dato: 18
+13:31:47   - HabitaciÃ³n dato: true
+13:31:47 HabitaciÃ³n #14 cargada
+13:31:47   - HabitaciÃ³n dato: 6
+13:31:47   - HabitaciÃ³n dato: Lavadero
+13:31:47   - HabitaciÃ³n dato: 0
+13:31:47   - HabitaciÃ³n dato: 12
+13:31:47   - HabitaciÃ³n dato: false
+13:31:47 HabitaciÃ³n #15 cargada
+13:31:47   - HabitaciÃ³n dato: 18
+13:31:47   - HabitaciÃ³n dato: Pasillo
+13:31:47   - HabitaciÃ³n dato: 0
+13:31:47   - HabitaciÃ³n dato: 15
+13:31:47   - HabitaciÃ³n dato: false
+13:31:47 HabitaciÃ³n #16 cargada
+13:31:47   - HabitaciÃ³n dato: 2
+13:31:47   - HabitaciÃ³n dato: Cocina
+13:31:47   - HabitaciÃ³n dato: 0
+13:31:47   - HabitaciÃ³n dato: 22
+13:31:47   - HabitaciÃ³n dato: true
+13:31:47 HabitaciÃ³n #17 cargada
+13:31:47   - HabitaciÃ³n dato: 21
+13:31:47   - HabitaciÃ³n dato: SalaDeEstar
+13:31:47   - HabitaciÃ³n dato: 0
+13:31:47   - HabitaciÃ³n dato: 30
+13:31:47   - HabitaciÃ³n dato: true
+13:31:47 HabitaciÃ³n #18 cargada
+13:31:47   - HabitaciÃ³n dato: 9
+13:31:47   - HabitaciÃ³n dato: Despensa
+13:31:47   - HabitaciÃ³n dato: -1
+13:31:47   - HabitaciÃ³n dato: 15
+13:31:47   - HabitaciÃ³n dato: false
+13:31:47 HabitaciÃ³n #19 cargada
+13:31:47   - HabitaciÃ³n dato: 13
+13:31:47   - HabitaciÃ³n dato: Escritorio
+13:31:47   - HabitaciÃ³n dato: 0
+13:31:47   - HabitaciÃ³n dato: 18
+13:31:47   - HabitaciÃ³n dato: false
+13:31:47 HabitaciÃ³n #20 cargada
+13:31:47   - HabitaciÃ³n dato: 23
+13:31:47   - HabitaciÃ³n dato: Terraza
+13:31:47   - HabitaciÃ³n dato: 2
+13:31:47   - HabitaciÃ³n dato: 20
+13:31:47   - HabitaciÃ³n dato: true
+13:31:47 HabitaciÃ³n #21 cargada
+13:31:47   - HabitaciÃ³n dato: 4
+13:31:47   - HabitaciÃ³n dato: Bodega
+13:31:47   - HabitaciÃ³n dato: -1
+13:31:47   - HabitaciÃ³n dato: 35
+13:31:47   - HabitaciÃ³n dato: false
+13:31:47 HabitaciÃ³n #22 cargada
+13:31:47   - HabitaciÃ³n dato: 11
+13:31:47   - HabitaciÃ³n dato: DormitorioHuÃ©spedes
+13:31:47   - HabitaciÃ³n dato: 1
+13:31:47   - HabitaciÃ³n dato: 22
+13:31:47   - HabitaciÃ³n dato: false
+13:31:47 HabitaciÃ³n #23 cargada
+13:31:47   - HabitaciÃ³n dato: 16
+13:31:47   - HabitaciÃ³n dato: BaÃ±o
+13:31:47   - HabitaciÃ³n dato: 1
+13:31:47   - HabitaciÃ³n dato: 10
+13:31:47   - HabitaciÃ³n dato: false
+13:31:47 HabitaciÃ³n #24 cargada
+13:31:47   - HabitaciÃ³n dato: 17
+13:31:47   - HabitaciÃ³n dato: Vestidor
+13:31:47   - HabitaciÃ³n dato: 1
+13:31:47   - HabitaciÃ³n dato: 15
+13:31:47   - HabitaciÃ³n dato: false
+13:31:47 Equipo #1 cargada
+13:31:47   - Equipo dato: Audaces
+13:31:47   - Equipo dato: 390
+13:31:47   - Equipo dato: 110
+13:31:47   - Equipo dato: 18
+13:31:47   - Equipo dato: 5
+13:31:47 Equipo #2 cargada
+13:31:47   - Equipo dato: Resolutivos
+13:31:47   - Equipo dato: 360
+13:31:47   - Equipo dato: 70
+13:31:47   - Equipo dato: 8
+13:31:47   - Equipo dato: 10
+13:31:47 Equipo #3 cargada
+13:31:47   - Equipo dato: Exploradores
+13:31:47   - Equipo dato: 350
+13:31:47   - Equipo dato: 80
+13:31:47   - Equipo dato: 7
+13:31:47   - Equipo dato: 15
+13:31:47 Equipo #4 cargada
+13:31:47   - Equipo dato: LosLocosAdams
+13:31:47   - Equipo dato: 400
+13:31:47   - Equipo dato: 50
+13:31:47   - Equipo dato: 2
+13:31:47   - Equipo dato: 10
+13:31:47 Equipo #5 cargada
+13:31:47   - Equipo dato: Estrategas
+13:31:47   - Equipo dato: 420
+13:31:47   - Equipo dato: 150
+13:31:47   - Equipo dato: 3
+13:31:47   - Equipo dato: 20
+13:31:47 Equipo #6 cargada
+13:31:47   - Equipo dato: Creativos
+13:31:47   - Equipo dato: 430
+13:31:47   - Equipo dato: 180
+13:31:47   - Equipo dato: 12
+13:31:47   - Equipo dato: 30
+13:31:47 Equipo #7 cargada
+13:31:47   - Equipo dato: Sabios
+13:31:47   - Equipo dato: 410
+13:31:47   - Equipo dato: 160
+13:31:47   - Equipo dato: 21
+13:31:47   - Equipo dato: 15
+13:31:47 Equipo #8 cargada
+13:31:47   - Equipo dato: Aventureros
+13:31:47   - Equipo dato: 380
+13:31:47   - Equipo dato: 95
+13:31:47   - Equipo dato: 15
+13:31:47   - Equipo dato: 5
+13:31:47 Equipo #9 cargada
+13:31:47   - Equipo dato: Genios
+13:31:47   - Equipo dato: 450
+13:31:47   - Equipo dato: 200
+13:31:47   - Equipo dato: 10
+13:31:47   - Equipo dato: 25
+13:31:47 Equipo #10 cargada
+13:31:47   - Equipo dato: LosValientes
+13:31:47   - Equipo dato: 400
+13:31:47   - Equipo dato: 130
+13:31:47   - Equipo dato: 4
+13:31:47   - Equipo dato: 0
+13:31:47 DesafÃ­o #1 cargada
+13:31:47   - DesafÃ­o dato: 35
+13:31:47   - DesafÃ­o dato: 5
+13:31:47   - DesafÃ­o dato: LaberintoDeHerramientas
+13:31:47   - DesafÃ­o dato: Destreza
+13:31:47 DesafÃ­o #2 cargada
+13:31:47   - DesafÃ­o dato: 80
+13:31:47   - DesafÃ­o dato: 22
+13:31:47   - DesafÃ­o dato: RazonarElTurno
+13:31:47   - DesafÃ­o dato: Ingenio
+13:31:47 DesafÃ­o #3 cargada
+13:31:47   - DesafÃ­o dato: 30
+13:31:47   - DesafÃ­o dato: 21
+13:31:47   - DesafÃ­o dato: AcertijoDelHogar
+13:31:47   - DesafÃ­o dato: LÃ³gico
+13:31:47 DesafÃ­o #4 cargada
+13:31:47   - DesafÃ­o dato: 65
+13:31:47   - DesafÃ­o dato: 22
+13:31:47   - DesafÃ­o dato: TrabadoLÃºdico
+13:31:47   - DesafÃ­o dato: Ingenio
+13:31:47 DesafÃ­o #5 cargada
+13:31:47   - DesafÃ­o dato: 95
+13:31:47   - DesafÃ­o dato: 18
+13:31:47   - DesafÃ­o dato: InterpretarSombras
+13:31:47   - DesafÃ­o dato: Ingenio
+13:31:47 DesafÃ­o #6 cargada
+13:31:47   - DesafÃ­o dato: 70
+13:31:47   - DesafÃ­o dato: 6
+13:31:47   - DesafÃ­o dato: CalcularDetergente
+13:31:47   - DesafÃ­o dato: MatemÃ¡tico
+13:31:47 DesafÃ­o #7 cargada
+13:31:47   - DesafÃ­o dato: 10
+13:31:47   - DesafÃ­o dato: 24
+13:31:47   - DesafÃ­o dato: SÃ³tanoOculto
+13:31:47   - DesafÃ­o dato: Busqueda
+13:31:47 DesafÃ­o #8 cargada
+13:31:47   - DesafÃ­o dato: 55
+13:31:47   - DesafÃ­o dato: 3
+13:31:47   - DesafÃ­o dato: CÃ¡lculoSilencioso
+13:31:47   - DesafÃ­o dato: MatemÃ¡tico
+13:31:47 DesafÃ­o #9 cargada
+13:31:47   - DesafÃ­o dato: 50
+13:31:47   - DesafÃ­o dato: 2
+13:31:47   - DesafÃ­o dato: SudokuArdiente
+13:31:47   - DesafÃ­o dato: MatemÃ¡tico
+13:31:47 DesafÃ­o #10 cargada
+13:31:47   - DesafÃ­o dato: 100
+13:31:47   - DesafÃ­o dato: 24
+13:31:47   - DesafÃ­o dato: AnalizarLaHumedad
+13:31:47   - DesafÃ­o dato: MatemÃ¡tico
+13:31:47 DesafÃ­o #11 cargada
+13:31:47   - DesafÃ­o dato: 15
+13:31:47   - DesafÃ­o dato: 23
+13:31:47   - DesafÃ­o dato: ObservarElHorizonte
+13:31:47   - DesafÃ­o dato: Busqueda
+13:31:47 DesafÃ­o #12 cargada
+13:31:47   - DesafÃ­o dato: 25
+13:31:47   - DesafÃ­o dato: 7
+13:31:47   - DesafÃ­o dato: BuscarElCubierto
+13:31:47   - DesafÃ­o dato: Busqueda
+13:31:47 DesafÃ­o #13 cargada
+13:31:47   - DesafÃ­o dato: 45
+13:31:47   - DesafÃ­o dato: 4
+13:31:47   - DesafÃ­o dato: EnigmaDeLasCubas
+13:31:47   - DesafÃ­o dato: LÃ³gico
+13:31:47 DesafÃ­o #14 cargada
+13:31:47   - DesafÃ­o dato: 85
+13:31:47   - DesafÃ­o dato: 15
+13:31:47   - DesafÃ­o dato: ResolverElInjerto
+13:31:47   - DesafÃ­o dato: MatemÃ¡tico
+13:31:47 DesafÃ­o #15 cargada
+13:31:47   - DesafÃ­o dato: 60
+13:31:47   - DesafÃ­o dato: 10
+13:31:47   - DesafÃ­o dato: CriptogramaDelSueÃ±o
+13:31:47   - DesafÃ­o dato: MatemÃ¡tico
+13:31:47 DesafÃ­o #16 cargada
+13:31:47   - DesafÃ­o dato: 40
+13:31:47   - DesafÃ­o dato: 9
+13:31:47   - DesafÃ­o dato: AdivinanzaDeLasConservas
+13:31:47   - DesafÃ­o dato: LÃ³gico
+13:31:47 DesafÃ­o #17 cargada
+13:31:47   - DesafÃ­o dato: 75
+13:31:47   - DesafÃ­o dato: 11
+13:31:47   - DesafÃ­o dato: EscapeDeLaCÃ³moda
+13:31:47   - DesafÃ­o dato: Destreza
+13:31:47 DesafÃ­o #18 cargada
+13:31:47   - DesafÃ­o dato: 20
+13:31:47   - DesafÃ­o dato: 1
+13:31:47   - DesafÃ­o dato: EcuaciÃ³nVertical
+13:31:47   - DesafÃ­o dato: MatemÃ¡tico
+13:31:47 DesafÃ­o #19 cargada
+13:31:47   - DesafÃ­o dato: 90
+13:31:47   - DesafÃ­o dato: 17
+13:31:47   - DesafÃ­o dato: ConstruirAtuendo
+13:31:47   - DesafÃ­o dato: Destreza
+13:31:47 DesafÃ­o #20 cargada
+13:31:47   - DesafÃ­o dato: 25
+13:31:47   - DesafÃ­o dato: 1
+13:31:47   - DesafÃ­o dato: SopaDeLetras
+13:31:47   - DesafÃ­o dato: Letras
+13:31:47 DesafÃ­o #21 cargada
+13:31:47   - DesafÃ­o dato: 105
+13:31:47   - DesafÃ­o dato: 20
+13:31:47   - DesafÃ­o dato: DecidirLaEntrada
+13:31:47   - DesafÃ­o dato: LÃ³gico
+13:31:47 DesafÃ­o #22 cargada
+13:31:47   - DesafÃ­o dato: 15
+13:31:47   - DesafÃ­o dato: 14
+13:31:47   - DesafÃ­o dato: ObservarMancuernas
+13:31:47   - DesafÃ­o dato: Busqueda
+13:31:47 DesafÃ­o #23 cargada
+13:31:47   - DesafÃ­o dato: 55
+13:31:47   - DesafÃ­o dato: 8
+13:31:47   - DesafÃ­o dato: RompecabezasPolvoriento
+13:31:47   - DesafÃ­o dato: Ingenio
+13:31:47 DesafÃ­o #24 cargada
+13:31:47   - DesafÃ­o dato: 40
+13:31:47   - DesafÃ­o dato: 8
+13:31:47   - DesafÃ­o dato: AdivinanzaDelTrastero
+13:31:47   - DesafÃ­o dato: LÃ³gico
+13:31:47 DesafÃ­o #25 cargada
+13:31:47   - DesafÃ­o dato: 30
+13:31:47   - DesafÃ­o dato: 1
+13:31:47   - DesafÃ­o dato: AcertijoDelÃtico
+13:31:47   - DesafÃ­o dato: LÃ³gico
+13:31:47 DesafÃ­o #26 cargada
+13:31:47   - DesafÃ­o dato: 25
+13:31:47   - DesafÃ­o dato: 5
+13:31:47   - DesafÃ­o dato: LlaveMaestra
+13:31:47   - DesafÃ­o dato: Busqueda
+13:31:47 DesafÃ­o #27 cargada
+13:31:47   - DesafÃ­o dato: 45
+13:31:47   - DesafÃ­o dato: 3
+13:31:47   - DesafÃ­o dato: EnigmaDelSabio
+13:31:47   - DesafÃ­o dato: LÃ³gico
+13:31:47 DesafÃ­o #28 cargada
+13:31:47   - DesafÃ­o dato: 50
+13:31:47   - DesafÃ­o dato: 20
+13:31:47   - DesafÃ­o dato: BienvenidaEnClave
+13:31:47   - DesafÃ­o dato: Letras
+13:31:47 DesafÃ­o #29 cargada
+13:31:47   - DesafÃ­o dato: 10
+13:31:47   - DesafÃ­o dato: 16
+13:31:47   - DesafÃ­o dato: AsociarTuberÃ­as
+13:31:47   - DesafÃ­o dato: LÃ³gico
+13:31:47 DesafÃ­o #30 cargada
+13:31:47   - DesafÃ­o dato: 25
+13:31:47   - DesafÃ­o dato: 22
+13:31:47   - DesafÃ­o dato: BuscarLaFicha
+13:31:47   - DesafÃ­o dato: Busqueda
+13:31:47 DesafÃ­o #31 cargada
+13:31:47   - DesafÃ­o dato: 95
+13:31:47   - DesafÃ­o dato: 24
+13:31:47   - DesafÃ­o dato: InterpretarElEco
+13:31:47   - DesafÃ­o dato: Ingenio
+13:31:47 DesafÃ­o #32 cargada
+13:31:47   - DesafÃ­o dato: 40
+13:31:47   - DesafÃ­o dato: 2
+13:31:47   - DesafÃ­o dato: RecetaOculta
+13:31:47   - DesafÃ­o dato: Letras
+13:31:47 DesafÃ­o #33 cargada
+13:31:47   - DesafÃ­o dato: 35
+13:31:47   - DesafÃ­o dato: 23
+13:31:47   - DesafÃ­o dato: LaberintoDeMacetas
+13:31:47   - DesafÃ­o dato: Destreza
+13:31:47 DesafÃ­o #34 cargada
+13:31:47   - DesafÃ­o dato: 100
+13:31:47   - DesafÃ­o dato: 19
+13:31:47   - DesafÃ­o dato: AnalizarLasBrasas
+13:31:47   - DesafÃ­o dato: MatemÃ¡tico
+13:31:47 DesafÃ­o #35 cargada
+13:31:47   - DesafÃ­o dato: 30
+13:31:47   - DesafÃ­o dato: 3
+13:31:47   - DesafÃ­o dato: BÃºsquedaDelTomo
+13:31:47   - DesafÃ­o dato: Busqueda
+13:31:47 DesafÃ­o #36 cargada
+13:31:47   - DesafÃ­o dato: 20
+13:31:47   - DesafÃ­o dato: 12
+13:31:47   - DesafÃ­o dato: MemoriaEnEscalones
+13:31:47   - DesafÃ­o dato: LÃ³gico
+13:31:47 DesafÃ­o #37 cargada
+13:31:47   - DesafÃ­o dato: 55
+13:31:47   - DesafÃ­o dato: 7
+13:31:47   - DesafÃ­o dato: RompecabezasDelBanquete
+13:31:47   - DesafÃ­o dato: Ingenio
+13:31:47 DesafÃ­o #38 cargada
+13:31:47   - DesafÃ­o dato: 35
+13:31:47   - DesafÃ­o dato: 2
+13:31:47   - DesafÃ­o dato: CadenaDeOllas
+13:31:47   - DesafÃ­o dato: Ingenio
+13:31:47 DesafÃ­o #39 cargada
+13:31:47   - DesafÃ­o dato: 60
+13:31:47   - DesafÃ­o dato: 8
+13:31:47   - DesafÃ­o dato: CriptogramaVertical
+13:31:47   - DesafÃ­o dato: MatemÃ¡tico
+13:31:47 DesafÃ­o #40 cargada
+13:31:47   - DesafÃ­o dato: 70
+13:31:47   - DesafÃ­o dato: 21
+13:31:47   - DesafÃ­o dato: CalcularCojines
+13:31:47   - DesafÃ­o dato: MatemÃ¡tico
+13:31:47 DesafÃ­o #41 cargada
+13:31:47   - DesafÃ­o dato: 65
+13:31:47   - DesafÃ­o dato: 3
+13:31:47   - DesafÃ­o dato: TrabalenguasAntiguo
+13:31:47   - DesafÃ­o dato: Ingenio
+13:31:47 DesafÃ­o #42 cargada
+13:31:47   - DesafÃ­o dato: 40
+13:31:47   - DesafÃ­o dato: 6
+13:31:47   - DesafÃ­o dato: CicloDeLavado
+13:31:47   - DesafÃ­o dato: LÃ³gico
+13:31:47 DesafÃ­o #43 cargada
+13:31:47   - DesafÃ­o dato: 25
+13:31:47   - DesafÃ­o dato: 21
+13:31:47   - DesafÃ­o dato: BuscarElControl
+13:31:47   - DesafÃ­o dato: Busqueda
+13:31:47 DesafÃ­o #44 cargada
+13:31:47   - DesafÃ­o dato: 80
+13:31:47   - DesafÃ­o dato: 13
+13:31:47   - DesafÃ­o dato: RazonarLaTinta
+13:31:47   - DesafÃ­o dato: Ingenio
+13:31:47 DesafÃ­o #45 cargada
+13:31:47   - DesafÃ­o dato: 20
+13:31:47   - DesafÃ­o dato: 9
+13:31:47   - DesafÃ­o dato: MemoriaDeEspecias
+13:31:47   - DesafÃ­o dato: LÃ³gico
+13:31:47 DesafÃ­o #46 cargada
+13:31:47   - DesafÃ­o dato: 60
+13:31:47   - DesafÃ­o dato: 4
+13:31:47   - DesafÃ­o dato: ConteoDeBotellas
+13:31:47   - DesafÃ­o dato: MatemÃ¡tico
+13:31:47 Puerta #1 cargada
+13:31:47   - Puerta dato: 1
+13:31:47   - Puerta dato: 13
+13:31:47   - Puerta dato: 55
+13:31:47 Puerta #2 cargada
+13:31:47   - Puerta dato: 1
+13:31:47   - Puerta dato: 23
+13:31:47   - Puerta dato: 35
+13:31:47 Puerta #3 cargada
+13:31:47   - Puerta dato: 1
+13:31:47   - Puerta dato: 6
+13:31:47   - Puerta dato: 30
+13:31:47 Puerta #4 cargada
+13:31:47   - Puerta dato: 2
+13:31:47   - Puerta dato: 11
+13:31:47   - Puerta dato: 95
+13:31:47 Puerta #5 cargada
+13:31:47   - Puerta dato: 2
+13:31:47   - Puerta dato: 20
+13:31:47   - Puerta dato: 40
+13:31:47 Puerta #6 cargada
+13:31:47   - Puerta dato: 2
+13:31:47   - Puerta dato: 24
+13:31:47   - Puerta dato: 65
+13:31:47 Puerta #7 cargada
+13:31:47   - Puerta dato: 3
+13:31:47   - Puerta dato: 7
+13:31:47   - Puerta dato: 40
+13:31:47 Puerta #8 cargada
+13:31:47   - Puerta dato: 3
+13:31:47   - Puerta dato: 15
+13:31:47   - Puerta dato: 60
+13:31:47 Puerta #9 cargada
+13:31:47   - Puerta dato: 3
+13:31:47   - Puerta dato: 24
+13:31:47   - Puerta dato: 85
+13:31:47 Puerta #10 cargada
+13:31:47   - Puerta dato: 4
+13:31:47   - Puerta dato: 17
+13:31:47   - Puerta dato: 10
+13:31:47 Puerta #11 cargada
+13:31:47   - Puerta dato: 4
+13:31:47   - Puerta dato: 19
+13:31:47   - Puerta dato: 90
+13:31:47 Puerta #12 cargada
+13:31:47   - Puerta dato: 4
+13:31:47   - Puerta dato: 8
+13:31:47   - Puerta dato: 45
+13:31:47 Puerta #13 cargada
+13:31:47   - Puerta dato: 5
+13:31:47   - Puerta dato: 14
+13:31:47   - Puerta dato: 45
+13:31:47 Puerta #14 cargada
+13:31:47   - Puerta dato: 5
+13:31:47   - Puerta dato: 18
+13:31:47   - Puerta dato: 30
+13:31:47 Puerta #15 cargada
+13:31:47   - Puerta dato: 5
+13:31:47   - Puerta dato: 20
+13:31:47   - Puerta dato: 50
+13:31:47 Puerta #16 cargada
+13:31:47   - Puerta dato: 6
+13:31:47   - Puerta dato: 23
+13:31:47   - Puerta dato: 105
+13:31:47 Puerta #17 cargada
+13:31:47   - Puerta dato: 6
+13:31:47   - Puerta dato: 12
+13:31:47   - Puerta dato: 25
+13:31:47 Puerta #18 cargada
+13:31:47   - Puerta dato: 7
+13:31:47   - Puerta dato: 16
+13:31:47   - Puerta dato: 25
+13:31:47 Puerta #19 cargada
+13:31:47   - Puerta dato: 7
+13:31:47   - Puerta dato: 21
+13:31:47   - Puerta dato: 35
+13:31:47 Puerta #20 cargada
+13:31:47   - Puerta dato: 7
+13:31:47   - Puerta dato: 13
+13:31:47   - Puerta dato: 60
+13:31:47 Puerta #21 cargada
+13:31:47   - Puerta dato: 8
+13:31:47   - Puerta dato: 9
+13:31:47   - Puerta dato: 25
+13:31:47 Puerta #22 cargada
+13:31:47   - Puerta dato: 8
+13:31:47   - Puerta dato: 16
+13:31:47   - Puerta dato: 115
+13:31:47 Puerta #23 cargada
+13:31:47   - Puerta dato: 8
+13:31:47   - Puerta dato: 22
+13:31:47   - Puerta dato: 40
+13:31:47 Puerta #24 cargada
+13:31:47   - Puerta dato: 9
+13:31:47   - Puerta dato: 14
+13:31:47   - Puerta dato: 100
+13:31:47 Puerta #25 cargada
+13:31:47   - Puerta dato: 9
+13:31:47   - Puerta dato: 22
+13:31:47   - Puerta dato: 70
+13:31:47 Puerta #26 cargada
+13:31:47   - Puerta dato: 9
+13:31:47   - Puerta dato: 17
+13:31:47   - Puerta dato: 55
+13:31:47 Puerta #27 cargada
+13:31:47   - Puerta dato: 10
+13:31:47   - Puerta dato: 11
+13:31:47   - Puerta dato: 30
+13:31:47 Puerta #28 cargada
+13:31:47   - Puerta dato: 10
+13:31:47   - Puerta dato: 14
+13:31:47   - Puerta dato: 65
+13:31:47 Puerta #29 cargada
+13:31:47   - Puerta dato: 10
+13:31:47   - Puerta dato: 17
+13:31:47   - Puerta dato: 120
+13:31:47 Puerta #30 cargada
+13:31:47   - Puerta dato: 10
+13:31:47   - Puerta dato: 20
+13:31:47   - Puerta dato: 50
+13:31:47 Puerta #31 cargada
+13:31:47   - Puerta dato: 11
+13:31:47   - Puerta dato: 15
+13:31:47   - Puerta dato: 125
+13:31:47 Puerta #32 cargada
+13:31:47   - Puerta dato: 11
+13:31:47   - Puerta dato: 19
+13:31:47   - Puerta dato: 70
+13:31:47 Puerta #33 cargada
+13:31:47   - Puerta dato: 12
+13:31:47   - Puerta dato: 19
+13:31:47   - Puerta dato: 35
+13:31:47 Puerta #34 cargada
+13:31:47   - Puerta dato: 12
+13:31:47   - Puerta dato: 22
+13:31:47   - Puerta dato: 50
+13:31:47 Puerta #35 cargada
+13:31:47   - Puerta dato: 12
+13:31:47   - Puerta dato: 18
+13:31:47   - Puerta dato: 40
+13:31:47 Puerta #36 cargada
+13:31:47   - Puerta dato: 13
+13:31:47   - Puerta dato: 18
+13:31:47   - Puerta dato: 45
+13:31:47 Puerta #37 cargada
+13:31:47   - Puerta dato: 13
+13:31:47   - Puerta dato: 20
+13:31:47   - Puerta dato: 75
+13:31:47 Puerta #38 cargada
+13:31:47   - Puerta dato: 14
+13:31:47   - Puerta dato: 15
+13:31:47   - Puerta dato: 30
+13:31:47 Puerta #39 cargada
+13:31:47   - Puerta dato: 14
+13:31:47   - Puerta dato: 4
+13:31:47   - Puerta dato: 55
+13:31:47 Puerta #40 cargada
+13:31:47   - Puerta dato: 15
+13:31:47   - Puerta dato: 19
+13:31:47   - Puerta dato: 60
+13:31:47 Puerta #41 cargada
+13:31:47   - Puerta dato: 15
+13:31:47   - Puerta dato: 22
+13:31:47   - Puerta dato: 80
+13:31:47 Puerta #42 cargada
+13:31:47   - Puerta dato: 16
+13:31:47   - Puerta dato: 5
+13:31:47   - Puerta dato: 20
+13:31:47 Puerta #43 cargada
+13:31:47   - Puerta dato: 16
+13:31:47   - Puerta dato: 24
+13:31:47   - Puerta dato: 90
+13:31:47 Puerta #44 cargada
+13:31:47   - Puerta dato: 17
+13:31:47   - Puerta dato: 21
+13:31:47   - Puerta dato: 45
+13:31:47 Puerta #45 cargada
+13:31:47   - Puerta dato: 18
+13:31:47   - Puerta dato: 21
+13:31:47   - Puerta dato: 20
+13:31:47 Puerta #46 cargada
+13:31:47   - Puerta dato: 18
+13:31:47   - Puerta dato: 6
+13:31:47   - Puerta dato: 35
+13:31:47 Puerta #47 cargada
+13:31:47   - Puerta dato: 19
+13:31:47   - Puerta dato: 21
+13:31:47   - Puerta dato: 65
+13:31:47 Puerta #48 cargada
+13:31:47   - Puerta dato: 20
+13:31:47   - Puerta dato: 22
+13:31:47   - Puerta dato: 85
+13:31:47 Puerta #49 cargada
+13:31:47   - Puerta dato: 21
+13:31:47   - Puerta dato: 23
+13:31:47   - Puerta dato: 40
+13:31:47 Puerta #50 cargada
+13:31:47   - Puerta dato: 21
+13:31:47   - Puerta dato: 16
+13:31:47   - Puerta dato: 50
+13:31:47 Puerta #51 cargada
+13:31:47   - Puerta dato: 22
+13:31:47   - Puerta dato: 23
+13:31:47   - Puerta dato: 75
+13:31:47 Puerta #52 cargada
+13:31:47   - Puerta dato: 23
+13:31:47   - Puerta dato: 8
+13:31:47   - Puerta dato: 95
+13:31:47 === CARGA FINALIZADA ===
+13:31:47 EstadÃ­sticas: Habitaciones=24, Equipos=10, DesafÃ­os=46, Puertas=52
+13:31:47 === FIN DE CARGA DEL SISTEMA ===
