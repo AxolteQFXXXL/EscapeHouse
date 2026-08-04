@@ -155,7 +155,7 @@ public class GestorArchivos {
     public void log(String mensaje){
         FileWriter fw = null;
         try {
-            fw = new FileWriter("EscapeHouse/sistema/testWrite.txt", true);
+            fw = new FileWriter("EscapeHouse/log.txt", true);
             String timestamp = LocalTime.now().format(formatter);
             fw.write(timestamp + " " + mensaje + "\n");
             fw.flush();
@@ -173,7 +173,7 @@ public class GestorArchivos {
     }
 
     public void reiniciarLog(){
-        try (FileWriter fw = new FileWriter("EscapeHouse/sistema/testWrite.txt", false)) {
+        try (FileWriter fw = new FileWriter("EscapeHouse/log.txt", false)) {
             fw.write("");
             fw.flush();
         } catch (IOException e) {

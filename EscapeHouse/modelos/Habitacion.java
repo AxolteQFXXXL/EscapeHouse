@@ -93,4 +93,8 @@ public class Habitacion {
         Desafio des = (Desafio) desafios.obtenerElemento(cod1);
         des.setTipo(nuevoTipo);
     }
+
+    public Lista mostrarDesafios(int puntMin, int puntMax){
+        return desafios.listarRango(puntMin, puntMax);
+    }
 }

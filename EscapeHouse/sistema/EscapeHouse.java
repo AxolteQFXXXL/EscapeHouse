@@ -229,11 +229,11 @@ public class EscapeHouse {
         String ss="";
         Lista lis = new Lista();
         Habitacion hab = (Habitacion) habitaciones.obtenerElemento(cod1);
-        if(hab != null) lis = hab.mostrarDesafios();
+        if(hab != null) lis = hab.mostrarDesafios(a, b);
 
         while(!lis.esVacia()){
             Desafio des = (Desafio) lis.recuperar(1);
-            if(des.getTipo().equals(nombreDes) && (des.getPuntaje().compareTo(a)>=0 && des.getPuntaje().compareTo(b)<=0)) ss+= des.toString();
+            if(des.getTipo().equals(nombreDes)) ss+= des.toString();
             lis.eliminar(1);
         }
 
