@@ -13,7 +13,6 @@ import java.io.IOException;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
-import java.util.Objects;
 import java.util.StringTokenizer;
 
 public class GestorArchivos {
@@ -24,7 +23,7 @@ public class GestorArchivos {
             AVL desafios = new AVL();
             HashMap<String, Equipo> equipos = new HashMap<String, Equipo>(20);
             Grafo esquema = new Grafo();
-        try (FileReader fr = new FileReader("EscapeHouse/sistema/test.txt");
+        try (FileReader fr = new FileReader("EscapeHouse/sistema/ArchivoCarga.txt");
              BufferedReader br = new BufferedReader(fr)) {
             int[] nros = {0, 0, 0, 0};
             String line;

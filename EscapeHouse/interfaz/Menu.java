@@ -163,7 +163,7 @@ public class Menu {
     }
 
     private void menuModificarDesafios() {
-        int opcion, a, b, c, d;
+        int opcion, a, b, c;
         String st1, st2;
         do{
             System.out.println("\n--- MODIFICACION DE HABITACIONES ---");
@@ -177,7 +177,7 @@ public class Menu {
 
             switch (opcion){
                 case 1:
-                    //crear habitacion
+                    //crear desafio
                     System.out.println("Ingrese el puntaje que dara el desafio: ");
                     a = scanner.nextInt();
                     System.out.println("Ingrese su habitacion correspondiente: ");
@@ -223,7 +223,7 @@ public class Menu {
 
 
     private void menuModificarHabitaciones() {
-        int opcion, a, b, c, d;
+        int opcion, a, b, c;
         String st1;
         do{
             System.out.println("\n--- MODIFICACION DE HABITACIONES ---");
@@ -280,8 +280,8 @@ public class Menu {
         int opcion, a, b, c, d;
         String st1;
         do{
-            System.out.println("\n--- MODIFICACION DE HABITACIONES ---");
-            System.out.println("1. crear un nueva equipo");
+            System.out.println("\n--- MODIFICACION DE EQUIPOS ---");
+            System.out.println("1. crear un nuevo equipo");
             System.out.println("2. eliminar un equipo");
             System.out.println("3. incrementar puntaje necesario");
             System.out.println("4. disminuar puntaje necesario");
