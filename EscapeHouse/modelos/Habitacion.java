@@ -76,7 +76,7 @@ public class Habitacion {
     }
 
     public String toString(){
-        String s = "Nombre: "+this.nombre+"| Planta: "+this.planta+"| Metros a 2: "+this.metros+"| esSalida: "+this.salida+".";
+        String s = "Nombre: "+this.nombre+"| Planta: "+this.planta+"| Metros a 2: "+this.metros+"| esSalida: "+this.salida+"| Codigo: "+this.codigo+".";
         return s;
     }
 

@@ -12,6 +12,7 @@ import java.util.Scanner;
 public class Menu {
     Scanner scanner = new Scanner(System.in);
     EscapeHouse house;
+    GestorArchivos gestorArchivos = new GestorArchivos();
     public void mostrarMenuPrincipal(EscapeHouse house) {
         int opcion;
         this.house=house;
@@ -24,7 +25,6 @@ public class Menu {
                 //faltaria opcion de la carga inicial del sistema y las opciones de ABM (añadir en, quitar en y modificar el sistema) ---------------------------------------------------------------
                 case 1:
                     //carga del sistema
-                    GestorArchivos gestorArchivos = new GestorArchivos();
                     gestorArchivos.cargarSistema(house);
                     break;
                 case 2:
@@ -141,7 +141,10 @@ public class Menu {
                     System.out.println("Ingrese puntaje necesario para pasar: ");
                     c = scanner.nextInt();
 
-                    if(house.agregarPuerta(a, b, c)) System.out.println("Se ha agregado correctamente!");
+                    if(house.agregarPuerta(a, b, c)){
+                        System.out.println("Se ha agregado correctamente!");
+                        gestorArchivos.log("Puerta de habitacion: "+a+" hacia "+b+" creada.");
+                    } 
                     break;
                 case 2:
                     // eliminar una puerta
@@ -150,7 +153,10 @@ public class Menu {
                     System.out.println("Ingrese codigo habitacion destino: ");
                     b = scanner.nextInt();
 
-                    if(house.eliminarPuerta(a, b)) System.out.println("Se ha eliminado Correctamente!");
+                    if(house.eliminarPuerta(a, b)){
+                        System.out.println("Se ha eliminado Correctamente!");
+                        gestorArchivos.log("Puerta de habitacion: "+a+" hacia "+b+" eliminada.");
+                    } 
                     break;
                 case 0:
                     System.out.println("Volviendo al menú principal...");
@@ -188,7 +194,7 @@ public class Menu {
 
                     Desafio des = new Desafio(a, b, st1, st2);
                     if(house.agregarDesafio(des)) System.out.println("Se ha agregado correctamente!");
-
+                    gestorArchivos.log("Desafio cargado: "+des.getPuntaje());
                     break;
                 case 2:
                     // eliminar un desafio
@@ -197,7 +203,10 @@ public class Menu {
                     System.out.println("Ingrese el codigo de su habitacion: ");
                     b = scanner.nextInt();
 
-                    if(house.eliminarDesafio(a, b)) System.out.println("Se ha eliminado Correctamente!");
+                    if(house.eliminarDesafio(a, b)){
+                        System.out.println("Se ha eliminado Correctamente!");
+                        gestorArchivos.log("Desafio eliminado: "+a);
+                    } 
 
                     break;
                 case 3:
@@ -248,14 +257,17 @@ public class Menu {
 
                     Habitacion unH = new Habitacion(a, st1, b, c, false);
                     if(house.agregarHabitacion(unH)) System.out.println("Se ha agregado correctamente!");;
-
+                    gestorArchivos.log("Habitacion cargada: "+unH.getCodigo());
                     break;
                 case 2:
                     // eliminar una habitacion
                     System.out.println("Ingrese el codigo de la habitacion que desea eliminar: ");
                     a = scanner.nextInt();
-                    if(house.eliminarHabitacion(a)) System.out.println("Se ha eliminado Correctamente!");
-
+                    if(house.eliminarHabitacion(a)) {
+                        System.out.println("Se ha eliminado Correctamente!");
+                        gestorArchivos.log("Habitacion eliminada: "+a);
+                    }
+                    
                     break;
                 case 3:
                     // modificar nombre habitacion
