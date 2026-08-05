@@ -215,6 +215,7 @@ public class Menu {
                     a = scanner.nextInt();
                     System.out.println("Ingrese el codigo de su habitacion: ");
                     c = scanner.nextInt();
+                    scanner.nextLine(); // limpiar buffer
                     System.out.println("Ingrese el nueva tipo para el desafio: ");
                     st2 = scanner.nextLine();
 
@@ -273,6 +274,7 @@ public class Menu {
                     // modificar nombre habitacion
                     System.out.println("Ingrese el codigo de la habitacion: ");
                     c = scanner.nextInt();
+                    scanner.nextLine(); // limpiar buffer
                     System.out.println("Que nombre desea colocarle: ");
                     st1 = scanner.nextLine();
 
