@@ -32,7 +32,6 @@ public class AVL {
             }
         }else root = new NodoAvl(clave, elem);
 
-        
         return rebalance(root);
     }
 
@@ -198,8 +197,8 @@ public class AVL {
         NodoAvl temp = h.getDerecho();
         h.setDerecho(piv);
         piv.setIzquierdo(temp);
+        actualizarAltura(piv);
         actualizarAltura(h);
-        actualizarAltura(temp);
 
         return h;
     }
@@ -210,8 +209,8 @@ public class AVL {
         NodoAvl temp = h.getIzquierdo();
         h.setIzquierdo(piv);
         piv.setDerecho(temp);
+        actualizarAltura(piv);
         actualizarAltura(h);
-        actualizarAltura(temp);
 
         return h;
     }
