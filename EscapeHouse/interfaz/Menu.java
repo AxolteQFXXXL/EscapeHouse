@@ -188,9 +188,10 @@ public class Menu {
                     a = scanner.nextInt();
                     System.out.println("Ingrese su habitacion correspondiente: ");
                     b = scanner.nextInt();
+                    scanner.nextLine();     //limpiar buffer
                     System.out.println("Ingrese el nombre y el tipo de desafio: ");
-                    st1 = scanner.nextLine();
-                    st2 = scanner.nextLine();
+                    st1 = scanner.nextLine().toUpperCase();
+                    st2 = scanner.nextLine().toUpperCase();
 
                     Desafio des = new Desafio(a, b, st1, st2);
                     if(house.agregarDesafio(des)) System.out.println("Se ha agregado correctamente!");
@@ -217,7 +218,7 @@ public class Menu {
                     c = scanner.nextInt();
                     scanner.nextLine(); // limpiar buffer
                     System.out.println("Ingrese el nueva tipo para el desafio: ");
-                    st2 = scanner.nextLine();
+                    st2 = scanner.nextLine().toUpperCase();
 
                     house.cambiarTipoDesafio(a, c, st2);
                     break;
@@ -230,7 +231,6 @@ public class Menu {
 
         }while(opcion!=0);
     }
-
 
     private void menuModificarHabitaciones() {
         int opcion, a, b, c;
@@ -249,7 +249,7 @@ public class Menu {
                 case 1:
                     //crear habitacion
                     System.out.println("Ingrese nombre de la habitacion:");
-                    st1 = scanner.nextLine();
+                    st1 = scanner.nextLine().toUpperCase();
                     System.out.println("Ingrese un codigo mayor a 24: ");
                     a = scanner.nextInt();
                     System.out.println("Ingrese en que planta estara y sus metros Cuadrados: ");
@@ -276,7 +276,7 @@ public class Menu {
                     c = scanner.nextInt();
                     scanner.nextLine(); // limpiar buffer
                     System.out.println("Que nombre desea colocarle: ");
-                    st1 = scanner.nextLine();
+                    st1 = scanner.nextLine().toUpperCase();
 
                     house.cambiarNombreHabit(c, st1);
                     break;
@@ -308,7 +308,7 @@ public class Menu {
                 case 1:
                     //crear equipo nuevo
                     System.out.println("Ingrese un nombre para su equipo: ");
-                    st1 = scanner.nextLine();
+                    st1 = scanner.nextLine().toUpperCase();
                     System.out.println("Ingrese puntaje necesario para escapar:");
                     a = scanner.nextInt();
                     System.out.println("Ingrese su puntaje total, actual y luego en que habitacion comienza: ");
@@ -323,14 +323,14 @@ public class Menu {
                 case 2:
                     // eliminar un equipo
                     System.out.println("Ingrese el nombre del equipo que desea eliminar: ");
-                    st1 = scanner.nextLine();
+                    st1 = scanner.nextLine().toUpperCase();
                     if(house.eliminarEquipo(st1)) System.out.println("Se ha eliminado correctamente!");;
 
                     break;
                 case 3:
                     // incrementar puntaje necesario
                     System.out.println("Ingrese el nombre del equipo: ");
-                    st1 = scanner.nextLine();
+                    st1 = scanner.nextLine().toUpperCase();
                     System.out.println("Cuanto quiere incrementarle(un valor): ");
                     c = scanner.nextInt();
 
@@ -339,7 +339,7 @@ public class Menu {
                 case 4:
                     //disminuir puntaje necesario
                     System.out.println("Ingrese el nombre del equipo: ");
-                    st1 = scanner.nextLine();
+                    st1 = scanner.nextLine().toUpperCase();
                     System.out.println("Cuanto quiere disminuirle(un valor): ");
                     c = scanner.nextInt();
 
@@ -354,7 +354,6 @@ public class Menu {
 
         }while(opcion!=0);
     }
-
 
     public void menuConsultasHabitaciones() {
         int opcion, a, b, c, d;
@@ -452,7 +451,7 @@ public class Menu {
                     // mostrarDesafíosResueltos
 
                     System.out.println("Ingrese nombre del Equipo: ");
-                    tt1 = scanner.nextLine();
+                    tt1 = scanner.nextLine().toUpperCase();
                     System.out.println(house.desafiosDelEquipo(tt1));
 
                     break;
@@ -460,7 +459,7 @@ public class Menu {
                     // verificarDesafíoResuelto
 
                     System.out.println("Ingrese nombre del Equipo; ");
-                    tt1 = scanner.nextLine();
+                    tt1 = scanner.nextLine().toUpperCase();
                     System.out.println("Ingrese codigo el codigo de la Habitacion: ");
                     a = scanner.nextInt();
                     System.out.println("Ingrese codigo del desafio: ");
@@ -476,7 +475,7 @@ public class Menu {
                 case 4:
                     // mostrarDesafíosTipo
                     System.out.println("Desafio de tipo?: ");
-                    tt1 = scanner.nextLine();
+                    tt1 = scanner.nextLine().toUpperCase();
                     System.out.println("Ingrese codigo de la habitacion: ");
                     a = scanner.nextInt();
                     System.out.println("Desde un rango: ");
@@ -515,13 +514,13 @@ public class Menu {
                 case 1:
                     // mostrarInfoEquipo
                     System.out.println("ingrese el nombre del equipo");
-                    tt1 = scanner.nextLine();
+                    tt1 = scanner.nextLine().toUpperCase();
                     System.out.println(house.mostrarInfoEquipos(tt1));
                     break;
                 case 2:
                     // posiblesDesafios
                     System.out.println("ingrese el nombre del equipo");
-                    tt1 = scanner.nextLine();
+                    tt1 = scanner.nextLine().toUpperCase();
                     System.out.println("ingrese el codigo de habitacion que desea buscar");
                     a = scanner.nextInt();
                     System.out.println(house.posiblesDesafios(tt1, a));
@@ -530,7 +529,7 @@ public class Menu {
                     // jugarDesafío
 
                     System.out.println("Ingrese nombre de equipo: ");
-                     tt1 = scanner.nextLine();
+                     tt1 = scanner.nextLine().toUpperCase();
                     System.out.println("Ingrese codigo habitacion: ");
                       a = scanner.nextInt();
                     System.out.println("Ingrese codigo desafio: ");
@@ -545,7 +544,7 @@ public class Menu {
                     // pasarAHabitacion
 
                     System.out.println("ingrese el nombre del equipo");
-                    tt1 = scanner.nextLine();
+                    tt1 = scanner.nextLine().toUpperCase();
                     System.out.println("ingrese el codigo de habitacion que desea buscar");
                      a = scanner.nextShort();
                     boolean exito = house.pasarAHabitacion(tt1, a);
@@ -557,7 +556,7 @@ public class Menu {
                     // puedeSalir
 
                     System.out.println("Ingrese nombre del equipo: ");
-                    String tt3 = scanner.nextLine();
+                    String tt3 = scanner.nextLine().toUpperCase();
                     boolean hanSalido = house.equipoEscapa(tt3);
 
                     if(hanSalido) System.out.println("ENHORABUENA! El equipo: "+tt3+" HA ESCAPADO!");

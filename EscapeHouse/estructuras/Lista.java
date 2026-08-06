@@ -140,9 +140,9 @@ public class Lista {
             s = "[";
             while (aux != null){
                 if (aux.getElem() == null){
-                    s += "null";
+                    s += "null\n";
                 } else {
-                    s += aux.getElem().toString();
+                    s += aux.getElem().toString()+"\n";
                 }
                 aux = aux.getEnlace();
                 if (aux != null)

@@ -84,6 +84,7 @@ public class GestorArchivos {
         }
 
         cajon[0] = Integer.parseInt((String) cajon[0]);
+        cajon[1] = cajon[1].toString().toUpperCase();
         cajon[2] = Integer.parseInt((String) cajon[2]);
         cajon[3] = Integer.parseInt((String) cajon[3]);
         cajon[4] = Boolean.parseBoolean((String) cajon[4]);
@@ -105,7 +106,7 @@ public class GestorArchivos {
             cajon[i]=token;
             i++;
         }
-
+        cajon[0] = cajon[0].toString().toUpperCase();
         cajon[1] = Integer.parseInt((String) cajon[1]);
         cajon[2] = Integer.parseInt((String) cajon[2]);
         cajon[3] = Integer.parseInt((String) cajon[3]);
@@ -129,6 +130,8 @@ public class GestorArchivos {
         }
         cajon[0]= Integer.parseInt((String) cajon[0]);
         cajon[1]= Integer.parseInt((String) cajon[1]);
+        cajon[2] = cajon[2].toString().toUpperCase();
+        cajon[3] = cajon[3].toString().toUpperCase();
 
         Desafio des = new Desafio((int) cajon[0], (int) cajon[1],(String) cajon[2],(String) cajon[3]);
         Habitacion hab = (Habitacion) habits.obtenerElemento((int) cajon[1]);

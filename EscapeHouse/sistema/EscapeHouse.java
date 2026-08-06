@@ -24,10 +24,13 @@ public class EscapeHouse {
     }
 
     public String mostrarHabitacion(int codigo){
-        String datos=habitaciones.obtenerDatos(codigo);
-        
-        if(datos==null){
+        Habitacion hab= (Habitacion) habitaciones.obtenerElemento(codigo);
+        String datos ;
+        if(hab==null){
             datos="No se encontró la habitación con el código "+codigo;
+        }else{
+            Lista lis = hab.mostrarDesafios();
+            datos = hab.toString()+"\nCon Desafios:\n"+lis.toString();
         }
         
         return datos;
