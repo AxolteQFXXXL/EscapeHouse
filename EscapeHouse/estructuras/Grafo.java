@@ -483,6 +483,7 @@ public class Grafo {
         return datos;
     }
 
+    //Devuelve todos los caminos que llevan al destino desde el origen teniendo en cuenta la puntuacion maxima y el vertice prohibido.
     public Lista caminosConRestricciones(Object origen, Object destino, Object prohibido, int valorMax){
         NodoVert vOrigen = ubicarVertice(origen);
         NodoVert vDestino = ubicarVertice(destino);

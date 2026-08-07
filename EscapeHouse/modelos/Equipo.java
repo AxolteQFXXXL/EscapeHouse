@@ -81,6 +81,7 @@ public class Equipo {
         return s;
     }
 
+    //Devuelve un mensaje con todos sus desafios resueltos.
     public String desafiosResueltos(){
         String ss="";
         for(Desafio des : resueltos.values()){

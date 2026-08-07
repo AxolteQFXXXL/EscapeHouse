@@ -23,6 +23,7 @@ public class EscapeHouse {
         this.equipos=equipos;
     }
 
+    //Busca y muestra toda la información de la habitación recibida.
     public String mostrarHabitacion(int codigo){
         Habitacion hab= (Habitacion) habitaciones.obtenerElemento(codigo);
         String datos ;
@@ -36,6 +37,7 @@ public class EscapeHouse {
         return datos;
     }
     
+    //Muestra las habitaciones adyacentes a la recibida por parámetro.
     public String habitacionesContiguas(Object codigo){
         String datos=casa.mostrarAdyacentes(codigo);
 
@@ -49,9 +51,9 @@ public class EscapeHouse {
     //metodo que calcula la cantidad de puntos minima y la resta con la requerida, devolviendo true or false si llega al destino.
     public String esPosibleLlegar(Object codigo1, Object codigo2, int puntos){
         String esPosible= "No es posible.";
-        Lista habitaciones= casa.caminoMasLiviano(codigo1, codigo2);
-        if(!habitaciones.esVacia()){
-            int aux=(int) habitaciones.recuperar(habitaciones.longitud());
+        Lista habs= casa.caminoMasLiviano(codigo1, codigo2);
+        if(!habs.esVacia()){
+            int aux=(int) habs.recuperar(habs.longitud());
             int calculo=puntos- aux;
             if(aux>=0 && calculo>=0){
                 esPosible="Es posible.";
@@ -61,18 +63,25 @@ public class EscapeHouse {
         return esPosible;
     }
 
+    //Muestra el camino más liviano entre dos habitaciones.
     public String minimoPuntaje(Object codigo1, Object codigo2){
         String resultado="";
         Lista camino= casa.caminoMasLiviano(codigo1, codigo2);
-        int ultPos= camino.longitud();
-        Object puntaje=camino.recuperar(ultPos);
-        camino.eliminar(ultPos);
+        if(!camino.esVacia()){
+            int ultPos= camino.longitud();
+            Object puntaje=camino.recuperar(ultPos);
+            camino.eliminar(ultPos);
 
-        resultado="Puntaje minimo necesario: "+puntaje+"\n"+"Camino a realizar: "+camino.toString();
+            resultado="Puntaje minimo necesario: "+puntaje+"\n"+"Camino a realizar: "+camino.toString();
+        }else{
+            resultado="Camino no encontrado.";
+        }
+        
 
         return resultado;
     }
 
+    //Muestra el camino que se puede realizar segun una puntuacion recibida y sin pasar por un elemento llamado "prohibido".
     public String sinPasarPor(Object origen, Object destino, Object prohibido, int puntMax){
         String res=null;
         Lista caminos= casa.caminosConRestricciones(origen, destino, prohibido, puntMax);
@@ -218,18 +227,20 @@ public class EscapeHouse {
         return exito;
     }
 
+    //Muestra los desafios resueltos de un equipo.
     public String desafiosDelEquipo(String nombreEquipo){
         Equipo eq = equipos.get(nombreEquipo);
         return (eq != null) ? eq.desafiosResueltos() : "Equipo No Existe...";
     }
 
+    //Muestra los desafios que esten en un rango de puntaje y que sean de un tipo específico.
     public boolean verificarDesafioResuelto(String nombreEquipo, int cod1, int cod2){
         Desafio des = null;
         Equipo eq = equipos.get(nombreEquipo);
         Habitacion hab = (Habitacion) habitaciones.obtenerElemento(cod1);
         if(hab!=null && eq!=null) des = hab.getUnDesafio(cod2);
 
-        return (des!=null) ? eq.resolvioDesafio((Integer) des.getPuntaje()) : null;
+        return (des!=null) ? eq.resolvioDesafio((Integer) des.getPuntaje()) : false;
     }
 
     public String desafiosDeTipo(String nombreDes, int cod1, int a, int b) {
