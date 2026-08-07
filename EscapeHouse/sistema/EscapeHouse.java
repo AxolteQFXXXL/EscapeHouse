@@ -54,7 +54,7 @@ public class EscapeHouse {
             int aux=(int) habitaciones.recuperar(habitaciones.longitud());
             int calculo=puntos- aux;
             if(aux>=0 && calculo>=0){
-                esPosible="Es es posible.";
+                esPosible="Es posible.";
             }
         }
 

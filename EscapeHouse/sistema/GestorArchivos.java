@@ -29,7 +29,7 @@ public class GestorArchivos {
             String line;
             reiniciarLog();
             log("=== INICIO DE CARGA DEL SISTEMA ===");
-            // Read line-by-line until the end of the file (null)
+            
             while ((line = br.readLine()) != null) {
                 StringTokenizer st = new StringTokenizer(line, ";");
 
