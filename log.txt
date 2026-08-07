@@ -1,0 +1,2 @@
+21:26:37 ERROR: Error al leer el archivo: EscapeHouse\sistema\ArchivoCargaSimple.txt (El sistema no puede encontrar la ruta especificada)
+21:26:37 === FIN DE CARGA DEL SISTEMA ===

@@ -257,8 +257,11 @@ public class Menu {
                     c = scanner.nextInt();
 
                     Habitacion unH = new Habitacion(a, st1, b, c, false);
-                    if(house.agregarHabitacion(unH)) System.out.println("Se ha agregado correctamente!");;
+                    if(house.agregarHabitacion(unH)) {System.out.println("Se ha agregado correctamente!");
                     gestorArchivos.log("Habitacion cargada: "+unH.getCodigo());
+                     } else{ System.out.println("Ya existe una habitacion con ese codigo");
+                     gestorArchivos.log("Habitaciom : "+unH.getCodigo() + "ya estaba cargada");
+                    }
                     break;
                 case 2:
                     // eliminar una habitacion

@@ -244,7 +244,10 @@ public class EscapeHouse {
     }
 
     public boolean agregarHabitacion(Habitacion unH) {
-        return habitaciones.insertar(unH.getCodigo(), unH);}
+        boolean existe = false;
+        Object hab = habitaciones.obtenerElemento(unH.getCodigo());
+        if(hab == null) existe = habitaciones.insertar(unH.getCodigo(), unH);
+         return existe;}
 
     public boolean eliminarHabitacion(int codHab) {
         boolean estaLlena = false;
