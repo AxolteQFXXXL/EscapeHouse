@@ -250,7 +250,7 @@ public class EscapeHouse {
          return existe;}
 
     public boolean eliminarHabitacion(int codHab) {
-        boolean estaLlena = false;
+        boolean estaLlena = false, exito = false;
         Iterator<Map.Entry<String, Equipo>> eq = equipos.entrySet().iterator();
         while(!estaLlena && eq.hasNext()){
             Map.Entry<String, Equipo> val = eq.next();
@@ -258,9 +258,12 @@ public class EscapeHouse {
             if(unEquipo.getHabitacionActual() == codHab) estaLlena = true;
 
         }
-        if(!estaLlena) estaLlena = habitaciones.eliminar(codHab);
+        if(!estaLlena){
+            Habitacion hab = (Habitacion) habitaciones.obtenerElemento(codHab);
+            if(hab !=null) exito = habitaciones.eliminar(codHab);
+        }
 
-        return estaLlena;
+        return exito;
     }
 
     public void cambiarNombreHabit(int cod, String nuevoNombre) {
