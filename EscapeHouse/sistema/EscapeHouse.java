@@ -180,13 +180,17 @@ public class EscapeHouse {
         Equipo eq = equipos.get(nombreEquipo);
         Habitacion hab = (Habitacion) habitaciones.obtenerElemento(codigoHab);
         Desafio des = null;
-        if(hab != null) des =hab.getUnDesafio(codigoDes);
-        if(des !=null && eq !=null){
-            a = (int) des.getPuntaje();
-            eq.agregarPuntajeActual(a);
-            eq.agregarDesafio((int)des.getPuntaje(), des);
+        if (!eq.resolvioDesafio(codigoDes)){
+            if(hab != null) des =hab.getUnDesafio(codigoDes);
+            if(des !=null && eq !=null){
+                a = (int) des.getPuntaje();
+                eq.agregarPuntajeActual(a);
+                eq.agregarDesafio((int)des.getPuntaje(), des);
+            }
+        }else{
+            a=-1;
         }
-
+        
         return a;
     }
 

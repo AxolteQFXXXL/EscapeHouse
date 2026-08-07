@@ -539,8 +539,13 @@ public class Menu {
                       b = scanner.nextInt();
                     c = house.equipoJuega(tt1,a,b);
 
-                    if(c>0) System.out.println("Equipo: "+tt1+" ganó:"+ c +" puntos.");
-                    else System.out.println("Tal desafio no se encuentra en esa habitacion.");
+                    if(c>0) {
+                        System.out.println("Equipo: "+tt1+" ganó:"+ c +" puntos.");
+                    }else if(c==0){
+                        System.out.println("Tal desafio no se encuentra en esa habitacion.");
+                    }else{
+                        System.out.println("El desafio ya fue resuelto por el equipo.");
+                    }
 
                     break;
                 case 4:
