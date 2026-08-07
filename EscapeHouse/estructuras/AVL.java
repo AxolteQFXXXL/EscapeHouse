@@ -44,35 +44,19 @@ public class AVL {
 
         if(root!=null) {
             if (clave.compareTo(root.getClave()) == 0) {
-                /*boolean caso1 = (root.getIzquierdo() == null);
-                boolean caso2 = (root.getDerecho()==null);
-                if(caso1 && caso2) root = null;
-                else if(caso1) root = root.getDerecho();
-                else if(caso2) root = root.getIzquierdo();
-                else{   //aqui encuentra el valor mas pequeno de su hijo derecho
-                    NodoAvl aux = encuentraElMenorValor(root.getDerecho());
-                    NodoAvl aux2 = new NodoAvl(aux.getClave(), aux.getElem());
-                    root.setElem(aux.getElem()); // se reemplaza por el root que se queria eliminar
-                    aux2.setIzquierdo(root.getIzquierdo());
-
-                    root.setDerecho(eliminarAux(root.getDerecho(), root.getClave()));
-                    aux2.setDerecho(root.getDerecho());
-                    root = aux2;
-                }*/
                 if (root.getIzquierdo() == null) root = root.getDerecho();
                 else if (root.getDerecho() == null) root = root.getIzquierdo();
                 else {
                     //aqui encuentra el valor mas pequeno de su hijo derecho
                     NodoAvl aux = encuentraElMenorValor(root.getDerecho());
-                    NodoAvl aux2 = new NodoAvl(aux.getClave(), aux.getElem());
-                     // se reemplaza por el root que se queria eliminar
-                    aux2.setIzquierdo(root.getIzquierdo());
-
-                    aux2.setDerecho(eliminarAux(root.getDerecho(), aux.getClave()));
-                    root = aux2;
+                    NodoAvl reemplazo = new NodoAvl(aux.getClave(), aux.getElem());
+                    reemplazo.setIzquierdo(root.getIzquierdo());
+                    reemplazo.setDerecho(eliminarAux(root.getDerecho(), aux.getClave()));
+                    root = reemplazo;
                 }
 
             } else if (clave.compareTo(root.getClave()) < 0) root.setIzquierdo(eliminarAux(root.getIzquierdo(), clave));
+
             else root.setDerecho(eliminarAux(root.getDerecho(), clave));
 
         }
