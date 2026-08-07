@@ -9,6 +9,7 @@ public class Equipo {
     private int habitacionActual;
     private int puntajeActual;
     private HashMap<Integer, Desafio> resueltos = new HashMap<>();
+    private HashMap<Integer, Boolean> habitacionPisada = new HashMap<>();
 
 
     public Equipo(String nombre){
@@ -21,6 +22,7 @@ public class Equipo {
         this.puntajeTotal = puntajeTotal;
         this.habitacionActual = habitacionActual;
         this.puntajeActual = puntajeActual;
+        this.habitacionPisada.put(habitacionActual, true);
     }
 
     public void agregarDesafioResuelto(int clave,Desafio unDes){
@@ -47,6 +49,10 @@ public class Equipo {
         return this.puntajeActual;
     }
 
+    public HashMap<Integer, Desafio> getResueltos(){ return  this.resueltos;}
+
+    public  HashMap<Integer, Boolean> getHabitacionPisada(){return  this.habitacionPisada;}
+
     public void setPuntajeNecesario(int puntajeNecesario){
         this.puntajeNecesario = puntajeNecesario;
     }
@@ -66,6 +72,9 @@ public class Equipo {
     public void sumarPuntActual(){
         this.puntajeTotal += this.puntajeActual;
         this.puntajeActual = 0;
+    }
+    public void agregarHabitacionPisada(int cod){
+        habitacionPisada.put(cod, true);
     }
 
     public void agregarPuntajeActual(int puntos){
@@ -90,7 +99,13 @@ public class Equipo {
         return ss;
     }
 
-    public boolean resolvioDesafio(int puntaje) {
-        return resueltos.containsKey(puntaje);
+    public boolean resolvioDesafio(int puntaje, int habActual) {
+        Desafio des = resueltos.get(puntaje);
+        boolean bool = false;
+        if(des != null) {
+            bool = des.getCodigoHabitacion() == habActual;
+        }
+
+        return bool;
     }
 }

@@ -159,19 +159,40 @@ public class EscapeHouse {
     public boolean pasarAHabitacion(String nombreEquipo, int codigoHab){
         boolean exito = false;
         Equipo eq = equipos.get(nombreEquipo);
+
         if(eq != null) {
+        int calculo = calcularTotalPuntaje(codigoHab, eq);
+        HashMap<Integer, Boolean> pisados = eq.getHabitacionPisada();
+
             if (casa.existeArco(eq.getHabitacionActual(), codigoHab)) {
                 int a = casa.getEtiquetaArco(eq.getHabitacionActual(), codigoHab);
-                
-                if (eq.getPuntajeActual() >= a) {
+
+                if (pisados.containsKey(codigoHab)) {
+                    exito = true;
+                    eq.setHabitacionActual(codigoHab);
+                    eq.setPuntajeActual(calculo);
+
+                }else if(eq.getPuntajeActual() >= a){
                     exito = true;
                     eq.setHabitacionActual(codigoHab);
                     eq.sumarPuntActual();
+                    eq.setPuntajeActual(calculo);
+                    eq.agregarHabitacionPisada(codigoHab);
                 }
             }
         }
 
         return exito;
+    }
+
+    private int calcularTotalPuntaje(int cod, Equipo eqi){
+        int valor = 0;
+        HashMap<Integer, Desafio> losResueltos = eqi.getResueltos();
+
+        for(Desafio des : losResueltos.values()) if(des.getCodigoHabitacion() == cod) valor += (int)des.getPuntaje();
+
+
+        return valor;
     }
 
     /**
@@ -189,15 +210,18 @@ public class EscapeHouse {
         Equipo eq = equipos.get(nombreEquipo);
         Habitacion hab = (Habitacion) habitaciones.obtenerElemento(codigoHab);
         Desafio des = null;
-        if (!eq.resolvioDesafio(codigoDes)){
-            if(hab != null) des =hab.getUnDesafio(codigoDes);
-            if(des !=null && eq !=null){
-                a = (int) des.getPuntaje();
-                eq.agregarPuntajeActual(a);
-                eq.agregarDesafio((int)des.getPuntaje(), des);
+        if(eq != null) {
+            if (!eq.resolvioDesafio(codigoDes, eq.getHabitacionActual()) ) {
+                if (hab != null) des = hab.getUnDesafio(codigoDes);
+                if (des != null && eq != null) {
+                    a = (int) des.getPuntaje();
+                    eq.agregarPuntajeActual(a);
+                    eq.agregarDesafio((int) des.getPuntaje(), des);
+
+                }
+            } else {
+                a = -1;
             }
-        }else{
-            a=-1;
         }
         
         return a;
@@ -240,7 +264,7 @@ public class EscapeHouse {
         Habitacion hab = (Habitacion) habitaciones.obtenerElemento(cod1);
         if(hab!=null && eq!=null) des = hab.getUnDesafio(cod2);
 
-        return (des!=null) ? eq.resolvioDesafio((Integer) des.getPuntaje()) : false;
+        return (des!=null) ? eq.resolvioDesafio((Integer) des.getPuntaje(), eq.getHabitacionActual()) : false;
     }
 
     public String desafiosDeTipo(String nombreDes, int cod1, int a, int b) {
