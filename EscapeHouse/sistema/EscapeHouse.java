@@ -87,7 +87,7 @@ public class EscapeHouse {
 
     public String mostrarDesafio(int cod1, int cod2){
         Habitacion hab = (Habitacion) habitaciones.obtenerElemento(cod2);
-        return hab.obtenerDatoDesafio( cod1);
+        return (hab != null) ?  hab.obtenerDatoDesafio(cod1) : "No se encontró la habitación";
     }
 
     public String mostrarInfoEquipos(String unNombre){

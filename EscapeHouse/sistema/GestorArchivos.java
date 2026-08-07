@@ -166,6 +166,7 @@ public class GestorArchivos {
         } finally {
             try {
                 if (fw != null) {
+                    //vacía los datos pendientes en el búfer
                     fw.close();
                 }
             } catch (IOException e) {
