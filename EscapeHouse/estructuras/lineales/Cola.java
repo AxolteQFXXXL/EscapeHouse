@@ -1,4 +1,4 @@
-package EscapeHouse.estructuras;
+package EscapeHouse.estructuras.lineales;
 
 /**Autores**
  Ansberck Martin, legajo FAI-4861

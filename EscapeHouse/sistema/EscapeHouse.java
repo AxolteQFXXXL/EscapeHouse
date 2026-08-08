@@ -1,6 +1,8 @@
 package EscapeHouse.sistema;
+import EscapeHouse.estructuras.conjuntista.AVL;
+import EscapeHouse.estructuras.grafo.Grafo;
+import EscapeHouse.estructuras.lineales.Lista;
 import EscapeHouse.modelos.*;
-import EscapeHouse.estructuras.*;
 
 import java.util.HashMap;
 import java.util.Iterator;

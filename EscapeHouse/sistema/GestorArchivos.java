@@ -1,7 +1,7 @@
 package EscapeHouse.sistema;
 
-import EscapeHouse.estructuras.AVL;
-import EscapeHouse.estructuras.Grafo;
+import EscapeHouse.estructuras.conjuntista.AVL;
+import EscapeHouse.estructuras.grafo.Grafo;
 import EscapeHouse.modelos.Desafio;
 import EscapeHouse.modelos.Equipo;
 import EscapeHouse.modelos.Habitacion;
