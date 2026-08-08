@@ -470,20 +470,22 @@ public class Grafo {
     }
 
     //Cambiado "Habitacion" por "Vertice" para generalizar los métodos.
-    public String mostrarAdyacentes(Object elem){
-        String datos="";
+    public Lista mostrarAdyacentes(Object elem){
+        String datos;
+        Lista lis = new Lista();
 
         NodoVert objetivo= ubicarVertice(elem);
 
         if(objetivo!=null){
             NodoAdy ady= objetivo.getPrimerAdy();
             while(ady!=null){
-                datos+="Vertice "+ ady.getVertice().getElem()+ " Etiqueta "+ ady.getEtiqueta()+ "\n";
+                datos="Vertice "+ ady.getVertice().getElem()+ " Etiqueta "+ ady.getEtiqueta()+ "\n";
+                lis.insertar(datos, 1);
                 ady=ady.getSigAdyacente();
             }
         }
 
-        return datos;
+        return lis;
     }
 
     //Devuelve todos los caminos que llevan al destino desde el origen teniendo en cuenta la puntuacion maxima y el vertice prohibido.

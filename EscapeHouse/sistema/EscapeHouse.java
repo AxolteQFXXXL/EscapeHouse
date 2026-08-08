@@ -41,13 +41,14 @@ public class EscapeHouse {
     
     //Muestra las habitaciones adyacentes a la recibida por parámetro.
     public String habitacionesContiguas(Object codigo){
-        String datos=casa.mostrarAdyacentes(codigo);
+        Lista datos=casa.mostrarAdyacentes(codigo);
 
-        if(datos=="") {
-            datos = "No se encontró la habitación con el código " + codigo;
+        if(datos.esVacia()) {
+            String dato = "No se encontró la habitación con el código " + codigo;
+            datos.insertar(dato, 1);
         }
 
-        return datos;
+        return datos.toString();
     }
 
     //metodo que calcula la cantidad de puntos minima y la resta con la requerida, devolviendo true or false si llega al destino.
