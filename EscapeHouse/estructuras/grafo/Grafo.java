@@ -35,33 +35,35 @@ public class Grafo {
         boolean exito = false;
         NodoVert auxE = null;
 
-        if (this.inicio.getElem().equals(elem)){
-            auxE = this.inicio;
-            NodoAdy auxA = auxE.getPrimerAdy();
-            while (auxA != null){
-                eliminarArcoAux(auxA.getVertice(), elem);
-                auxA = auxA.getSigAdyacente();
-            }
-            this.inicio = this.inicio.getSigVertice();
-            exito = true;
-        } else {
-            NodoVert aux = this.inicio;
-            NodoVert previo = null;
-            while (auxE == null && aux.getSigVertice() != null){
-                if (aux.getSigVertice().getElem().equals(elem)) {
-                    previo = aux;
-                    auxE = aux.getSigVertice();
-                }
-                aux = aux.getSigVertice();
-            }
-            if (auxE != null){
+        if(this.inicio != null) {
+            if (this.inicio.getElem().equals(elem)) {
+                auxE = this.inicio;
                 NodoAdy auxA = auxE.getPrimerAdy();
-                while (auxA != null){
+                while (auxA != null) {
                     eliminarArcoAux(auxA.getVertice(), elem);
                     auxA = auxA.getSigAdyacente();
                 }
-                previo.setSigVertice(auxE.getSigVertice());
+                this.inicio = this.inicio.getSigVertice();
                 exito = true;
+            } else {
+                NodoVert aux = this.inicio;
+                NodoVert previo = null;
+                while (auxE == null && aux.getSigVertice() != null) {
+                    if (aux.getSigVertice().getElem().equals(elem)) {
+                        previo = aux;
+                        auxE = aux.getSigVertice();
+                    }
+                    aux = aux.getSigVertice();
+                }
+                if (auxE != null) {
+                    NodoAdy auxA = auxE.getPrimerAdy();
+                    while (auxA != null) {
+                        eliminarArcoAux(auxA.getVertice(), elem);
+                        auxA = auxA.getSigAdyacente();
+                    }
+                    previo.setSigVertice(auxE.getSigVertice());
+                    exito = true;
+                }
             }
         }
 
