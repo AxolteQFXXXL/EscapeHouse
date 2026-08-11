@@ -505,7 +505,7 @@ public class Grafo {
 
     private void recorreAux(Lista visitados, NodoVert n, NodoVert dest, Lista caminos, Object pro, int[] punt, int valorMax){
         
-        if(n!=null){
+        if(n!=null && punt[0]<=valorMax){
             visitados.insertar(n.getElem(), visitados.longitud()+1);
             if(n!=dest){
 
@@ -521,10 +521,7 @@ public class Grafo {
                     v=v.getSigAdyacente();
                 }
             }else{
-                if(punt[0]<=valorMax){
-                    caminos.insertar((visitados.clone()), caminos.longitud()+1);
-                }
-                
+                caminos.insertar((visitados.clone()), caminos.longitud()+1);
             }   
             
             visitados.eliminar(visitados.longitud());
