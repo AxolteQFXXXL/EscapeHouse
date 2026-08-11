@@ -522,7 +522,7 @@ public class Grafo {
                 }
             }else{
                 if(punt[0]<=valorMax){
-                    caminos.insertar((visitados.toString()), caminos.longitud()+1);
+                    caminos.insertar((visitados.clone()), caminos.longitud()+1);
                 }
                 
             }   
