@@ -41,7 +41,7 @@ public class EscapeHouse {
     
     //Muestra las habitaciones adyacentes a la recibida por parámetro.
     public String habitacionesContiguas(Object codigo){
-        Lista datos=casa.mostrarAdyacentes(codigo);
+        Lista datos=casa.listarAdyacentes(codigo);
 
         if(datos.esVacia()) {
             String dato = "No se encontró la habitación con el código " + codigo;
