@@ -1,7 +1,5 @@
 package EscapeHouse.estructuras.grafo;
 
-//este grafo es etiquetado pero aun no usamos las etiquetas
-
 import EscapeHouse.estructuras.lineales.Cola;
 import EscapeHouse.estructuras.lineales.Lista;
 
@@ -12,7 +10,6 @@ public class Grafo {
         this.inicio = null;
     }
 
-    //grafo no etiquetado
     public boolean insertarVertice(Object nuevoVertice) {
         boolean exito = false;
         NodoVert aux = this.ubicarVertice(nuevoVertice);
@@ -472,7 +469,7 @@ public class Grafo {
     }
 
     //Cambiado "Habitacion" por "Vertice" para generalizar los métodos.
-    public Lista mostrarAdyacentes(Object elem){
+    public Lista listarAdyacentes(Object elem){
         String datos;
         Lista lis = new Lista();
 
@@ -481,7 +478,7 @@ public class Grafo {
         if(objetivo!=null){
             NodoAdy ady= objetivo.getPrimerAdy();
             while(ady!=null){
-                datos="Vertice "+ ady.getVertice().getElem()+ " Etiqueta "+ ady.getEtiqueta()+ "\n";
+                datos="Vertice "+ ady.getVertice().getElem()+ " Etiqueta "+ ady.getEtiqueta();
                 lis.insertar(datos, 1);
                 ady=ady.getSigAdyacente();
             }
